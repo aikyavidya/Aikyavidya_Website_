@@ -42,8 +42,7 @@ export default function ImpactSection() {
         </p>
 
         <Link to="/impact" className="btn">
-  DONATE NOW ❤
-</Link>
+Learn More</Link>
       </div>
       </div>
     </section>
