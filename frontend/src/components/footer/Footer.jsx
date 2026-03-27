@@ -18,7 +18,7 @@ export default function Footer() {
         {/* COLUMN 1 */}
         <div className="footer-col">
           <img
-            src="https://aikyavidya.org/new/wp-content/uploads/2020/09/logo-1-1.png"
+            src="images/logo-1.png"
             alt="logo"
             className="logo"
           />

@@ -47,7 +47,7 @@ export default function PurposeSection() {
         <div className="tab-content">
           <p>{content[activeTab]}</p>
 
-          <a href="/donations" className="donate-btn">
+          <a href="/donation" className="donate-btn">
             Donate Now
           </a>
         </div>

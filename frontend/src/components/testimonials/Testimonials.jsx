@@ -41,7 +41,7 @@ export default function Testimonials() {
             education they will be helpful to the society at large.
           </p>
 
-          <a href="/donations" className="btn">
+          <a href="/donation" className="btn">
             DONATE NOW
           </a>
         </div>

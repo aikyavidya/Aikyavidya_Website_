@@ -9,13 +9,13 @@ export default function ImpactSection() {
 
         <div className="image-stack">
           <img
-            src="\images\home-1_01-2.png"
+            src="/images/home-1_01-2.png"
             alt="bg"
             className="img-back"
           />
 
           <img
-            src="\images\12.webp"
+            src="/images/12.webp"
             alt="main"
             className="img-front"
           />
@@ -41,7 +41,7 @@ export default function ImpactSection() {
           many villages in Telangana and Andhra Pradesh.
         </p>
 
-        <a href="/our-impact" className="learn-btn">
+        <a href="/impact" className="learn-btn">
           LEARN MORE
         </a>
       </div>
