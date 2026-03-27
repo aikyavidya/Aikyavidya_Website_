@@ -1,6 +1,6 @@
 import "./about.css";
 import { FaUtensils, FaBookOpen, FaHandsHelping } from "react-icons/fa";
-
+import { Link } from "react-router-dom";
 export default function AboutSection() {
   return (
     <section className="about">
@@ -17,9 +17,9 @@ export default function AboutSection() {
             Values
           </h2>
 
-          <a href="/donations" className="donate-btn">
-            DONATE NOW
-          </a>
+         <Link to="/donation" className="btn">
+  DONATE NOW ❤
+</Link>
         </div>
 
         {/* RIGHT */}

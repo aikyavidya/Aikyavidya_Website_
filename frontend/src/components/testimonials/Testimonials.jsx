@@ -1,6 +1,6 @@
 import "./testimonials.css";
 import { useState } from "react";
-
+import { Link } from "react-router-dom";
 const data = [
   {
     text: `I am from Ahobilam Village. my father is a daily labour, my mother is a house help. I am studying 9th standard in Girijana Ashrama Paatashala. They help me in completing my homework.`,
@@ -41,9 +41,11 @@ export default function Testimonials() {
             education they will be helpful to the society at large.
           </p>
 
-          <a href="/donation" className="btn">
-            DONATE NOW
-          </a>
+          
+
+<Link to="/donation" className="btn">
+  DONATE NOW ❤
+</Link>
         </div>
 
         {/* RIGHT */}

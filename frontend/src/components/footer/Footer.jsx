@@ -1,4 +1,6 @@
 import "./footer.css";
+import { Link } from "react-router-dom";
+
 import {
   FaInstagram,
   FaFacebookF,
@@ -31,9 +33,10 @@ export default function Footer() {
             especially in rural areas.
           </p>
 
-          <a  href="/donation" className="btn">
-            DONATE NOW ❤
-          </a>
+
+<Link to="/donation" className="btn">
+  DONATE NOW ❤
+</Link>
         </div>
 
         {/* COLUMN 2 */}

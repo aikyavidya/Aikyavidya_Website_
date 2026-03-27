@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./purpose.css";
 import { FaPlay } from "react-icons/fa";
+import { Link } from "react-router-dom";
+
 
 export default function PurposeSection() {
   const [activeTab, setActiveTab] = useState("purpose");
@@ -47,9 +49,10 @@ export default function PurposeSection() {
         <div className="tab-content">
           <p>{content[activeTab]}</p>
 
-          <a href="/donation" className="donate-btn">
-            Donate Now
-          </a>
+
+<Link to="/donation" className="btn">
+  DONATE NOW ❤
+</Link>
         </div>
       </div>
 

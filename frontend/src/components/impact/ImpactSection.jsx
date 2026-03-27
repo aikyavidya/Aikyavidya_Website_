@@ -1,5 +1,5 @@
 import "./impact.css";
-
+import { Link } from "react-router-dom";
 export default function ImpactSection() {
   return (
     <section className="impact">
@@ -41,9 +41,9 @@ export default function ImpactSection() {
           many villages in Telangana and Andhra Pradesh.
         </p>
 
-        <a href="/impact" className="learn-btn">
-          LEARN MORE
-        </a>
+        <Link to="/impact" className="btn">
+  DONATE NOW ❤
+</Link>
       </div>
       </div>
     </section>
