@@ -1,0 +1,54 @@
+/* HERO */
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* VIDEO FULL COVER */
+.hero iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 177.77vh; /* 16:9 ratio fix */
+  height: 100vh;
+  transform: translate(-50%, -50%);
+  pointer-events: none; /* disables click */
+}
+
+/* DARK OVERLAY (like original) */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 1;
+}
+
+/* CONTENT */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hero-content h1 {
+  font-size: 60px;
+  font-weight: 700;
+}
+
+.hero-content p {
+  margin: 15px 0;
+  font-size: 18px;
+}
+
+.hero-content button {
+  background: linear-gradient(135deg, #ff5a2c, #ff7a18);
+  padding: 12px 30px;
+  border-radius: 30px;
+  border: none;
+  color: white;
+  font-weight: 600;
+}

@@ -1,0 +1,37 @@
+.volunteer-section {
+  text-align: center;
+  padding: 80px 20px;
+  background: #f9f9f9;
+}
+
+.volunteer-section h2 {
+  font-family: "Quicksand";
+  font-size: 32px;
+  color: #f74f22;
+  margin-bottom: 20px;
+}
+
+.volunteer-section p {
+  font-family: "Nunito Sans";
+  color: #616161;
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 10px auto;
+}
+
+
+.volunteer-header-overlay {
+  text-align: center;
+  color: white;
+}
+
+.volunteer-header-overlay h1 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.volunteer-header-overlay p {
+  margin-top: 10px;
+  font-size: 14px;
+}

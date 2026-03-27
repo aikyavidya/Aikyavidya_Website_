@@ -1,0 +1,84 @@
+.initiatives {
+  display: flex;
+  width: 100%;
+  height: 400px;
+}
+
+/* CARD */
+.initiative-card {
+  flex: 1;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* DARK OVERLAY */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  transition: 0.4s;
+}
+
+/* CONTENT */
+.content {
+  position: absolute;
+  bottom: 60px;
+  left: 30px;
+  right: 30px;
+  color: white;
+  z-index: 2;
+}
+
+.content h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.content p {
+  font-size: 13px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* PLUS BUTTON */
+.plus-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+  width: 45px;
+  height: 45px;
+  background: #ff5a2c;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  z-index: 3;
+  transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.initiative-card:hover .overlay {
+  background: rgba(0,0,0,0.6);
+}
+
+.initiative-card:hover .plus-btn {
+  transform: rotate(90deg);
+  background: white;
+  color: #ff5a2c;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .initiatives {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .initiative-card {
+    height: 250px;
+  }
+}

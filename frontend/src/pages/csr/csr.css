@@ -1,0 +1,87 @@
+/* PAGE */
+.csr-page {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+/* HERO */
+.csr-header {
+  height: 396px;
+  background-size: cover;
+  background-position: bottom center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.csr-header-overlay {
+  text-align: center;
+  color: white;
+}
+
+.csr-header-overlay h1 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.csr-header-overlay p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* CONTENT */
+.csr-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 70px 20px;
+  text-align: center;
+}
+
+/* TITLE */
+.csr-title {
+  font-size: 40px;
+  font-weight: bold;
+  color: #eb951d;
+  margin-bottom: 20px;
+}
+
+/* DESCRIPTION */
+.csr-desc {
+  max-width: 750px;
+  margin: auto;
+  font-size: 20px;
+  color: #333;
+  line-height: 1.7;
+  margin-bottom: 50px;
+}
+
+/* LOGOS GRID */
+.csr-logos {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+/* LOGO IMAGE */
+.csr-logos img {
+  width: 480px;
+  object-fit: contain;
+  transition: 0.3s ease;
+}
+
+/* HOVER EFFECT (nice touch) */
+.csr-logos img:hover {
+  transform: scale(1.05);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .csr-header-overlay h1 {
+    font-size: 36px;
+  }
+
+  .csr-logos {
+    flex-direction: column;
+    gap: 30px;
+  }
+}

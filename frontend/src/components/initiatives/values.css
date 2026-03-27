@@ -1,0 +1,71 @@
+.values-page {
+  font-family: "Poppins", sans-serif;
+}
+
+/* HERO */
+.values-header {
+  height: 400px;
+  background-size: cover;
+  background-position: bottom center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-content .active {
+  color: #ff7a18;
+}
+
+.values-header-overlay {
+  text-align: center;
+  color: white;
+}
+
+.values-header-overlay h1 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.values-header-overlay p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* CONTAINER */
+.values-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+/* TEXT */
+.values-section h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.values-section p {
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* IMAGES */
+.values-full-img {
+  width: 80%;
+  margin: 30px 0;
+  border-radius: 10px;
+}
+
+.values-wide-img {
+  align-items: center;
+  width: 80%;
+  border-radius: 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .values-header-overlay h1 {
+    font-size: 32px;
+  }
+}

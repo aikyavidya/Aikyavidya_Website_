@@ -1,0 +1,102 @@
+/* ROOT SCOPE */
+.edu-page {
+  font-family: "Poppins", sans-serif;
+}
+
+/* HERO */
+.edu-header {
+  height: 400px;
+  background-size: cover;
+  background-position: bottom center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.edu-header-overlay {
+  text-align: center;
+  color: white;
+}
+
+.edu-header-overlay h1 {
+  font-size: 48px;
+  font-weight: 700;
+}
+.header-content .active {
+  color: #ff7a18;
+}
+
+.edu-header-overlay p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* CONTAINER */
+.edu-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+/* GRID */
+.edu-grid {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.edu-reverse {
+  flex-direction: row-reverse;
+}
+
+.edu-grid img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 10px;
+}
+
+/* TEXT */
+.edu-section h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.edu-section p {
+  color: #555;
+  line-height: 1.7;
+}
+
+/* FULL IMAGE */
+.edu-full-img {
+  width: 100%;
+  display: flex;
+  justify-content: center;   /* center horizontally */
+  margin: 40px 0;
+}
+
+.edu-full-img img {
+  width: 100%;
+  max-width: 1100px;         /* control size like reference */
+  border-radius: 10px;
+  display: block;
+}
+/* WIDE IMAGE */
+.edu-wide-img  {
+  margin-top: 20px;
+  width: 50%;
+  border-radius: 10px;
+}
+
+
+
+.edu-bar-img{
+  width: 20%;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .edu-grid {
+    flex-direction: column;
+  }
+}

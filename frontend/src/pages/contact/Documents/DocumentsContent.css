@@ -1,0 +1,86 @@
+/* ROOT COLORS FROM INSPECT */
+:root {
+  --primary: #F74F22;
+  --text: #616161;
+  --heading: #232323;
+}
+
+/* SECTION */
+.documents-section {
+  padding: 90px 0; /* exact from inspect */
+  background: #ffffff;
+  text-align: center;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+/* TITLE */
+.documents-title {
+  font-family: "Quicksand", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--primary); /* ORANGE like screenshot */
+  margin-bottom: 50px;
+}
+
+/* GRID */
+.documents-grid {
+  display: flex;
+  justify-content: center;
+  gap: 120px; /* exact spacing */
+  flex-wrap: wrap;
+}
+
+/* ITEM */
+.doc-item {
+  text-align: center;
+}
+
+/* TITLE (HKM INDIA ...) */
+.doc-item h5 {
+  font-family: "Quicksand", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+
+/* BUTTON */
+.doc-btn {
+  display: inline-block;
+  background: #5f6b77; /* exact grey button */
+  color: #fff;
+  font-size: 13px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+/* BUTTON HOVER */
+.doc-btn:hover {
+  background: #4a5560;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .documents-grid {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
+
+.document-header-overlay {
+  text-align: center;
+  color: white;
+}
+
+.document-header-overlay h1 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.document-header-overlay p {
+  margin-top: 10px;
+  font-size: 14px;
+}

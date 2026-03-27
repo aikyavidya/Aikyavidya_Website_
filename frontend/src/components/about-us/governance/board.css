@@ -1,0 +1,122 @@
+/* PAGE */
+.trustees-page {
+  font-family: "Poppins", sans-serif;
+  background: #f9f9f9;
+}
+
+/* HERO */
+.trustees-header {
+  height: 400px;
+  background-size: cover;
+  background-position: bottom center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.trustees-header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.trustees-overlay {
+  position: relative;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.trustees-overlay h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.trustees-overlay p {
+  margin-top: 10px;
+}
+
+.trustees-overlay .active {
+  color: #ff7a18;
+}
+
+/* SECTION */
+.trustees-section {
+  padding: 80px 20px;
+}
+
+.trustees-container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* TITLE */
+.trustees-title {
+  text-align: center;
+  font-size: 32px;
+  color: #ff7a18;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.trustees-title::after {
+  content: "";
+  width: 120px;
+  height: 2px;
+  background: #ccc;
+  display: block;
+  margin: 10px auto;
+}
+
+/* CARD */
+.trustee-card {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 40px;
+  align-items: flex-start;
+
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+/* IMAGE */
+.trustee-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* CONTENT */
+.trustee-content h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.trustee-content p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.7;
+  white-space: pre-line;
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .trustee-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}

@@ -1,0 +1,134 @@
+/* PAGE */
+.checkout-page {
+  font-family: "Poppins", sans-serif;
+  background: #f4f4f4;
+  padding: 60px 20px;
+  position: relative;
+}
+
+/* TITLE */
+.checkout-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #2c7a4b;
+}
+
+/* CONTAINER */
+.checkout-container {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+/* LEFT */
+.checkout-left {
+  flex: 1;
+  background: #f8f8f8;
+  padding: 40px;
+}
+
+.checkout-left h2 {
+  color: #ff5a2c;
+  margin-bottom: 20px;
+}
+
+.checkout-left .label {
+  margin-top: 20px;
+  color: #666;
+}
+
+.checkout-left h3 {
+  margin-top: 5px;
+}
+
+.amount {
+  color: #ff5a2c;
+  margin-top: 5px;
+}
+
+/* RIGHT */
+.checkout-right {
+  flex: 1;
+  background: #fff;
+  padding: 40px;
+}
+
+.checkout-right label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+.checkout-right input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* CHECKBOX */
+.checkbox {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* TEXT */
+.secure {
+  margin-top: 20px;
+  color: #777;
+  font-size: 14px;
+}
+
+/* BUTTON */
+.pay-btn {
+  margin-top: 20px;
+  width: 100%;
+  background: linear-gradient(90deg, #ff5a2c, #ff8a00);
+  border: none;
+  padding: 12px;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pay-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .checkout-container {
+    flex-direction: column;
+  }
+}
+
+/* BACK BUTTON */
+.back-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+
+  background: rgb(59, 59, 59);
+  border: 1px solid #ddd;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+
+  font-size: 16px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  background: #ff5a2c;
+  color: white;
+}

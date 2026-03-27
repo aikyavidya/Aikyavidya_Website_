@@ -1,0 +1,155 @@
+.footer {
+  background: linear-gradient(180deg, #1f2128, #181a20);
+  color: #e5e5e5;
+  padding: 80px 0 20px;
+}
+
+/* CONTAINER */
+.footer-container {
+  max-width: 1400px;
+  margin: auto;
+  padding: 0 40px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+}
+
+/* COLUMN */
+.footer-col h4 {
+  font-size: 16px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.footer-col p {
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+/* LOGO */
+.logo {
+  width: 160px;
+  margin-bottom: 20px;
+}
+
+/* BUTTON */
+.btn {
+  display: flex;              /* 🔥 change from inline-block */
+  align-items: center;        /* vertical center */
+  justify-content: center;    /* horizontal center */
+
+  margin-top: 15px;
+  background: linear-gradient(135deg, #ff5a2c, #ff7a18);
+  padding: 12px 26px;
+  border-radius: 30px;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+
+  text-align: center;         /* fallback */
+}
+
+.footer-col a {
+  color: #ffffff;
+}
+/* LINKS */
+.footer-col a {
+  display: block;
+  margin-bottom: 10px;
+  color: #f0f0f0;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.footer-col a:hover {
+  color: #ff5a2c;
+}
+
+/* CONTACT */
+.item-a{
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.item-a a{
+  color: #ffffff;
+}
+
+.item svg {
+  color: #ff5a2c;
+  margin-top: 3px;
+}
+
+/* SOCIAL */
+.socials {
+  margin-top: 15px;
+}
+
+.socials a {
+  display: inline-flex;
+  width: 36px;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  border: 0.5px solid #888686;
+  border-radius: 50%;
+  margin-right: 10px;
+  color: #ffffff;
+}
+
+.socials a:hover {
+  background: #ff5a2c;
+}
+
+/* BOTTOM */
+.footer-bottom {
+  border-top: 1px solid #2a2c33;
+  margin-top: 50px;
+  padding: 15px 40px;
+  
+
+  max-width: 1400px;
+  margin-inline: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 16px;
+  color: #888;
+}
+
+.footer-bottom  p {
+  color: #ffffff;
+}
+
+
+.links a {
+  margin: 0 8px;
+  color: #ffffff;
+}
+
+.links span {
+  color: #555;
+}
+
+.links a:hover {
+  color: white;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}

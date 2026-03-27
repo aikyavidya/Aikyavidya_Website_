@@ -1,0 +1,114 @@
+.testimonials {
+  background: url("https://aikyavidya.org/new/wp-content/uploads/2020/08/icon-box_bg.jpg");
+  padding: 100px 0;
+}
+
+/* CONTAINER */
+.test-container {
+  max-width: 1400px;
+  margin: auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* LEFT */
+.left .subtitle {
+  color: orange;
+  letter-spacing: 2px;
+  font-size: 13px;
+}
+
+.left h2 {
+  font-size: 32px;
+  margin: 15px 0;
+}
+
+.left p {
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.btn {
+  border: 1px solid orange;
+  padding: 10px 20px;
+  border-radius: 30px;
+  display: inline-block;
+  color: black;
+}
+
+/* RIGHT CARD */
+.card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+/* QUOTE */
+.quote {
+  font-size: 40px;
+  color: orange;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+}
+
+/* TEXT */
+.card p {
+  margin-top: 30px;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* USER */
+.user {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.user img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user h4 {
+  margin: 0;
+}
+
+.user span {
+  font-size: 12px;
+  color: orange;
+  text-transform: uppercase;
+}
+
+/* CONTROLS */
+.controls {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  color: #ffffff;
+}
+
+.controls button {
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  border: none;
+  background: rgb(48, 48, 48);
+  cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .test-container {
+    grid-template-columns: 1fr;
+  }
+}

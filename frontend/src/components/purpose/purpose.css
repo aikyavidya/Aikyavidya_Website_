@@ -1,0 +1,113 @@
+.purpose-section {
+  display: flex;
+  height: 500px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* LEFT */
+.purpose-left {
+  width: 40%;
+  background: #f3742b;
+  color: white;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* TABS */
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.tabs button {
+  background: rgba(255,255,255,0.2);
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.tabs button.active {
+  background: white;
+  color: #f3742b;
+}
+
+/* CONTENT */
+.tab-content p {
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* BUTTON */
+.donate-btn {
+  display: inline-block;
+  background: white;
+  color: #f3742b;
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* RIGHT */
+.purpose-right {
+  width: 60%;
+  position: relative;
+  background: url("../../public/images/purpose_thumbnail.webp") center/cover no-repeat ;
+}
+
+/* DARK OVERLAY */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+}
+
+/* VIDEO BUTTON */
+.video-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: white;
+  font-weight: 600;
+}
+
+.play-btn {
+  width: 60px;
+  height: 60px;
+  background: #f3742b;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .purpose-section {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .purpose-left,
+  .purpose-right {
+    width: 100%;
+  }
+
+  .purpose-right {
+    height: 300px;
+  }
+}

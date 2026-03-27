@@ -1,0 +1,107 @@
+.about {
+  background: url("https://aikyavidya.org/new/wp-content/uploads/2020/08/bg.jpg");
+  padding: 80px 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* CONTAINER */
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  width: 100%;
+}
+
+/* LEFT CARD */
+.about-left {
+  flex: 1;
+  background: linear-gradient(135deg, #ff5a2c, #ff7a18);
+  color: white;
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 320px;
+}
+
+.about-left h2 {
+  font-size: 22px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* BUTTON */
+.donate-btn {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 30px;
+  border: 2px solid white;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.donate-btn:hover {
+  background: white;
+  color: #ff5a2c;
+}
+
+/* RIGHT */
+.about-right {
+  flex: 2;
+}
+
+.about-right p {
+  font-size: 14px;
+  line-height: 1.9;
+  color: #555;
+}
+
+/* FEATURES */
+.features {
+  display: flex;
+  gap: 50px;
+  margin-top: 30px;
+}
+
+.feature {
+  text-align: center;
+}
+
+/* ICON CIRCLE */
+.icon {
+  width: 60px;
+  height: 60px;
+  background: #ff5a2c;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+  margin: auto;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+.feature p {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* HOVER EFFECT */
+.feature:hover .icon {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .features {
+    justify-content: center;
+  }
+}

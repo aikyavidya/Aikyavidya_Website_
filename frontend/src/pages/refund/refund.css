@@ -1,0 +1,72 @@
+/* PAGE */
+.refund-page {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+/* HERO */
+.refund-header {
+  height: 396px;
+  background-size: cover;
+  background-position: bottom center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.refund-header-overlay {
+  text-align: center;
+  color: white;
+}
+
+.refund-header-overlay h1 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.refund-header-overlay p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* CONTENT */
+.refund-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 70px 20px;
+  line-height: 1.8;
+  color: #444;
+}
+
+/* MAIN TITLE */
+.refund-container h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #232323;
+}
+
+/* SUBHEADINGS */
+.refund-container h3 {
+  margin-top: 25px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #232323;
+}
+
+/* TEXT */
+.refund-container p {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #616161;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .refund-header-overlay h1 {
+    font-size: 34px;
+  }
+
+  .refund-container {
+    padding: 50px 15px;
+  }
+}

@@ -1,0 +1,140 @@
+/* ROOT */
+.mgmt-page {
+  font-family: "Poppins", sans-serif;
+}
+
+/* HERO */
+.mgmt-header {
+  height: 400px;
+  background-size: cover;
+  background-position: bottom center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.mgmt-header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.mgmt-overlay {
+  color: white;
+  text-align: center;
+  z-index: 2;
+}
+
+.mgmt-overlay h1 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.mgmt-overlay .active {
+  color: #ff7a18;
+}
+
+/* CONTAINER */
+.mgmt-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 80px 20px;
+}
+
+/* ROW */
+.mgmt-row {
+  display: flex;
+  gap: 60px;
+  margin-bottom: 80px;
+
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeUp 1s forwards;
+}
+
+.mgmt-row.reverse {
+  flex-direction: row-reverse;
+}
+
+/* CARD */
+.mgmt-card {
+  flex: 1;
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+  transition: 0.4s;
+}
+
+.mgmt-card:hover {
+  transform: translateY(-10px);
+}
+
+.mgmt-card img {
+  width: 140px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.mgmt-card h4 {
+  margin-bottom: 10px;
+}
+
+.mgmt-card p {
+  color: #555;
+  font-size: 14px;
+}
+
+/* GRID */
+.mgmt-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 25px;
+}
+
+/* MINI CARDS */
+.mgmt-mini {
+  background: #fff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.mgmt-mini:hover {
+  transform: translateY(-8px);
+}
+
+.mgmt-mini img {
+  width: 90px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.mgmt-mini h5 {
+  margin-bottom: 5px;
+}
+
+.mgmt-mini span {
+  font-size: 12px;
+  color: #777;
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .mgmt-row {
+    flex-direction: column;
+  }
+}

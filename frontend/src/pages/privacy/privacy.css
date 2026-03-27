@@ -1,0 +1,72 @@
+/* PAGE */
+.privacy-page {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+/* HERO */
+.privacy-header {
+  height: 396px;
+  background-size: cover;
+  background-position: bottom center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.privacy-header-overlay {
+  text-align: center;
+  color: white;
+}
+
+.privacy-header-overlay h1 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.privacy-header-overlay p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* CONTENT */
+.privacy-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 70px 20px;
+  line-height: 1.8;
+  color: #444;
+}
+
+/* MAIN TITLE */
+.privacy-container h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #232323;
+}
+
+/* SUB HEADINGS */
+.privacy-container h3 {
+  margin-top: 25px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #232323;
+}
+
+/* PARAGRAPHS */
+.privacy-container p {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #616161;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .privacy-header-overlay h1 {
+    font-size: 34px;
+  }
+
+  .privacy-container {
+    padding: 50px 15px;
+  }
+}

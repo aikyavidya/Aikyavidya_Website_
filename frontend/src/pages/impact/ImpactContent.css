@@ -1,0 +1,87 @@
+/* SECTION */
+.impact-section {
+  background: #f5f2ed;
+  
+  /* 🔥 TEXTURE (VERY IMPORTANT) */
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+
+  padding: 70px 20px;
+}
+
+/* TITLE */
+.impact-title {
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #f47c20;
+  margin-bottom: 50px;
+}
+
+/* ROW */
+.impact-row {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 100px; /* 🔥 spacing between text & counters */
+}
+
+/* LEFT TEXT */
+.impact-col.text {
+  width: 45%;
+  font-size: 14px;
+  color: #7a7a7a; /* 🔥 lighter grey */
+  line-height: 2; /* more breathing space */
+}
+
+/* COUNTERS WRAPPER */
+.impact-col.counter {
+  width: 25%;
+  text-align: center;
+}
+
+/* NUMBERS */
+.impact-col.counter h1 {
+  font-size: 64px; /* 🔥 bigger like original */
+  color: #f74f22;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* LABEL */
+.impact-col.counter span {
+  display: block;
+  margin-top: 10px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #f47c20;
+}
+
+/* IMAGE */
+.impact-image {
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+}
+
+.impact-image img {
+  width: 80%;
+  max-width: 800px;
+}
+
+.impact-header-overlay {
+  text-align: center;
+  color: white;
+}
+
+.impact-header-overlay h1 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.impact-header-overlay p {
+  margin-top: 10px;
+  font-size: 14px;
+}
