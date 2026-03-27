@@ -49,7 +49,7 @@ const DocumentsContent = () => {
         <div className="doc-item">
           <h5>HKM INDIA 80G</h5>
           <a
-            href="/documents/HKM-I-80G-NEW.pdf.pdf"
+            href="/documents/HKM-I-80G-NEW.pdf"
             target="_blank"
             rel="noreferrer"
             className="doc-btn"
