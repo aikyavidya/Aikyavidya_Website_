@@ -293,7 +293,25 @@ margin-top: 20px;
   .navbar {
     position: relative;
   }
+ .navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+     gap: 10px;
+  }
 
+  .donate-btn {
+    margin-left: 0;
+    padding: 8px 14px;
+    font-size: 12px;
+     white-space: nowrap;
+  }
+
+  .logo-box img {
+    width: 140px;
+    height: auto;
+    margin-top: 10px;
+  }
   /* Hamburger */
   .hamburger {
     display: block;
