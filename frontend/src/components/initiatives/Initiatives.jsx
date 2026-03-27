@@ -5,19 +5,19 @@ export default function Initiatives() {
     {
       title: "Healthy Food",
       desc: "In a heartwarming initiative aimed at alleviating hunger and nurturing the potential of underprivileged children, AIKYA Vidya distributes nutritious meals.",
-      img: "../../public/images/healthy_food.webp",
+      img: "/images/healthy_food.webp",
       link: "/food",
     },
     {
       title: "Education",
       desc: "Post-school education sessions help children improve academically and achieve complete self-development.",
-      img: "../../public/images/education.webp",
+      img: "/images/education.webp",
       link: "/education",
     },
     {
       title: "Values",
       desc: "Empowering children with discipline, confidence and strong values to build better citizens.",
-      img: "../../public/images/values.webp",
+      img: "/images/values.webp",
       link: "/values",
     },
   ];

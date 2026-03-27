@@ -11,7 +11,7 @@ const ContactContent = () => {
         className="contact-header"
         style={{
           backgroundImage:
-            "url(https://aikyavidya.org/new/wp-content/uploads/2023/12/bredcrumb2.jpg)",
+            "url(/images/bg/bredcrumb2.jpg)",
         }}
       >
         <div className="header-content">

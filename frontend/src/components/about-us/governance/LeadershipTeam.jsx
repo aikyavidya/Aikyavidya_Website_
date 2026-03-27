@@ -9,7 +9,7 @@ function LeadershipTeam() {
         className="leader-header"
         style={{
           backgroundImage:
-            "url(https://aikyavidya.org/new/wp-content/uploads/2023/12/bredcrumb2.jpg)",
+            "url(/images/bg/bredcrumb2.jpg)",
         }}
       >
         <div className="leader-overlay">
@@ -27,7 +27,7 @@ function LeadershipTeam() {
           {/* 🔹 MEMBER 1 */}
           <div className="leader-row">
             <div className="leader-left">
-              <img src="public\images\donation\p1.jpg" alt="" />
+              <img src="/images/donation/p1.jpg" alt="" />
               <h3>HG Satya Gaura Chandra Dasa</h3>
               <h6>President, Hare Krishna Movement - Hyderabad</h6>
               <h6>Regional President, Akshaya Patra Foundation</h6>
@@ -48,7 +48,7 @@ function LeadershipTeam() {
           {/* 🔹 MEMBER 2 */}
           <div className="leader-row reverse">
             <div className="leader-left">
-              <img src="public\images\donation\sahadeva-sakha.jpg" alt="" />
+              <img src="/images/donation/sahadeva-sakha.jpg" alt="" />
               <h3>HG Sahadeva Sakha Dasa</h3>
               <h6>Director, AIKYA VIDYA</h6>
             </div>
@@ -68,7 +68,7 @@ function LeadershipTeam() {
           <div className="leader-grid">
 
             <div className="leader-card">
-              <img src="public\images\donation\p3.png" />
+              <img src="/images/donation/p3.png" />
               <h4>Chaitanya Krishna Dasa</h4>
               <p>Chief Education Officer</p>
               <p>Chaitanya Krishna Dasa is currently serving as the CEdO of AIKYA Vidya. He Completed his B.Tech Mechanical Engineering from JNTU, Kakinada and worked in PSUs, Railways, and India Post (Accounting).  
@@ -79,14 +79,14 @@ He is also one of the largest social media influencers in India spreading the kn
             </div>
 
             <div className="leader-card">
-              <img src="public\images\donation\p4.png" />
+              <img src="/images/donation/p4.png" />
               <h4>Tejasvi Chaitanya Dasa</h4>
               <p>Chief Operations Officer</p>
               <p>Tejasvi is currently serving as the COO of AIKYA Vidya and GITA Values Programme. His passion lies in inculcating Bharatiya values based on Bhagavadgita to metropolitan children who are otherwise overloaded with information and distracted by modern gadgets and social media. He is a Qualified Company Secretary. He has over 5 years’ experience in Corporate Law regulatory matters. </p>
             </div>
 
             <div className="leader-card">
-              <img src="public\images\donation\p5.png" />
+              <img src="/images/donation/p5.png" />
               <h4>Raghavendra</h4>
               <p>Chief Sustainability Officer</p>
               <p>Raghavendra is currently serving as the CSCO of AIKYA VIDYA. He is an Ex-Political and Policy Consultant and Ex-Civil Services mentor. In a span of his 10 years career in development sector he contributed to many policy reforms in India in the spheres of education and healthcare.

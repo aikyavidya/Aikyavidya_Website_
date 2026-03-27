@@ -9,7 +9,7 @@ function ManagementTeam() {
         className="mgmt-header"
         style={{
           backgroundImage:
-            "url(https://aikyavidya.org/new/wp-content/uploads/2023/12/bredcrumb2.jpg)",
+            "url(/images/bg/bredcrumb2.jpg)",
         }}
       >
         <div className="mgmt-overlay">
@@ -36,7 +36,7 @@ function ManagementTeam() {
             </div>
 
             <div className="mgmt-card">
-              <img src="public\images\donation\m2.png" />
+              <img src="/images/donation/m2.png" />
               <h4>Kumaraswamy</h4>
               <p>
                 Senior Manager Youth Outreach. MA in Sanskrit and international kickboxing medalist.
@@ -48,7 +48,7 @@ function ManagementTeam() {
           {/* 🔹 ROW 2 */}
           <div className="mgmt-row reverse">
             <div className="mgmt-card">
-              <img src="public\images\donation\m3.png" />
+              <img src="/images/donation/m3.png" />
               <h4>Brahmanandam</h4>
               <p>
                 Senior Manager Village Outreach with NGO experience.
@@ -57,7 +57,7 @@ function ManagementTeam() {
             </div>
 
             <div className="mgmt-card">
-              <img src="public\images\donation\m4.png" />
+              <img src="/images/donation/m4.png" />
               <h4>G. Karthik</h4>
               <p>
                 Manager Outreach. Mechanical Engineer with corporate experience.
@@ -70,13 +70,13 @@ function ManagementTeam() {
           <div className="mgmt-grid">
 
             <div className="mgmt-mini">
-              <img src="public\images\donation\m5.png" />
+              <img src="/images/donation/m5.png" />
               <h5>Mani Teja</h5>
               <span>Executive Assistant Donor Care</span>
             </div>
 
             <div className="mgmt-mini">
-              <img src="public\images\donation\m6.png" />
+              <img src="/images/donation/m6.png" />
               <h5>Sai Pawan</h5>
               <span>Executive Assistant Operations</span>
             </div>

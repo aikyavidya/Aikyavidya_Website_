@@ -60,7 +60,7 @@
 .purpose-right {
   width: 60%;
   position: relative;
-  background: url("../../public/images/purpose_thumbnail.webp") center/cover no-repeat ;
+  background: url("/images/purpose_thumbnail.webp") center/cover no-repeat ;
 }
 
 /* DARK OVERLAY */

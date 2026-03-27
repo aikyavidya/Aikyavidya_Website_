@@ -125,7 +125,7 @@ const vidya = [
         className="donation-header"
         style={{
           backgroundImage:
-            "url(https://aikyavidya.org/new/wp-content/uploads/2023/12/bredcrumb2.jpg)",
+            "url(/images/bg/bredcrumb2.jpg)",
         }}
       >
         <div className="donation-overlay">
@@ -265,7 +265,7 @@ const vidya = [
 
         <img
           className="upi-apps"
-          src="public/images/donation/upi_apps_logo.png"
+          src="/images/donation/upi_apps_logo.png"
           alt="upi apps"
         />
 
@@ -280,7 +280,7 @@ const vidya = [
 
         <img
           className="upi-qr"
-          src="public/images/upi_qr.webp"
+          src="/images/upi_qr.webp"
           alt="QR Code"
         />
 
@@ -296,10 +296,10 @@ const vidya = [
   <div className="gallery-container">
 
     <div className="gallery-grid">
-      <img src="public\images\donation\a1.webp" alt="" />
-      <img src="public\images\donation\a2.webp" alt="" />
-      <img src="public\images\donation\a3.webp" alt="" />
-      <img src="public\images\donation\a4.webp" alt="" />
+      <img src="/images/donation/a1.webp" alt="" />
+      <img src="/images/donation/a2.webp" alt="" />
+      <img src="/images/donation/a3.webp" alt="" />
+      <img src="/images/donation/a4.webp" alt="" />
     </div>
 
   </div>

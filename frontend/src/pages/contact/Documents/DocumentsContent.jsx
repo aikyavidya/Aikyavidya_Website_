@@ -10,7 +10,7 @@ const DocumentsContent = () => {
         className="document-header"
         style={{
           backgroundImage:
-            "url(https://aikyavidya.org/new/wp-content/uploads/2023/12/bredcrumb2.jpg)",
+            "url(/images/bg/bredcrumb2.jpg)",
         }}
       >
         <div className="header-content">
@@ -36,7 +36,7 @@ const DocumentsContent = () => {
         <div className="doc-item">
           <h5>HKM INDIA 12A</h5>
           <a
-            href="\documents\Annex-1-HKMI-12A-NEW.pdf"
+            href="/documents/Annex-1-HKMI-12A-NEW.pdf"
             target="_blank"
             rel="noreferrer"
             className="doc-btn"
@@ -49,7 +49,7 @@ const DocumentsContent = () => {
         <div className="doc-item">
           <h5>HKM INDIA 80G</h5>
           <a
-            href="\documents\HKM-I-80G-NEW.pdf.pdf"
+            href="/documents/HKM-I-80G-NEW.pdf.pdf"
             target="_blank"
             rel="noreferrer"
             className="doc-btn"
@@ -62,7 +62,7 @@ const DocumentsContent = () => {
         <div className="doc-item">
           <h5>HKM INDIA CSR Reg</h5>
           <a
-            href="\documents\CSR-Regn-MCA.pdf"
+            href="/documents/CSR-Regn-MCA.pdf"
             target="_blank"
             rel="noreferrer"
             className="doc-btn"

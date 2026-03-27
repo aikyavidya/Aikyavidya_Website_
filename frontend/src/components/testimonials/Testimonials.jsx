@@ -6,13 +6,13 @@ const data = [
     text: `I am from Ahobilam Village. my father is a daily labour, my mother is a house help. I am studying 9th standard in Girijana Ashrama Paatashala. They help me in completing my homework.`,
     name: "Arun Nayak",
     role: "Student at AIKYA",
-    img: "/public/images/st1.webp",
+    img: "/images/st1.webp",
   },
   {
     text: `After joining AIKYA Vidya, I became more confident and can now complete my homework independently. Yoga and meditation helped me a lot.`,
     name: "Pravalika",
     role: "Student at AIKYA",
-    img: "/public/images/st2.webp",
+    img: "/images/st2.webp",
   },
 ];
 

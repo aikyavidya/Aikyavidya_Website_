@@ -31,7 +31,7 @@ export default function Footer() {
             especially in rural areas.
           </p>
 
-          <a  href="/donations" className="btn">
+          <a  href="/donation" className="btn">
             DONATE NOW ❤
           </a>
         </div>
