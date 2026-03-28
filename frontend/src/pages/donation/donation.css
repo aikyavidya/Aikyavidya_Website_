@@ -308,3 +308,9 @@
 .donation-note {
   box-shadow: inset 0 0 80px rgba(255, 90, 44, 0.1);
 }
+
+@media (max-width: 768px) {
+  .donation-overlay h1 {
+    font-size: 32px;
+  }
+}

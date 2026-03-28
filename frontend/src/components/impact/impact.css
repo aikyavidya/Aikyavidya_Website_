@@ -17,7 +17,9 @@
 .image-stack {
   position: relative;
   width: 420px;
-  height: 420px;
+  max-width: 100%;
+  aspect-ratio: 1;
+  height: auto;
 }
 
 .img-back {

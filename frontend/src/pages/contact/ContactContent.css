@@ -199,3 +199,9 @@
   margin-top: 10px;
   font-size: 14px;
 }
+
+@media (max-width: 768px) {
+  .contact-header-overlay h1 {
+    font-size: 32px;
+  }
+}

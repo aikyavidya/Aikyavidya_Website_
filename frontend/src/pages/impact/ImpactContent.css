@@ -85,3 +85,35 @@
   margin-top: 10px;
   font-size: 14px;
 }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .impact-row {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .impact-col.text {
+    width: 100%;
+  }
+
+  .impact-col.counter {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .impact-header-overlay h1 {
+    font-size: 32px;
+  }
+
+  .impact-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .impact-col.counter h1 {
+    font-size: 48px;
+  }
+}
