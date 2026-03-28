@@ -26,7 +26,7 @@ import Checkout from "./pages/donation/Checkout";
 import LeadershipTeam from "./components/about-us/governance/LeadershipTeam"
 import ManagementTeam from "./components/about-us/governance/ManagementTeam"
 import BoardOfTrustees from "./components/about-us/governance/BoardOfTrustees"
-
+import ScrollToTop from "./components/ScrollToTop";
 
 
 function App() {
@@ -64,6 +64,7 @@ function App() {
 
       </Routes>
       <ScrollToTopButton />
+      <ScrollToTop />
       {/* FOOTER ALWAYS FIXED */}
       <Footer />
 
