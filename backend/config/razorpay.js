@@ -1,4 +1,6 @@
 import Razorpay from "razorpay";
+import dotenv from "dotenv";
+dotenv.config();
 
 let razorpayInstance = null;
 
@@ -9,6 +11,7 @@ if (process.env.RAZORPAY_KEY_ID && process.env.RAZORPAY_KEY_SECRET) {
   });
 } else {
   console.warn("⚠️ Razorpay not configured (missing keys)");
+  
 }
 
 export { razorpayInstance };

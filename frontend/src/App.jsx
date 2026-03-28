@@ -27,6 +27,7 @@ import LeadershipTeam from "./components/about-us/governance/LeadershipTeam"
 import ManagementTeam from "./components/about-us/governance/ManagementTeam"
 import BoardOfTrustees from "./components/about-us/governance/BoardOfTrustees"
 import ScrollToTop from "./components/ScrollToTop";
+import Success from "./pages/donation/Success";
 
 
 function App() {
@@ -61,6 +62,8 @@ function App() {
         <Route path="/leadership" element={<LeadershipTeam />} />
         <Route path="/management" element={<ManagementTeam />} />
         <Route path="/board" element={<BoardOfTrustees />} />
+        <Route path="/success" element={<Success />} />
+
 
       </Routes>
       <ScrollToTopButton />
