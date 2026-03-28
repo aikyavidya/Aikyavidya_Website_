@@ -104,12 +104,12 @@ export default function Footer() {
         <div className="footer-col">
           <h4>QUICK LINKS</h4>
 
-          <a href="/food">Initiative – Food</a>
-          <a href="/education">Initiative – Education</a>
-          <a href="values">Initiative – Values</a>
-          <a href="/csr">CSR Partners</a>
-          <a href="/volunteer">Become a Volunteer</a>
-          <a href="/media">Media Presence</a>
+          <Link to="/food">Initiative – Food</Link>
+          <Link to="/education">Initiative – Education</Link>
+          <Link to="/values">Initiative – Values</Link>
+          <Link to="/csr">CSR Partners</Link>
+          <Link to="/volunteer">Become a Volunteer</Link>
+          <Link to="/media">Media Presence</Link>
         </div>
 
         {/* COLUMN 4 */}
