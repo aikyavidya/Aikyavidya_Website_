@@ -15,7 +15,15 @@ import { useState } from "react";
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
+  const [openSubmenu, setOpenSubmenu] = useState(null);
   const navigate = useNavigate();
+
+  const closeMobileMenu = () => {
+    setMenuOpen(false);
+    setOpenDropdown(null);
+    setOpenSubmenu(null);
+  };
+
   return (
     <header className="header" data-aos="fade-down" data-aos-duration="1000">
 
@@ -103,6 +111,7 @@ export default function Header() {
                   to="/" 
                   end 
                   className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
+                  onClick={closeMobileMenu}
                 >
                   Home
                 </NavLink>
@@ -121,36 +130,34 @@ export default function Header() {
 
   <ul className={`dropdown-menu ${openDropdown === "about" ? "show" : ""}`}>
 
-    <NavLink to="/ourInspiration" className={({ isActive }) => isActive ? "dropdown-link active" : "dropdown-link"}>
+    <NavLink to="/ourInspiration" className={({ isActive }) => isActive ? "dropdown-link active" : "dropdown-link"} onClick={closeMobileMenu}>
       Our Inspiration
     </NavLink>
 
-    <NavLink to="/ourTrust" className={({ isActive }) => isActive ? "dropdown-link active" : "dropdown-link"}>
+    <NavLink to="/ourTrust" className={({ isActive }) => isActive ? "dropdown-link active" : "dropdown-link"} onClick={closeMobileMenu}>
       Our Trust
     </NavLink>
 
-    <NavLink to="/associatedTrusts" className={({ isActive }) => isActive ? "dropdown-link active" : "dropdown-link"}>
+    <NavLink to="/associatedTrusts" className={({ isActive }) => isActive ? "dropdown-link active" : "dropdown-link"} onClick={closeMobileMenu}>
       Associated Trusts
     </NavLink>
 
     {/* 🔥 NESTED DROPDOWN */}
     <li
       className="submenu-dropdown"
-      onMouseEnter={() => setOpenDropdown("governance")}
-      onMouseLeave={() => setOpenDropdown(null)}
     >
-      <span className="dropdown-link">
+      <span className="dropdown-link" onClick={(e) => { e.stopPropagation(); setOpenSubmenu(openSubmenu === "governance" ? null : "governance"); }}>
         Governance ▸
       </span>
 
-      <ul className={`submenu ${openDropdown === "governance" ? "show" : ""}`}>
-        <NavLink to="/board" className="dropdown-link">Board of Trustees</NavLink>
-        <NavLink to="/leadership" className="dropdown-link">Leadership Team</NavLink>
-        <NavLink to="/management" className="dropdown-link">Management Team</NavLink>
+      <ul className={`submenu ${openSubmenu === "governance" ? "show" : ""}`}>
+        <NavLink to="/board" className="dropdown-link" onClick={closeMobileMenu}>Board of Trustees</NavLink>
+        <NavLink to="/leadership" className="dropdown-link" onClick={closeMobileMenu}>Leadership Team</NavLink>
+        <NavLink to="/management" className="dropdown-link" onClick={closeMobileMenu}>Management Team</NavLink>
       </ul>
     </li>
 
-    <NavLink to="/csr" className={({ isActive }) => isActive ? "dropdown-link active" : "dropdown-link"}>
+    <NavLink to="/csr" className={({ isActive }) => isActive ? "dropdown-link active" : "dropdown-link"} onClick={closeMobileMenu}>
       CSR Partners
     </NavLink>
 
@@ -160,9 +167,9 @@ export default function Header() {
              <li className="dropdown">
                  <span className="nav-link" onClick={() => setOpenDropdown(openDropdown === "initiatives" ? null : "initiatives")}>Initiatives <span className="arrow"></span></span>
                  <ul className={`dropdown-menu ${openDropdown === "initiatives" ? "show" : ""}`}>
-                   <NavLink to="/food" className={({ isActive }) => isActive ? "dropdown-link active" : "dropdown-link"}> Food</NavLink>
-                   <NavLink to="/education" className={({ isActive }) => isActive ? "dropdown-link active" : "dropdown-link"}> Education</NavLink>
-                   <NavLink to="/values" className={({ isActive }) => isActive ? "dropdown-link active" : "dropdown-link"}> Values</NavLink>
+                   <NavLink to="/food" className={({ isActive }) => isActive ? "dropdown-link active" : "dropdown-link"} onClick={closeMobileMenu}> Food</NavLink>
+                   <NavLink to="/education" className={({ isActive }) => isActive ? "dropdown-link active" : "dropdown-link"} onClick={closeMobileMenu}> Education</NavLink>
+                   <NavLink to="/values" className={({ isActive }) => isActive ? "dropdown-link active" : "dropdown-link"} onClick={closeMobileMenu}> Values</NavLink>
                  </ul>
                </li>
 
@@ -170,6 +177,7 @@ export default function Header() {
                 <NavLink 
                   to="/impact" 
                   className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
+                  onClick={closeMobileMenu}
                 >
                   Our Impact
                 </NavLink>
@@ -179,6 +187,7 @@ export default function Header() {
                 <NavLink 
                   to="/media" 
                   className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
+                  onClick={closeMobileMenu}
                 >
                   Media
                 </NavLink>
@@ -188,6 +197,7 @@ export default function Header() {
                 <NavLink 
                   to="/volunteer" 
                   className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
+                  onClick={closeMobileMenu}
                 >
                   Become a Volunteer
                 </NavLink>
@@ -204,6 +214,7 @@ export default function Header() {
                     <NavLink 
                       to="/photos" 
                       className={({ isActive }) => isActive ? "dropdown-link active" : "dropdown-link"}
+                      onClick={closeMobileMenu}
                     >
                       Photo Gallery
                     </NavLink>
@@ -213,6 +224,7 @@ export default function Header() {
       <NavLink 
         to="/videos" 
         className={({ isActive }) => isActive ? "dropdown-link active" : "dropdown-link"}
+        onClick={closeMobileMenu}
       >
         Video Gallery
       </NavLink>
@@ -222,22 +234,29 @@ export default function Header() {
 
 
 
-              <li className="nav-item dropdown">
+              <li className="dropdown">
   
-  {/* CLICKABLE CONTACT */}
-  <NavLink 
-    to="/contact" 
-    className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} onClick={() => setOpenDropdown(openDropdown === "contact" ? null : "contact")}
+  <span 
+    className="nav-link" onClick={() => setOpenDropdown(openDropdown === "contact" ? null : "contact")}
   >
     Contact <span className="arrow"></span>
-  </NavLink>
+  </span>
 
-  {/* DROPDOWN (ONLY ONE ITEM) */}
   <ul className={`dropdown-menu ${openDropdown === "contact" ? "show" : ""}`}>
+    <li>
+      <NavLink 
+        to="/contact" 
+        className="dropdown-link"
+        onClick={closeMobileMenu}
+      >
+        Contact Us
+      </NavLink>
+    </li>
     <li>
       <NavLink 
         to="/documents" 
         className="dropdown-link"
+        onClick={closeMobileMenu}
       >
         Documents & Downloads
       </NavLink>

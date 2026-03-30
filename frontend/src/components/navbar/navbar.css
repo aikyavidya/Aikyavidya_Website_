@@ -388,6 +388,24 @@ margin-top: 20px;
     display: block;
   }
 
+  /* 🔥 SUBMENU FIX FOR MOBILE */
+  .submenu-dropdown .submenu {
+    position: static !important;
+    left: 0 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    box-shadow: none !important;
+    display: none !important;
+    padding-left: 15px;
+    padding-top: 10px;
+  }
+  .submenu-dropdown .submenu.show {
+    display: flex !important;
+    flex-direction: column;
+    gap: 10px;
+  }
+
   /* REMOVE HOVER EFFECT (IMPORTANT) */
  .dropdown:hover .dropdown-menu {
   opacity: 1;
