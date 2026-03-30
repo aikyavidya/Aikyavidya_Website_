@@ -6,6 +6,12 @@ body {
   font-family: 'Nunito Sans', sans-serif;
 }
 
+/* 🔥 HEADER STACK FIX: Keeps dropdowns above hero video and AOS sections */
+.header {
+  position: relative;
+  z-index: 999999 !important;
+}
+
 /* Container */
 .container {
   max-width: 1200px;
@@ -237,6 +243,16 @@ margin-top: 20px;
 /* EACH ITEM FULL WIDTH */
 .dropdown-menu li {
   width: 100%;
+}
+
+/* 🔥 HOVER BRIDGE: Prevents dropdown from disappearing when mouse crosses the gap */
+.dropdown-menu::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 0;
+  width: 100%;
+  height: 30px;
 }
 
 /* SHOW DROPDOWN */
@@ -481,6 +497,16 @@ margin-top: 20px;
   visibility: hidden;
   transform: translateX(10px);
   transition: 0.3s;
+}
+
+/* 🔥 SUBMENU HOVER BRIDGE: Prevents submenu disappearing on gap crossing */
+.submenu-dropdown .submenu::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -20px;
+  width: 20px;
+  height: 100%;
 }
 
 /* show submenu */

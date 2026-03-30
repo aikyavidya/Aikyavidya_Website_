@@ -19,7 +19,7 @@ function CSRPartners() {
       </section>
 
       {/* CONTENT */}
-      <section className="csr-container">
+      <section className="csr-container" data-aos="fade-up">
 
         <h2 className="csr-title">Our CSR Partners</h2>
 
@@ -31,7 +31,7 @@ function CSRPartners() {
         </p>
 
         {/* LOGOS */}
-        <div className="csr-logos">
+        <div className="csr-logos" data-aos="zoom-in">
           <img
             src="/images/csr1.jpg"
             alt="partner1"

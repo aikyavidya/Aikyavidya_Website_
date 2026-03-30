@@ -29,7 +29,7 @@ const ContactContent = () => {
       <h2 className="contact-title">Get i Touch</h2>
 
       {/* CONTACT INFO */}
-      <div className="contact-info">
+      <div className="contact-info" data-aos="fade-right">
 
         {/* LEFT */}
         <div className="info-box">
@@ -65,7 +65,7 @@ const ContactContent = () => {
       </div>
 
       {/* FORM CARD */}
-      <div className="contact-card">
+      <div className="contact-card" data-aos="fade-left">
         <h3>Leave a Reply</h3>
         <p className="subtitle">
           Your email address will not be published. Required fields are marked *

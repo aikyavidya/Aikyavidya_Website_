@@ -21,7 +21,7 @@ export default function Food() {
       <section className="food-section">
 
         {/* BLOCK 1 */}
-        <div className="food-row">
+        <div className="food-row" data-aos="fade-up">
           <div className="food-text">
             <h2>Food Initiatives</h2>
             <p>
@@ -41,7 +41,7 @@ export default function Food() {
         </div>
 
         {/* BLOCK 2 (REVERSED) */}
-        <div className="food-row reverse">
+        <div className="food-row reverse" data-aos="fade-up" data-aos-delay="100">
           <div className="food-image">
             <img src="/images/hf2.png" />
           </div>

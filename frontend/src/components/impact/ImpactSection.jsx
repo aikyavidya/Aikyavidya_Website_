@@ -5,7 +5,7 @@ export default function ImpactSection() {
     <section className="impact">
        <div className="container impact">
       {/* LEFT */}
-      <div className="impact-left">
+      <div className="impact-left" data-aos="fade-right">
 
         <div className="image-stack">
           <img
@@ -29,7 +29,7 @@ export default function ImpactSection() {
       </div>
 
       {/* RIGHT */}
-      <div className="impact-right">
+      <div className="impact-right" data-aos="fade-left">
         <p className="subtitle">OUR IMPACT</p>
 
         <h2>A Resonating Impact</h2>

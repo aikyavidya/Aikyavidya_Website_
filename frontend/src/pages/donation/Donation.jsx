@@ -149,7 +149,7 @@ const vidya = [
 <section className="donation-block annadaan-bg">
   <div className="container donation-list">
     {annadaan.map((item, i) => (
-      <div className="donation-row" key={i}>
+      <div className="donation-row" key={i} data-aos="fade-up" data-aos-delay={(i % 3) * 100}>
         <h3>{item.title}</h3>
 
         <div className="donation-price">{item.amount}</div>
@@ -175,7 +175,7 @@ const vidya = [
 <section className="donation-block sponsor-bg">
   <div className="container donation-list">
     {sponsor.map((item, i) => (
-      <div className="donation-row" key={i}>
+      <div className="donation-row" key={i} data-aos="fade-up" data-aos-delay={(i % 3) * 100}>
         <div>
           <h3>{item.title}</h3>
           <p className="sub">{item.sub}</p>
@@ -204,7 +204,7 @@ const vidya = [
 <section className="donation-block vidya-bg">
   <div className="container donation-list">
     {vidya.map((item, i) => (
-      <div className="donation-row" key={i}>
+      <div className="donation-row" key={i} data-aos="fade-up" data-aos-delay={(i % 3) * 100}>
         <h3>{item.title}</h3>
 
         <div className="donation-price">{item.amount}</div>
@@ -244,7 +244,7 @@ const vidya = [
 
 
       {/* BANK DETAILS */}
-<section className="bank-section">
+<section className="bank-section" data-aos="fade-up">
   <div className="bank-container">
 
     <div className="bank-grid">
@@ -292,7 +292,7 @@ const vidya = [
 </section>
 
       {/* IMAGE GALLERY */}
-<section className="donation-gallery">
+<section className="donation-gallery" data-aos="zoom-in">
   <div className="gallery-container">
 
     <div className="gallery-grid">

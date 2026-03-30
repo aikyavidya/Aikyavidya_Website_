@@ -17,7 +17,7 @@ export default function Header() {
   const [openDropdown, setOpenDropdown] = useState(null);
   const navigate = useNavigate();
   return (
-    <header className="header">
+    <header className="header" data-aos="fade-down" data-aos-duration="1000">
 
       {/* TOP BAR  */}
       <div className="topbar">

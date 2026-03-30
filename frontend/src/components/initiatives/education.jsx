@@ -21,7 +21,7 @@ function Education() {
       </section>
 
       {/* SECTION 1 */}
-      <section className="edu-section">
+      <section className="edu-section" data-aos="fade-up">
         <div className="edu-container edu-grid ">
             <img
             src="/images/bg/bar.png"
@@ -45,7 +45,7 @@ function Education() {
       </section>
 
       {/* SECTION 2 */}
-      <section className="edu-section">
+      <section className="edu-section" data-aos="fade-up">
         <div className="edu-container edu-grid edu-reverse">
           <img
             src="/images/bg/chart.png"
@@ -70,7 +70,7 @@ function Education() {
       </section>
 
       {/* SECTION 3 */}
-      <section className="edu-section">
+      <section className="edu-section" data-aos="fade-up">
         <div className="edu-container">
           <h2>The Way Of Teaching</h2>
           <p>
@@ -87,7 +87,7 @@ function Education() {
       </section>
 
       {/* SECTION 4 */}
-      <section className="edu-section">
+      <section className="edu-section" data-aos="fade-up">
         <div className="edu-container">
           <h2>Special Development Drives</h2>
           <p>

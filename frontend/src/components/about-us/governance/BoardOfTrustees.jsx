@@ -73,6 +73,7 @@ function BoardOfTrustees() {
             <div
               key={index}
               className="trustee-card"
+              data-aos="fade-up" data-aos-delay={index * 100}
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <img src={item.img} alt={item.name} />

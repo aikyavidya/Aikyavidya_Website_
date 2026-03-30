@@ -55,7 +55,7 @@ const ImpactContent = () => {
       </section>
 
 
-    <section className="impact-section">
+    <section className="impact-section" data-aos="fade-up">
 
 
       {/* TITLE */}
@@ -95,7 +95,7 @@ const ImpactContent = () => {
       </div>
 
       {/* IMAGE */}
-      <div className="impact-image">
+      <div className="impact-image" data-aos="zoom-in">
         <img
           src="images/bg/ak2546.jpg"
           alt="impact"

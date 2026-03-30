@@ -19,7 +19,7 @@ function Refund() {
       </section>
 
       {/* CONTENT */}
-      <section className="refund-container">
+      <section className="refund-container" data-aos="fade-up">
 
         <h2>Refund Policy</h2>
 

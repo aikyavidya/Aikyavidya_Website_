@@ -28,6 +28,8 @@ export default function Initiatives() {
         <div
           className="initiative-card"
           key={i}
+          data-aos="fade-up" 
+          data-aos-delay={i * 100}
           style={{ backgroundImage: `url(${item.img})` }}
         >
           <div className="overlay"></div>

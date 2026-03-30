@@ -19,7 +19,7 @@ export default function PurposeSection() {
     <section className="purpose-section">
 
       {/* LEFT SIDE */}
-      <div className="purpose-left">
+      <div className="purpose-left" data-aos="fade-right">
 
         {/* TABS */}
         <div className="tabs">
@@ -57,7 +57,7 @@ export default function PurposeSection() {
       </div>
 
       {/* RIGHT SIDE */}
-      <div className="purpose-right">
+      <div className="purpose-right" data-aos="fade-left">
         <div className="overlay"></div>
 
         <div className="video-box">

@@ -1,4 +1,7 @@
+import React, { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import Header from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
@@ -31,6 +34,15 @@ import Success from "./pages/donation/Success";
 
 
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: false,
+      offset: 100,
+      easing: "ease-in-out",
+    });
+  }, []);
+
   return (
     <BrowserRouter>
 

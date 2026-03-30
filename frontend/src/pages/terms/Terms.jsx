@@ -19,7 +19,7 @@ function Terms() {
       </section>
 
       {/* CONTENT */}
-      <section className="terms-container">
+      <section className="terms-container" data-aos="fade-up">
 
         <h2>Terms & Conditions</h2>
 

@@ -18,7 +18,7 @@ export default function Footer() {
       <div className="footer-container">
 
         {/* COLUMN 1 */}
-        <div className="footer-col">
+        <div className="footer-col" data-aos="fade-up" data-aos-delay="0">
           <img
             src="images/logo-1.png"
             alt="logo"
@@ -40,7 +40,7 @@ export default function Footer() {
         </div>
 
         {/* COLUMN 2 */}
-        <div className="footer-col">
+        <div className="footer-col" data-aos="fade-up" data-aos-delay="100">
           <h4>CONTACTS</h4>
 
           <div className="item-a">
@@ -101,7 +101,7 @@ export default function Footer() {
         </div>
 
         {/* COLUMN 3 */}
-        <div className="footer-col">
+        <div className="footer-col" data-aos="fade-up" data-aos-delay="200">
           <h4>QUICK LINKS</h4>
 
           <Link to="/food">Initiative – Food</Link>
@@ -113,7 +113,7 @@ export default function Footer() {
         </div>
 
         {/* COLUMN 4 */}
-        <div className="footer-col">
+        <div className="footer-col" data-aos="fade-up" data-aos-delay="300">
           <h4>ASSOCIATED TRUSTS</h4>
 
           <a target="_blank"  href="https://www.akshayapatra.org/">Akshaya Patra</a>

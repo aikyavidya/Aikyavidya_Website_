@@ -25,7 +25,7 @@ function ManagementTeam() {
         <div className="mgmt-container">
 
           {/* 🔹 ROW 1 */}
-          <div className="mgmt-row">
+          <div className="mgmt-row" data-aos="fade-up">
             <div className="mgmt-card">
               {/* <img src="https://aikyavidya.org/new/wp-content/uploads/2024/02/15.png" /> */}
               <h4>Rasa Mandal Dasa</h4>
@@ -46,7 +46,7 @@ function ManagementTeam() {
           </div>
 
           {/* 🔹 ROW 2 */}
-          <div className="mgmt-row reverse">
+          <div className="mgmt-row reverse" data-aos="fade-up" data-aos-delay="100">
             <div className="mgmt-card">
               <img src="/images/donation/m3.png" />
               <h4>Brahmanandam</h4>
@@ -69,35 +69,35 @@ function ManagementTeam() {
           {/* 🔹 GRID TEAM */}
           <div className="mgmt-grid">
 
-            <div className="mgmt-mini">
+            <div className="mgmt-mini" data-aos="zoom-in">
               <img src="/images/donation/m5.png" />
               <h5>Mani Teja</h5>
               <span>Executive Assistant Donor Care</span>
             </div>
 
-            <div className="mgmt-mini">
+            <div className="mgmt-mini" data-aos="zoom-in">
               <img src="/images/donation/m6.png" />
               <h5>Sai Pawan</h5>
               <span>Executive Assistant Operations</span>
             </div>
 
-            <div className="mgmt-mini">
+            <div className="mgmt-mini" data-aos="zoom-in">
               {/* <img src="https://aikyavidya.org/new/wp-content/uploads/2024/02/1.png" /> */}
               <h5>Ravi</h5>
               <span>Executive Assistant Youth Outreach</span>
             </div>
 
-            <div className="mgmt-mini">
+            <div className="mgmt-mini" data-aos="zoom-in">
               <h5>Lakshmi</h5>
               <span>Digital Communications Executive</span>
             </div>
 
-            <div className="mgmt-mini">
+            <div className="mgmt-mini" data-aos="zoom-in">
               <h5>Puja Sharma</h5>
               <span>Digital Communications Executive</span>
             </div>
 
-            <div className="mgmt-mini">
+            <div className="mgmt-mini" data-aos="zoom-in">
               <h5>Lakshmi Prasanna</h5>
               <span>Digital Communications Executive</span>
             </div>

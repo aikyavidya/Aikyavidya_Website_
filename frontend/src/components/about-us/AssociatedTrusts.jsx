@@ -48,11 +48,11 @@ function AssociatedTrusts() {
       </section>
 
       {/* TRUST LIST */}
-      <section className="trusts-section">
+      <section className="trusts-section" data-aos="fade-up">
         <div className="container">
 
           {trusts.map((item, index) => (
-            <div className="trust-card" key={index}>
+            <div className="trust-card" key={index} data-aos="fade-up" data-aos-delay={index * 150}>
 
               {/* LOGO */}
               <div className="trust-logo">

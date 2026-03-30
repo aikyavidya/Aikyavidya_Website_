@@ -71,7 +71,7 @@ function OurTrust() {
         <div className={`trust-container trust-grid ${visible ? "show" : ""}`}>
 
           {/* LEFT (VIDEO CARD) */}
-          <div className="trust-left" onClick={() => setOpenVideo(true)}>
+          <div className="trust-left" onClick={() => setOpenVideo(true)} data-aos="fade-right">
             <img
               src="\images\purpose_thumbnail.webp"
               alt=""
@@ -80,7 +80,7 @@ function OurTrust() {
           </div>
 
           {/* RIGHT */}
-          <div className="trust-right">
+          <div className="trust-right" data-aos="fade-left">
             <h2>Empowering Post-school Education</h2>
 
             <p>
@@ -111,7 +111,7 @@ function OurTrust() {
       )}
 
       {/* ACCORDION */}
-      <section className="trust-accordion">
+      <section className="trust-accordion" data-aos="fade-up">
         <div className="trust-container">
 
           {[

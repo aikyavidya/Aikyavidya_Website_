@@ -24,7 +24,7 @@ const VolunteerContent = () => {
       </section>
 
 
-    <div className="volunteer-section">
+    <div className="volunteer-section" data-aos="zoom-in">
       <h2>Volunteer with AIKYA VIDYA</h2>
 
       <p>

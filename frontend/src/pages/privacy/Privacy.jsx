@@ -19,7 +19,7 @@ function Privacy() {
       </section>
 
       {/* CONTENT */}
-      <section className="privacy-container">
+      <section className="privacy-container" data-aos="fade-up">
 
         <h2>Privacy Policy</h2>
 

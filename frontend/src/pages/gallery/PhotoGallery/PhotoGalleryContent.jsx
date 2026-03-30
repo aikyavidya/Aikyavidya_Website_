@@ -84,7 +84,7 @@ useEffect(() => {
       <div className="gallery-container">
         <div className="masonry">
   {images.map((img, index) => (
-    <div className="masonry-item" key={index}>
+    <div className="masonry-item" key={index} data-aos="fade-up" data-aos-delay={(index % 4) * 100}>
       <img src={img} alt="gallery" onClick={() => setCurrentIndex(index)} />
     </div>
   ))}

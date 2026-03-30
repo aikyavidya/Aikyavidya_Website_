@@ -37,7 +37,7 @@ const VideoGalleryContent = () => {
       <div className="video-container">
         <div className="video-grid">
           {videos.map((id, index) => (
-            <div className="video-item" key={index}>
+            <div className="video-item" key={index} data-aos="fade-up" data-aos-delay={(index % 3) * 100}>
               <iframe
                 src={`https://www.youtube.com/embed/${id}`}
                 title={`video-${index}`}

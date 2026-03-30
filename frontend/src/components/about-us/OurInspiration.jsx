@@ -101,7 +101,7 @@ function OurInspiration() {
       <div className={`insp-container insp-grid ${visible ? "show" : ""}`}>
 
         {/* LEFT */}
-        <div className="insp-left">
+        <div className="insp-left" data-aos="fade-right">
           <img
             src="/images/donation/inspiration.png"
             alt="Prabhupada"
@@ -113,7 +113,7 @@ function OurInspiration() {
         </div>
 
         {/* RIGHT */}
-        <div className="insp-right">
+        <div className="insp-right" data-aos="fade-left">
           <p>
             Hare Krishna Movement (HKM) was founded by His Divine Grace
             A.C. Bhaktivedanta Prabhupada.

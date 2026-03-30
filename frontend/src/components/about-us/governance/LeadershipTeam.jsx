@@ -25,7 +25,7 @@ function LeadershipTeam() {
         <div className="leader-container">
 
           {/* 🔹 MEMBER 1 */}
-          <div className="leader-row">
+          <div className="leader-row" data-aos="fade-up">
             <div className="leader-left">
               <img src="/images/donation/p1.jpg" alt="" />
               <h3>HG Satya Gaura Chandra Dasa</h3>
@@ -46,7 +46,7 @@ function LeadershipTeam() {
           </div>
 
           {/* 🔹 MEMBER 2 */}
-          <div className="leader-row reverse">
+          <div className="leader-row reverse" data-aos="fade-up" data-aos-delay="100">
             <div className="leader-left">
               <img src="/images/donation/sahadeva-sakha.jpg" alt="" />
               <h3>HG Sahadeva Sakha Dasa</h3>
@@ -67,7 +67,7 @@ function LeadershipTeam() {
           {/* 🔹 GRID MEMBERS */}
           <div className="leader-grid">
 
-            <div className="leader-card">
+            <div className="leader-card" data-aos="zoom-in">
               <img src="/images/donation/p3.png" />
               <h4>Chaitanya Krishna Dasa</h4>
               <p>Chief Education Officer</p>
@@ -78,14 +78,14 @@ function LeadershipTeam() {
 He is also one of the largest social media influencers in India spreading the knowledge of the Bhagavad Gita through his digital media company JivJago media.   </p>
             </div>
 
-            <div className="leader-card">
+            <div className="leader-card" data-aos="zoom-in">
               <img src="/images/donation/p4.png" />
               <h4>Tejasvi Chaitanya Dasa</h4>
               <p>Chief Operations Officer</p>
               <p>Tejasvi is currently serving as the COO of AIKYA Vidya and GITA Values Programme. His passion lies in inculcating Bharatiya values based on Bhagavadgita to metropolitan children who are otherwise overloaded with information and distracted by modern gadgets and social media. He is a Qualified Company Secretary. He has over 5 years’ experience in Corporate Law regulatory matters. </p>
             </div>
 
-            <div className="leader-card">
+            <div className="leader-card" data-aos="zoom-in">
               <img src="/images/donation/p5.png" />
               <h4>Raghavendra</h4>
               <p>Chief Sustainability Officer</p>

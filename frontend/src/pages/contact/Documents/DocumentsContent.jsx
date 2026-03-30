@@ -33,7 +33,7 @@ const DocumentsContent = () => {
       <div className="documents-grid">
 
         {/* ITEM 1 */}
-        <div className="doc-item">
+        <div className="doc-item" data-aos="zoom-in" data-aos-delay="0">
           <h5>HKM INDIA 12A</h5>
           <a
             href="/documents/Annex-1-HKMI-12A-NEW.pdf"
@@ -46,7 +46,7 @@ const DocumentsContent = () => {
         </div>
 
         {/* ITEM 2 */}
-        <div className="doc-item">
+        <div className="doc-item" data-aos="zoom-in" data-aos-delay="100">
           <h5>HKM INDIA 80G</h5>
           <a
             href="/documents/HKM-I-80G-NEW.pdf"
@@ -59,7 +59,7 @@ const DocumentsContent = () => {
         </div>
 
         {/* ITEM 3 */}
-        <div className="doc-item">
+        <div className="doc-item" data-aos="zoom-in" data-aos-delay="200">
           <h5>HKM INDIA CSR Reg</h5>
           <a
             href="/documents/CSR-Regn-MCA.pdf"

@@ -28,7 +28,7 @@ export default function Testimonials() {
       <div className="test-container">
 
         {/* LEFT */}
-        <div className="left">
+        <div className="left" data-aos="fade-right">
           <span className="subtitle">TESTIMONIALS</span>
 
           <h2>
@@ -49,7 +49,7 @@ export default function Testimonials() {
         </div>
 
         {/* RIGHT */}
-        <div className="right">
+        <div className="right" data-aos="fade-left">
 
           <div className="card">
             <div className="quote">❝</div>

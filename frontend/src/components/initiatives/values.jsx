@@ -21,7 +21,7 @@ function Values() {
       </section>
 
       {/* SECTION 1 */}
-      <section className="values-section">
+      <section className="values-section" data-aos="fade-up">
         <div className="values-container">
           <h2>Value Based Learning</h2>
 
@@ -51,7 +51,7 @@ function Values() {
       </section>
 
       {/* SECTION 2 IMAGE */}
-      <section className="values-image-section">
+      <section className="values-image-section" data-aos="zoom-in">
         <div className="values-container">
           <img
             src="/images/bg/chart2.png"
