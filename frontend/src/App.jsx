@@ -31,6 +31,8 @@ import ManagementTeam from "./components/about-us/governance/ManagementTeam"
 import BoardOfTrustees from "./components/about-us/governance/BoardOfTrustees"
 import ScrollToTop from "./components/ScrollToTop";
 import Success from "./pages/donation/Success";
+import { Toaster } from "react-hot-toast";
+
 
 
 function App() {
@@ -62,14 +64,14 @@ function App() {
         <Route path="/documents" element={<Documents />} />
         <Route path="/photos" element={<Photos />} />
         <Route path="/videos" element={<Videos />} />
-        <Route path="/csr" element={<CSRPartners/>} />
-        <Route path="/terms" element={<Terms/>} />
-        <Route path="/privacy" element={<Privacy/>} />
-        <Route path="/refund" element={<Refund/>} />
-        <Route path="/ourInspiration" element={<OurInspiration/>} />
-        <Route path="/ourTrust" element={<OurTrust/>} />
-        <Route path="/associatedTrusts" element={<AssociatedTrusts/>} />
-        <Route path="/donation" element={<Donation/>} />
+        <Route path="/csr" element={<CSRPartners />} />
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/refund" element={<Refund />} />
+        <Route path="/ourInspiration" element={<OurInspiration />} />
+        <Route path="/ourTrust" element={<OurTrust />} />
+        <Route path="/associatedTrusts" element={<AssociatedTrusts />} />
+        <Route path="/donation" element={<Donation />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/leadership" element={<LeadershipTeam />} />
         <Route path="/management" element={<ManagementTeam />} />
@@ -80,6 +82,8 @@ function App() {
       </Routes>
       <ScrollToTopButton />
       <ScrollToTop />
+      <Toaster position="top-right" />
+
       {/* FOOTER ALWAYS FIXED */}
       <Footer />
 

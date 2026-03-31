@@ -14,7 +14,7 @@ const annadaan = [
   { title: "Feed 3000 people", amount: "₹ 81,000" },
   { title: "Feed 5000 people", amount: "₹ 1,35,000" },
   { title: "Feed 10,000 people", amount: "₹ 2,70,000" },
-  //{ title: "Donate any other Amount", amount: "" }, // 🔥 IMPORTANT
+  { title: "Donate any other Amount", amount: "" }, // 🔥 IMPORTANT
 ];
 // 🔥 SPONSOR (FULL CORRECT)
 const sponsor = [
@@ -43,11 +43,11 @@ const sponsor = [
     sub: "(Food and Education For 1 Year)",
     amount: "₹ 1,08,000",
   },
-  /*{
+  {
     title: "Donate any other Amount",
     sub: "(Food and Education)",
     amount: "",
-  },*/
+  },
 ];
 
 
@@ -109,6 +109,11 @@ const vidya = [
     title: "Sponsor Education of 1 Entire Village for 1 Month",
     amount: "₹12,500",
   },
+  {
+    title: "Donate any other Amount ",
+    amount: "",
+  },
+  
   
 ];
 

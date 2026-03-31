@@ -12,6 +12,8 @@ function Checkout() {
     email: "",
   });
 
+  const [customAmount, setCustomAmount] = useState("");
+
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
@@ -31,7 +33,17 @@ function Checkout() {
         return;
       }
 
-      const amount = parseInt(state?.amount?.replace(/[^0-9]/g, ""));
+      let finalAmount = 0;
+      if (state?.amount) {
+        finalAmount = parseInt(state.amount.replace(/[^0-9]/g, ""));
+      } else if (customAmount) {
+        finalAmount = parseInt(customAmount);
+      }
+
+      if (!finalAmount || finalAmount <= 0) {
+        alert("Please enter a valid donation amount.");
+        return;
+      }
 
       // 🔹 STEP 1: CREATE ORDER
       const res = await fetch("http://localhost:5000/api/payment/create-order", {
@@ -40,7 +52,7 @@ function Checkout() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          amount,
+          amount: finalAmount,
           name: form.name,
           email: form.email,
           phone: form.phone,
@@ -72,7 +84,7 @@ function Checkout() {
                 name: form.name,
                 email: form.email,
                 phone: form.phone,
-                amount,
+                amount: finalAmount,
                 title: state?.title,
               }),
             }
@@ -85,7 +97,7 @@ function Checkout() {
             navigate("/success", {
               state: {
                 name: form.name,
-                amount,
+                amount: finalAmount,
                 title: state?.title,
                 paymentId: response.razorpay_payment_id,
               },
@@ -134,7 +146,21 @@ function Checkout() {
           <h3>{state?.title}</h3>
 
           <p className="label">Amount:</p>
-          <h2 className="amount">{state?.amount}</h2>
+          {state?.amount ? (
+            <h2 className="amount">{state?.amount}</h2>
+          ) : (
+            <div className="custom-amount-container">
+              <span className="currency-symbol">₹</span>
+              <input
+                type="number"
+                min="1"
+                placeholder="Enter amount"
+                value={customAmount}
+                onChange={(e) => setCustomAmount(e.target.value)}
+                className="custom-amount-input"
+              />
+            </div>
+          )}
         </div>
 
         {/* RIGHT */}

@@ -1,4 +1,4 @@
-import { transporter } from "../config/mailer.js";
+import { emailApi } from "../config/mailer.js";
 
 export const sendContactMail = async (req, res) => {
   try {
@@ -9,12 +9,19 @@ export const sendContactMail = async (req, res) => {
       return res.status(400).json({ message: "Required fields missing" });
     }
 
-    // mail content
-    const mailOptions = {
-      from: email,
-      to: process.env.EMAIL_USER,
+    // email content
+    const emailData = {
+      sender: {
+        email: process.env.SENDER_EMAIL,
+        name: "Aikya Vidya Website",
+      },
+      to: [{ email: process.env.RECEIVER_EMAIL }],
+      replyTo: {
+        email: email,
+        name: name,
+      },
       subject: "New Contact Form Submission",
-      html: `
+      htmlContent: `
         <h2>New Message from AIKYA VIDYA Website</h2>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
@@ -24,7 +31,7 @@ export const sendContactMail = async (req, res) => {
       `,
     };
 
-    await transporter.sendMail(mailOptions);
+    await emailApi.sendTransacEmail(emailData);
 
     res.status(200).json({ message: "Message sent successfully" });
 

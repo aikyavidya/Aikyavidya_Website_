@@ -50,6 +50,28 @@
   margin-top: 5px;
 }
 
+.custom-amount-container {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  gap: 10px;
+}
+
+.currency-symbol {
+  font-size: 24px;
+  font-weight: 600;
+  color: #ff5a2c;
+}
+
+.custom-amount-input {
+  width: 100%;
+  max-width: 200px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 18px;
+}
+
 /* RIGHT */
 .checkout-right {
   flex: 1;
