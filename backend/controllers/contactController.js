@@ -2,7 +2,7 @@ import { emailApi } from "../config/mailer.js";
 
 export const sendContactMail = async (req, res) => {
   try {
-    const { name, email, website, message } = req.body;
+    const { name, email,  message } = req.body;
 
     // validation
     if (!name || !email || !message) {
@@ -25,7 +25,6 @@ export const sendContactMail = async (req, res) => {
         <h2>New Message from AIKYA VIDYA Website</h2>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Website:</strong> ${website || "N/A"}</p>
         <p><strong>Message:</strong></p>
         <p>${message}</p>
       `,
