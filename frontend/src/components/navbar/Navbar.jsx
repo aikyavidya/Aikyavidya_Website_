@@ -157,6 +157,10 @@ export default function Header() {
       </ul>
     </li>
 
+    <NavLink to="/csr-page" className={({ isActive }) => isActive ? "dropdown-link active" : "dropdown-link"} onClick={closeMobileMenu}>
+      CSR Applicability
+    </NavLink>
+
     <NavLink to="/csr" className={({ isActive }) => isActive ? "dropdown-link active" : "dropdown-link"} onClick={closeMobileMenu}>
       CSR Partners
     </NavLink>
@@ -165,11 +169,22 @@ export default function Header() {
 </li>
 
              <li className="dropdown">
-                 <span className="nav-link" onClick={() => setOpenDropdown(openDropdown === "initiatives" ? null : "initiatives")}>Initiatives <span className="arrow"></span></span>
+                 <span className="nav-link" onClick={() => setOpenDropdown(openDropdown === "initiatives" ? null : "initiatives")}>
+                   Initiatives <span className="arrow"></span>
+                 </span>
                  <ul className={`dropdown-menu ${openDropdown === "initiatives" ? "show" : ""}`}>
-                   <NavLink to="/food" className={({ isActive }) => isActive ? "dropdown-link active" : "dropdown-link"} onClick={closeMobileMenu}> Food</NavLink>
-                   <NavLink to="/education" className={({ isActive }) => isActive ? "dropdown-link active" : "dropdown-link"} onClick={closeMobileMenu}> Education</NavLink>
-                   <NavLink to="/values" className={({ isActive }) => isActive ? "dropdown-link active" : "dropdown-link"} onClick={closeMobileMenu}> Values</NavLink>
+                   <li>
+                     <NavLink to="/initiatives" className={({ isActive }) => isActive ? "dropdown-link active" : "dropdown-link"} onClick={closeMobileMenu}> Our Initiatives</NavLink>
+                   </li>
+                   <li>
+                     <NavLink to="/food" className={({ isActive }) => isActive ? "dropdown-link active" : "dropdown-link"} onClick={closeMobileMenu}> Food</NavLink>
+                   </li>
+                   <li>
+                     <NavLink to="/education" className={({ isActive }) => isActive ? "dropdown-link active" : "dropdown-link"} onClick={closeMobileMenu}> Education</NavLink>
+                   </li>
+                   <li>
+                     <NavLink to="/values" className={({ isActive }) => isActive ? "dropdown-link active" : "dropdown-link"} onClick={closeMobileMenu}> Values</NavLink>
+                   </li>
                  </ul>
                </li>
 

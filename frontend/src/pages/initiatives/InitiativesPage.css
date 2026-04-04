@@ -1,0 +1,310 @@
+/* Global */
+.initiatives-page {
+  font-family: 'Nunito Sans', sans-serif;
+  color: #616161;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: #232323;
+  margin: 60px 0 40px;
+}
+
+/* Banner */
+.banner {
+  height: 420px;
+  background: url('https://aikyavidya.org/new/wp-content/uploads/2024/02/ak-12.jpg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+}
+
+.banner h1 {
+  color: #fff;
+  font-size: 48px;
+  z-index: 2;
+  font-family: 'Quicksand';
+}
+
+/* Services */
+.services {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  flex: 1;
+  min-width: 260px;
+  background: #fff;
+  padding: 40px;
+  text-align: center;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #232323;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.service-card .icon {
+  font-size: 40px;
+  color: #f74f22;
+  margin-bottom: 15px;
+}
+
+/* Life Skills */
+.life-skills {
+  padding: 60px 0;
+}
+
+.skills-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.second-row {
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.skill-box {
+  text-align: center;
+  max-width: 300px;
+}
+
+.skill-box img {
+  width: 120px;
+  margin-bottom: 15px;
+}
+
+.skill-box h4 {
+  font-family: 'Quicksand';
+  font-size: 22px;
+  color: #232323;
+}
+
+.skill-box p {
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* Full Banner */
+.full-banner img {
+  width: 100%;
+  margin: 60px 0;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+/* Rural */
+.rural {
+  padding-bottom: 80px;
+}
+
+.rural-grid {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.rural-grid img {
+  width: 100%;
+  max-width: 500px;
+}
+
+.rural-grid ul {
+  list-style: none;
+  padding: 0;
+}
+
+.rural-grid li {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+.rural-grid svg {
+  color: #f74f22;
+  margin-right: 10px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+  .services {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .service-card {
+    width: 100%;
+    max-width: 350px;
+    padding: 30px;
+  }
+
+  .skills-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .second-row {
+    margin-top: 0;
+  }
+
+  .rural-grid {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .section-title {
+    font-size: 32px;
+    margin: 40px 0 20px;
+  }
+
+  .life-skills {
+    padding: 30px 0;
+  }
+
+  .full-banner img {
+    margin: 30px 0;
+  }
+
+  .rural {
+    padding: 40px 0 60px;
+  }
+}
+
+/* VIDEO BANNER */
+.video-banner {
+  position: relative;
+  height: 650px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.video-banner iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 56.25vw; /* 16:9 ratio based on width */
+  min-height: 650px; 
+  min-width: 1155.55px; /* 650px * 16/9 */
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.video-banner .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 1;
+}
+
+.banner-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.banner-content h1 {
+  color: #fff;
+  font-size: 48px;
+  font-family: 'Quicksand';
+  text-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+/* Rural FIX */
+.rural {
+  padding: 80px 0;
+}
+
+.rural-grid {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+
+.rural-img img {
+  width: 100%;
+  max-width: 550px;
+  border-radius: 10px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+.rural-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.rural-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.rural-list svg {
+  color: #f74f22;
+  margin-right: 12px;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+/* Responsive Overrides for Video & Rural */
+@media(max-width: 768px) {
+  .video-banner {
+    height: 400px;
+  }
+  
+  .video-banner iframe {
+    min-height: 400px;
+    min-width: 711.11px; /* 400px * 16/9 */
+  }
+
+  .banner-content h1 {
+    font-size: 36px;
+  }
+
+  .rural-grid {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .rural-img img {
+    margin-bottom: 20px;
+  }
+}

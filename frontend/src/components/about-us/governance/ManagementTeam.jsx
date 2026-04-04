@@ -27,52 +27,29 @@ function ManagementTeam() {
           {/* 🔹 ROW 1 */}
           <div className="mgmt-row" data-aos="fade-up">
             <div className="mgmt-card">
-              {/* <img src="https://aikyavidya.org/new/wp-content/uploads/2024/02/15.png" /> */}
+              <img src="/images/donation/15.webp" /> 
               <h4>Rasa Mandal Dasa</h4>
-              <p>
-                Senior Manager Outreach. B.Pharmacy graduate with experience in healthcare industry.
-              </p>
-              <p>He is currently serving as the Senior Manager Outreach of AIKYA Vidya. He is a B.Pharmacy graduate from Vignan University Vizag. Before joining AIKYA Vidya, he worked in Healthcare industry </p>
+              
+              <p>He is currently serving as the Senior Manager Outreach of AIKYA Vidya. He is a B.Pharmacy graduate from Vignan University Vizag. Before joining AIKYA Vidya, he worked in Healthcare industry  </p>
             </div>
 
             <div className="mgmt-card">
               <img src="/images/donation/m2.png" />
               <h4>Kumaraswamy</h4>
-              <p>
-                Senior Manager Youth Outreach. MA in Sanskrit and international kickboxing medalist.
-              </p>
-              <p>He is currently serving as Senior Manager Youth outreach programme of the AIKYA Vidya. He has done his MA in Sanskrit and diploma in Kathak dance. He participated 3 times in International Kick Boxing championship and won silver medal once. Before joining AIKYA Vidya he worked with various reputed NGOs in different capacities.  </p>
+             
+              <p>He is currently serving as Senior Manager Youth outreach programme of the AIKYA Vidya. He has done his MA in Sanskrit and diploma in Kathak dance. He participated 3 times in International Kick Boxing championship and won silver medal once. Before joining AIKYA Vidya he worked with various reputed NGOs in different capacities.    </p>
             </div>
           </div>
 
-          {/* 🔹 ROW 2 */}
-          <div className="mgmt-row reverse" data-aos="fade-up" data-aos-delay="100">
-            <div className="mgmt-card">
-              <img src="/images/donation/m3.png" />
-              <h4>Brahmanandam</h4>
-              <p>
-                Senior Manager Village Outreach with NGO experience.
-              </p>
-              <p>He is currently serving as Senior Manager Village Outreach. Before joining AIKYA Vidya, Brahmanandam served in various reputed NGOs in different capacities.  </p>
-            </div>
-
-            <div className="mgmt-card">
-              <img src="/images/donation/m4.png" />
-              <h4>G. Karthik</h4>
-              <p>
-                Manager Outreach. Mechanical Engineer with corporate experience.
-              </p>
-              <p>He is currently serving as the Manager Outreach in AIKYA Vidya. He is a Mechanical Engineer by education and previously worked in reputed pharmaceutical and software companies.  </p>
-            </div>
-          </div>
+        
 
           {/* 🔹 GRID TEAM */}
           <div className="mgmt-grid">
 
             <div className="mgmt-mini" data-aos="zoom-in">
-              <img src="/images/donation/m5.png" />
-              <h5>Mani Teja</h5>
-              <span>Executive Assistant Donor Care</span>
+              <img src="/images/donation/m3.png" />
+              <h4>Brahmanandam</h4>
+              <span> Senior Manager Village Outreach.</span>
             </div>
 
             <div className="mgmt-mini" data-aos="zoom-in">
@@ -81,12 +58,7 @@ function ManagementTeam() {
               <span>Executive Assistant Operations</span>
             </div>
 
-            <div className="mgmt-mini" data-aos="zoom-in">
-              {/* <img src="https://aikyavidya.org/new/wp-content/uploads/2024/02/1.png" /> */}
-              <h5>Ravi</h5>
-              <span>Executive Assistant Youth Outreach</span>
-            </div>
-
+            
             <div className="mgmt-mini" data-aos="zoom-in">
               <h5>Lakshmi</h5>
               <span>Digital Communications Executive</span>

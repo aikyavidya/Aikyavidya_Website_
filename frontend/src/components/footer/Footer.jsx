@@ -107,6 +107,7 @@ export default function Footer() {
           <Link to="/food">Initiative – Food</Link>
           <Link to="/education">Initiative – Education</Link>
           <Link to="/values">Initiative – Values</Link>
+          <Link to="/csr-page">CSR Applicability</Link>
           <Link to="/csr">CSR Partners</Link>
           <Link to="/volunteer">Become a Volunteer</Link>
           <Link to="/media">Media Presence</Link>

@@ -34,13 +34,9 @@ function LeadershipTeam() {
             </div>
 
             <div className="leader-right">
+             
               <p>
-                Gold Medalist in B.Tech Mechanical and M.Tech from IIT Chennai.
-                Worked in IT before dedicating life to service.
-              </p>
-              <p>
-                Led first Akshaya Patra kitchen in Andhra Pradesh (2008) and
-                mega kitchen in Telangana.
+                HG Satya Gaura Chandra Dasa is a Gold Medalist in B.Tech Mechanical at Jawaharlal Nehru Technological University – Kakinada. He eventually did his M.Tech from IIT-Chennai and worked in a multinational IT firm in Bengaluru for a couple of years before deciding to dedicate his life to serving humanity. The first Akshaya Patra kitchen in unified Andhra Pradesh (now Telangana) was set up in Hyderabad in 2008 under his leadership. He also oversaw the setting up of the Foundation’s high-tech mega kitchen in Kandi, Telangana, in association with the Infosys Foundation in 2018. Currently, he is serving as the President for Akshaya Patra Andhra Pradesh and Telangana. HG is also serving as the President of AIKYA VIDYA.
               </p>
             </div>
           </div>
@@ -54,12 +50,11 @@ function LeadershipTeam() {
             </div>
 
             <div className="leader-right">
+             
               <p>
-                M.Tech from NIT Calicut, ex-Wipro professional.
-                Dedicated over 12 years to service and youth training.
-              </p>
-              <p>
-                Conducts personality development programs based on Bhagavad-Gita.
+                HG is currently serving as Director of the AIKYA Vidya. Sahadeva Saka Dasa is also the Associate Vice President of Hare Krishna Movement Hyderabad’s state youth outreach. He pursued M.Tech degree from NIT Calicut and Worked in Wipro Software Company before joining the movement. HG has been rendering his dedicated services to movement from past 12 years. 
+
+Swamiji is well versed in conducting training programs for the youth in the aspect of PERSONALITY DEVELOPMENT based on Bhagavad-Gita and trained students from reputed colleges like IIT Hyderabad, JNTU University, BITS Hyderabad etc. He is also the most sought-after speaker in reputed software professionals from Microsoft, Google, Qualcom, Deloitte, TCS, Infosys etc.
               </p>
             </div>
           </div>
@@ -73,9 +68,9 @@ function LeadershipTeam() {
               <p>Chief Education Officer</p>
               <p>Chaitanya Krishna Dasa is currently serving as the CEdO of AIKYA Vidya. He Completed his B.Tech Mechanical Engineering from JNTU, Kakinada and worked in PSUs, Railways, and India Post (Accounting).  
 
-<p>He has been serving the Hare Krishna Movement and ISKCON (Vrindavan and Delhi temples) from the past 11 years. He is also serving as the main editor of Bhakti Vedanta Book Trust one of the world’s largest publisher of classic Vaishnava texts and contemporary works on the philosophy, theology, and culture of bhakti-yoga.</p>
+He has been serving the Hare Krishna Movement and ISKCON (Vrindavan and Delhi temples) from the past 11 years. He is also serving as the main editor of Bhakti Vedanta Book Trust one of the world’s largest publisher of classic Vaishnava texts and contemporary works on the philosophy, theology, and culture of bhakti-yoga.
 
-He is also one of the largest social media influencers in India spreading the knowledge of the Bhagavad Gita through his digital media company JivJago media.   </p>
+He is also one of the largest social media influencers in India spreading the knowledge of the Bhagavad Gita through his digital media company JivJago media.     </p>
             </div>
 
             <div className="leader-card" data-aos="zoom-in">
@@ -85,18 +80,7 @@ He is also one of the largest social media influencers in India spreading the kn
               <p>Tejasvi is currently serving as the COO of AIKYA Vidya and GITA Values Programme. His passion lies in inculcating Bharatiya values based on Bhagavadgita to metropolitan children who are otherwise overloaded with information and distracted by modern gadgets and social media. He is a Qualified Company Secretary. He has over 5 years’ experience in Corporate Law regulatory matters. </p>
             </div>
 
-            <div className="leader-card" data-aos="zoom-in">
-              <img src="/images/donation/p5.png" />
-              <h4>Raghavendra</h4>
-              <p>Chief Sustainability Officer</p>
-              <p>Raghavendra is currently serving as the CSCO of AIKYA VIDYA. He is an Ex-Political and Policy Consultant and Ex-Civil Services mentor. In a span of his 10 years career in development sector he contributed to many policy reforms in India in the spheres of education and healthcare.
-
-<p>Earlier he worked for reputed think tanks like Centre for Civil Society and Foundation for Democratic Reforms contributing towards Governance Reforms and National Education Policy.</p>
-
-He has published more than 60 articles for various reputed magazines like Swarajya, the Pulse and Telugu news dailies like Andhra Jyothi and Velugu.
-
-He has done his Masters in Governance from MIT school of Government and was awarded a certificate in Rule of Law by International Academy of Leadership Germany.</p>
-            </div>
+            
 
           </div>
 

@@ -2,44 +2,16 @@ import "./board.css";
 
 const trustees = [
   {
-    name: "Padma Shri HG Madhu Pandit Dasa",
-    desc: `M.Tech in Civil Engineering from IIT-Bombay
-Trustee and Chairman of The Akshaya Patra Foundation
-Chairman and Mentor, Global Hare Krishna Movement
-President of ISKCON Bangalore
-Chairman of Vrindavan Chandrodaya Mandir and India Heritage Foundation
-Awards: Padma Shri, Gandhi Peace Prize, National Award for Child Welfare, Nikkie Asia Prize and Distinguished Alumnus Award by IIT-Bombay`,
-    img: "/images/donation/t1.png",
-  },
-  {
     name: "HG Chanchalapathi Dasa",
-    desc: `Masters from Indian Institute of Science, Bangalore
-Vice Chairman of Akshaya Patra
-Senior Vice President of ISKCON Bangalore
-President of Vrindavan Chandrodaya Mandir
-Vice Chairman of the Governing Body Committee`,
-    img: "/images/donation/t2.png",
+    role: "Vice Chairman - Akshaya Patra",
+    desc: `Chanchalapathi Dasa has been working in the field of spiritual education since 1984 and social development since 2000. He pursued his Bachelor's degree and later completed his Masters from IISc Bangalore. He is actively involved in governance and planning of Akshaya Patra.`,
+    img: "/images/donation/Chanchalapathi-dasa.webp",
   },
   {
-    name: "HG Satya Gaura Chandra Dasa",
-    desc: `M-Tech - IIT Chennai
-President - Hare Krishna Golden Temple
-Regional President - Akshayapatra Foundation, Telangana & Andhra Pradesh
-President - Hare Krishna Vidya`,
-    img: "/images/donation/t3.png",
-  },
-  {
-    name: "HG Suvyakta Narasimha Dasa",
-    desc: `BE Mechanical
-President - Hare Krishna Movement Chennai`,
-    img: "/images/donation/t4.png",
-  },
-  {
-    name: "HG Niskinchana Bhakta Dasa",
-    desc: `MBBS
-President - Hare Krishna Movement Vizag
-Unit President - The Akshaya Patra Foundation - Visakhapatnam, Srikakulam & Kakinada`,
-    img: "/images/donation/t5.png",
+    name: "HG Amitasana Dasa",
+    role: "President - Hare Krishna Movement Mumbai",
+    desc: `Amitasana Dasa is the President of Hare Krishna Movement Mumbai and leads Akshaya Patra operations in Maharashtra. He has guided youth and professionals across India towards a balanced and fulfilling life.`,
+    img: "/images/donation/amitasana-dasa.webp",
   },
 ];
 
@@ -51,13 +23,13 @@ function BoardOfTrustees() {
       <section
         className="trustees-header"
         style={{
-          backgroundImage:
-            "url(/images/bg/bredcrumb2.jpg)",
+          backgroundImage: "url(/images/bg/bredcrumb2.jpg)",
         }}
       >
-        <div className="trustees-overlay">
-          <h1>Board of Trustees</h1>
-          <p>
+        <div className="trustees-overlay"></div>
+        <div className="trustees-header-content">
+          <h1 data-aos="fade-down">Board of Trustees</h1>
+          <p data-aos="fade-up" data-aos-delay="200">
             <span>Home</span> › <span className="active">Board of Trustees</span>
           </p>
         </div>
@@ -67,20 +39,33 @@ function BoardOfTrustees() {
       <section className="trustees-section">
         <div className="trustees-container">
 
-          <h2 className="trustees-title">Trustees</h2>
+          <h2 className="trustees-title" data-aos="fade-up">Our Visionary Trustees</h2>
 
           {trustees.map((item, index) => (
             <div
               key={index}
-              className="trustee-card"
-              data-aos="fade-up" data-aos-delay={index * 100}
-              style={{ animationDelay: `${index * 0.2}s` }}
+              className={`trustee-row ${index % 2 !== 0 ? 'reverse' : ''}`}
             >
-              <img src={item.img} alt={item.name} />
+              <div 
+                className="trustee-img" 
+                data-aos={index % 2 !== 0 ? 'fade-left' : 'fade-right'}
+                data-aos-duration="1000"
+              >
+                <div className="img-wrapper">
+                  <img src={item.img} alt={item.name} />
+                </div>
+              </div>
 
-              <div className="trustee-content">
+              <div 
+                className="trustee-text" 
+                data-aos={index % 2 !== 0 ? 'fade-right' : 'fade-left'}
+                data-aos-duration="1000"
+                data-aos-delay="200"
+              >
                 <h3>{item.name}</h3>
+                <h6>{item.role}</h6>
                 <p>{item.desc}</p>
+                <div className="line-accent"></div>
               </div>
             </div>
           ))}

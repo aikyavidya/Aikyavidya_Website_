@@ -6,6 +6,7 @@ import "aos/dist/aos.css";
 import Header from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import Home from "./pages/Home";
+import InitiativesPage from "./pages/initiatives/InitiativesPage";
 import Food from "./components/initiatives/food";
 import Education from "./components/initiatives/education";
 import Values from "./components/initiatives/values";
@@ -18,6 +19,7 @@ import Photos from "./pages/gallery/PhotoGallery/PhotoGalleryPage"
 import Videos from "./pages/gallery/VideoGallery/VideoGalleryPage"
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import CSRPartners from "./pages/csr/CSRPartners";
+import CSRPage from "./pages/csr/CSRPage";
 import Terms from "./pages/terms/Terms";
 import Privacy from "./pages/privacy/Privacy";
 import Refund from "./pages/refund/Refund";
@@ -54,6 +56,7 @@ function App() {
       {/* ROUTES */}
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/initiatives" element={<InitiativesPage />} />
         <Route path="/food" element={<Food />} />
         <Route path="/education" element={<Education />} />
         <Route path="/values" element={<Values />} />
@@ -65,6 +68,7 @@ function App() {
         <Route path="/photos" element={<Photos />} />
         <Route path="/videos" element={<Videos />} />
         <Route path="/csr" element={<CSRPartners />} />
+        <Route path="/csr-page" element={<CSRPage />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/refund" element={<Refund />} />

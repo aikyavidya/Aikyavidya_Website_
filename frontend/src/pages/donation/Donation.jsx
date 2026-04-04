@@ -4,117 +4,153 @@ import { useNavigate } from "react-router-dom";
 function Donation() {
 const navigate = useNavigate();
   // ANNADAAN 
+// ANNADAAN (UPDATED TEXT EXACTLY LIKE ORIGINAL)
 const annadaan = [
-  { title: "Feed 100 people", amount: "₹ 2700" },
-  { title: "Feed 200 people", amount: "₹ 5400" },
-  { title: "Feed 300 people", amount: "₹ 8100" },
-  { title: "Feed 500 people", amount: "₹ 13500" },
-  { title: "Feed 1000 people", amount: "₹ 27,000" },
-  { title: "Feed 1500 people", amount: "₹ 40,500" },
-  { title: "Feed 3000 people", amount: "₹ 81,000" },
-  { title: "Feed 5000 people", amount: "₹ 1,35,000" },
-  { title: "Feed 10,000 people", amount: "₹ 2,70,000" },
-  { title: "Donate any other Amount", amount: "" }, // 🔥 IMPORTANT
+  {
+    title: "Donate meals for 100 Children",
+    sub: "(Your generous donation ensures that 100 children receive a nutritious meal a day)",
+    amount: "₹ 2700",
+  },
+  {
+    title: "Donate meals for 200 Children",
+    sub: "(Your generous donation ensures that 200 children receive a nutritious meal a day)",
+    amount: "₹ 5400",
+  },
+  {
+    title: "Donate meals for 300 Children",
+    sub: "(Your generous donation ensures that 300 children receive a nutritious meal a day)",
+    amount: "₹ 8100",
+  },
+  {
+    title: "Donate meals for 500 Children",
+    sub: "(Your generous donation ensures that 500 children receive a nutritious meal a day)",
+    amount: "₹ 13500",
+  },
+  {
+    title: "Donate meals for 1000 Children",
+    sub: "(Your generous donation ensures that 1000 children receive a nutritious meal a day)",
+    amount: "₹ 27,000",
+  },
+  {
+    title: "Donate meals for 1500 Children",
+    sub: "(Your generous donation ensures that 1500 children receive a nutritious meal a day)",
+    amount: "₹ 40,500",
+  },
+  {
+    title: "Donate meals for 3000 Children",
+    sub: "(Your generous donation ensures that 3000 children receive a nutritious meal a day)",
+    amount: "₹ 81,000",
+  },
+  {
+    title: "Donate meals for 5000 Children",
+    sub: "(Your generous donation ensures that 5000 children receive a nutritious meal a day)",
+    amount: "₹ 1,35,000",
+  },
+  {
+    title: "Donate meals for 10,000 Children",
+    sub: "(Your generous donation ensures that 10,000 children receive a nutritious meal a day)",
+    amount: "₹ 2,70,000",
+  },
+  {
+    title: "Donate any other Amount",
+    sub: "",
+    amount: "",
+  },
 ];
-// 🔥 SPONSOR (FULL CORRECT)
+
+
+// SPONSOR CHILDREN (FIXED TEXT)
 const sponsor = [
   {
     title: "Sponsor 1 Child",
-    sub: "(Food and Education For 1 Year)",
+    sub: "(Your sponsorship ensures education and daily meals for a child throughout the year.)",
     amount: "₹ 12,000",
   },
   {
     title: "Sponsor 2 Children",
-    sub: "(Food and Education For 1 Year)",
+    sub: "(Your sponsorship ensures education and daily meals for 2 Children throughout the year.)",
     amount: "₹ 24,000",
   },
   {
     title: "Sponsor 4 Children",
-    sub: "(Food and Education For 1 Year)",
+    sub: "(Your sponsorship ensures education and daily meals for 4 Children throughout the year.)",
     amount: "₹ 48,000",
   },
   {
     title: "Sponsor 8 Children",
-    sub: "(Food and Education For 1 Year)",
+    sub: "(Your sponsorship ensures education and daily meals for 8 Children throughout the year.)",
     amount: "₹ 96,000",
   },
   {
     title: "Sponsor 9 Children",
-    sub: "(Food and Education For 1 Year)",
+    sub: "(Your sponsorship ensures education and daily meals for 9 Children throughout the year.)",
     amount: "₹ 1,08,000",
   },
   {
     title: "Donate any other Amount",
-    sub: "(Food and Education)",
+    sub: "(Your sponsorship ensures education and daily meals for Children.)",
     amount: "",
   },
 ];
 
 
- // 🔥 VIDYA DAAN (FULL CORRECT + COMPLETE)
+// VIDYA DAAN (MATCHED FROM ORIGINAL)
 const vidya = [
   {
     title: "Sponsor Education of 1 Child for 1 Academic Year",
+    sub: "(Your sponsorship ensures a child's education for 12 months.)",
     amount: "₹ 5000",
   },
   {
     title: "Sponsor Education of 3 Children for 1 Academic Year",
+    sub: "(Your sponsorship ensures 3 Children education for 12 months.)",
     amount: "₹ 15000",
   },
   {
     title: "Sponsor Education of 5 Children for 1 Academic Year",
+    sub: "(Your sponsorship ensures 5 Children education for 12 months.)",
     amount: "₹ 25000",
   },
   {
     title: "Sponsor Education of 1 Child for 1 Month",
+    sub: "(Your sponsorship ensures a child's education for 1 month.)",
     amount: "₹ 500",
   },
   {
     title: "Sponsor Education of 5 Children for 1 Month",
+    sub: "(Your sponsorship ensures 5 Children education for 1 month.)",
     amount: "₹ 2500",
   },
   {
     title: "Sponsor Education of 10 Children for 1 Month",
+    sub: "(Your sponsorship ensures 10 Children education for 1 month.)",
     amount: "₹ 5000",
   },
   {
     title: "Sponsor Education of 25 Children for 1 Month",
+    sub: "(Your sponsorship ensures 25 Children education for 1 month.)",
     amount: "₹ 12,500",
   },
   {
     title: "Sponsor Education of 50 Children for 1 Month",
+    sub: "(Your sponsorship ensures 50 Children education for 1 month.)",
     amount: "₹ 25,000",
   },
   {
     title: "Sponsor Education of 75 Children for 1 Month",
+    sub: "(Your sponsorship ensures 75 Children education for 1 month.)",
     amount: "₹ 37,500",
   },
   {
     title: "Sponsor Education of 100 Children for 1 Month",
+    sub: "(Your sponsorship ensures 100 Children education for 1 month.)",
     amount: "₹ 50,000",
   },
   {
-    title: "Sponsor Education of 150 Children for 1 Month",
-    amount: "₹ 75,000",
-  },
-  {
-    title: "Sponsor Education of 200 Children for 1 Month",
-    amount: "₹ 1,00,000",
-  },
-  {
-    title: "Sponsor Education of 1 Entire Village for 1 Whole Year",
-    amount: "₹ 1,50,000",
-  },
-  {
-    title: "Sponsor Education of 1 Entire Village for 1 Month",
-    amount: "₹12,500",
-  },
-  {
-    title: "Donate any other Amount ",
+    title: "Donate any other Amount",
+    sub: "",
     amount: "",
   },
-  
-  
 ];
 
   const handleDonate = (amount) => {
@@ -130,11 +166,10 @@ const vidya = [
         className="donation-header"
         style={{
           backgroundImage:
-            "url(/images/bg/bredcrumb2.jpg)",
+            "url(/images/bg/av_new.webp)",
         }}
       >
         <div className="donation-overlay">
-          <h1>Donate</h1>
          
         </div>
       </section>
@@ -143,8 +178,7 @@ const vidya = [
 <section className="donation-tagline">
   <div className="container">
     <h2>
-      We are providing <span>Free Food, Education</span> and Values for life
-      based on Bhagavad-Gita to underprivileged in
+      We are providing <span>Free Food, Education</span> and teaching moral values to underprivileged Children in
       <span> Rural Areas of India</span>
     </h2>
   </div>
@@ -154,80 +188,77 @@ const vidya = [
 <section className="donation-block annadaan-bg">
   <div className="container donation-list">
     {annadaan.map((item, i) => (
-      <div className="donation-row" key={i} data-aos="fade-up" data-aos-delay={(i % 3) * 100}>
-        <h3>{item.title}</h3>
+  <div className="donation-row" key={i}>
+    <div>
+      <h3>{item.title}</h3>
+      {item.sub && <p className="sub">{item.sub}</p>}
+    </div>
 
-        <div className="donation-price">{item.amount}</div>
+    <div className="donation-price">{item.amount}</div>
 
-        <button
-            onClick={() =>
-                navigate("/checkout", {
-                state: {
-                    title: item.title,
-                    amount: item.amount,
-                },
-                })
-            }
-            >
-            DONATE NOW
-        </button>
-      </div>
-    ))}
+    <button
+      onClick={() =>
+        navigate("/checkout", {
+          state: { title: item.title, amount: item.amount },
+        })
+      }
+    >
+      DONATE NOW
+    </button>
+  </div>
+))}
   </div>
 </section>
 
 {/* SPONSOR */}
 <section className="donation-block sponsor-bg">
   <div className="container donation-list">
-    {sponsor.map((item, i) => (
-      <div className="donation-row" key={i} data-aos="fade-up" data-aos-delay={(i % 3) * 100}>
-        <div>
-          <h3>{item.title}</h3>
-          <p className="sub">{item.sub}</p>
-        </div>
+   { sponsor.map((item, i) => (
+  <div className="donation-row" key={i}>
+    <div>
+      <h3>{item.title}</h3>
+      <p className="sub">{item.sub}</p>
+    </div>
 
-        <div className="donation-price">{item.amount}</div>
+    <div className="donation-price">{item.amount}</div>
 
-        <button
-            onClick={() =>
-                navigate("/checkout", {
-                state: {
-                    title: item.title,
-                    amount: item.amount,
-                },
-                })
-            }
-            >
-            DONATE NOW
-        </button>
-      </div>
-    ))}
+    <button
+      onClick={() =>
+        navigate("/checkout", {
+          state: { title: item.title, amount: item.amount },
+        })
+      }
+    >
+      DONATE NOW
+    </button>
+  </div>
+))}
   </div>
 </section>
 
 {/* VIDYA */}
 <section className="donation-block vidya-bg">
   <div className="container donation-list">
-    {vidya.map((item, i) => (
-      <div className="donation-row" key={i} data-aos="fade-up" data-aos-delay={(i % 3) * 100}>
-        <h3>{item.title}</h3>
+   {vidya.map((item, i) => (
+  <div className="donation-row" key={i}>
+    <div>
+      <h3>{item.title}</h3>
+      {item.sub && <p className="sub">{item.sub}</p>}
+    </div>
 
-        <div className="donation-price">{item.amount}</div>
+    <div className="donation-price">{item.amount}</div>
 
-        <button
-            onClick={() =>
-                navigate("/checkout", {
-                state: {
-                    title: item.title,
-                    amount: item.amount,
-                },
-                })
-            }
-            >
-            DONATE NOW
-        </button>
-      </div>
-    ))}
+    <button
+      onClick={() =>
+        navigate("/checkout", {
+          state: { title: item.title, amount: item.amount },
+        })
+      }
+    >
+      DONATE NOW
+    </button>
+  </div>
+))}
   </div>
 </section>
 
