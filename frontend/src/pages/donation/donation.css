@@ -310,7 +310,25 @@
 }
 
 @media (max-width: 768px) {
+  .donation-header {
+    height: 350px;
+    background-position: center;
+  }
+  
   .donation-overlay h1 {
     font-size: 32px;
+  }
+
+  .donation-tagline {
+    padding: 40px 15px;
+  }
+
+  .donation-tagline h2 {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  .donation-row {
+    padding: 20px 15px;
   }
 }

@@ -2,6 +2,8 @@
 .initiatives-page {
   font-family: 'Nunito Sans', sans-serif;
   color: #616161;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 .container {
@@ -95,6 +97,7 @@
 .skill-box {
   text-align: center;
   max-width: 300px;
+  width: 100%;
 }
 
 .skill-box img {
