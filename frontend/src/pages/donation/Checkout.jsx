@@ -46,24 +46,27 @@ function Checkout() {
       }
 
       // 🔹 STEP 1: CREATE ORDER
-      const res = await fetch("http://localhost:5000/api/payment/create-order", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const res = await fetch(
+        "http://localhost:5023/api/payment/create-order",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            amount: finalAmount,
+            name: form.name,
+            email: form.email,
+            phone: form.phone,
+          }),
         },
-        body: JSON.stringify({
-          amount: finalAmount,
-          name: form.name,
-          email: form.email,
-          phone: form.phone,
-        }),
-      });
+      );
 
       const order = await res.json();
 
       // 🔹 STEP 2: OPEN RAZORPAY
       const options = {
-        key: import.meta.env.VITE_RAZORPAY_KEY,
+        key: "rzp_live_SxXbUt1CyXmS3Z",
         amount: order.amount,
         currency: "INR",
         name: "AIKYA VIDYA",
@@ -73,7 +76,7 @@ function Checkout() {
         handler: async function (response) {
           // 🔹 STEP 3: VERIFY + SAVE
           const verifyRes = await fetch(
-            "http://localhost:5000/api/payment/verify-payment",
+            "http://localhost:5023/api/payment/verify-payment",
             {
               method: "POST",
               headers: {
@@ -87,7 +90,7 @@ function Checkout() {
                 amount: finalAmount,
                 title: state?.title,
               }),
-            }
+            },
           );
 
           const data = await verifyRes.json();
@@ -120,7 +123,6 @@ function Checkout() {
 
       const rzp = new window.Razorpay(options);
       rzp.open();
-
     } catch (err) {
       console.error(err);
       alert("Payment failed");
@@ -129,7 +131,6 @@ function Checkout() {
 
   return (
     <div className="checkout-page">
-
       <button className="back-btn" onClick={() => navigate(-1)}>
         ← Back
       </button>
@@ -137,7 +138,6 @@ function Checkout() {
       <h1 className="checkout-title">Confirm Donation</h1>
 
       <div className="checkout-container">
-
         {/* LEFT */}
         <div className="checkout-left">
           <h2>Donation Summary</h2>
@@ -165,7 +165,6 @@ function Checkout() {
 
         {/* RIGHT */}
         <div className="checkout-right">
-
           <label>Name *</label>
           <input name="name" onChange={handleChange} />
 
@@ -180,9 +179,7 @@ function Checkout() {
           <button className="pay-btn" onClick={handlePayment}>
             Donate Now
           </button>
-
         </div>
-
       </div>
     </div>
   );

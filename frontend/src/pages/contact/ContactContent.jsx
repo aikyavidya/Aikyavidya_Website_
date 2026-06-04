@@ -17,7 +17,7 @@ const ContactContent = () => {
     try {
       setLoading(true);
 
-      const res = await fetch("http://localhost:5000/api/contact", {
+      const res = await fetch("http://localhost:5023/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -33,7 +33,6 @@ const ContactContent = () => {
       } else {
         toast.error(data.message || "Something went wrong");
       }
-
     } catch (err) {
       toast.error("Server error, try again later");
     } finally {
@@ -43,7 +42,6 @@ const ContactContent = () => {
 
   return (
     <div className="contact-page">
-
       {/* HERO */}
       <section
         className="contact-header"
@@ -60,16 +58,16 @@ const ContactContent = () => {
       </section>
 
       <section className="contact-section">
-
         <h2 className="contact-title">Get i Touch</h2>
 
         <div className="contact-info" data-aos="fade-right">
-
           <div className="info-box">
             <div className="icon">📍</div>
             <div>
               <h4>Visit us</h4>
-              <p><strong>AIKYA VIDYA - Hare Krishna Movement.</strong></p>
+              <p>
+                <strong>AIKYA VIDYA - Hare Krishna Movement.</strong>
+              </p>
               <p>MLA Colony, Road No -12, Banjara Hills, Hyderabad - 500034.</p>
             </div>
           </div>
@@ -93,22 +91,37 @@ const ContactContent = () => {
               </div>
             </div>
           </div>
-
         </div>
 
         <div className="contact-card" data-aos="fade-left">
           <h3>Leave a Reply</h3>
           <p className="subtitle">
-            Your email address will not be published. Required fields are marked *
+            Your email address will not be published. Required fields are marked
+            *
           </p>
 
           <form className="contact-form" onSubmit={handleSubmit}>
             <div className="row">
-              <input name="name" type="text" placeholder="Your Name *" required />
-              <input name="email" type="email" placeholder="Your Email *" required />
+              <input
+                name="name"
+                type="text"
+                placeholder="Your Name *"
+                required
+              />
+              <input
+                name="email"
+                type="email"
+                placeholder="Your Email *"
+                required
+              />
             </div>
 
-            <textarea name="message" placeholder="Type your Message" rows="5" required></textarea>
+            <textarea
+              name="message"
+              placeholder="Type your Message"
+              rows="5"
+              required
+            ></textarea>
 
             <button type="submit" disabled={loading}>
               {loading ? "Sending..." : "SEND A MESSAGE"}
@@ -122,7 +135,6 @@ const ContactContent = () => {
             src="https://maps.google.com/maps?q=Hare%20Krishna%20Golden%20Temple&t=m&z=12&output=embed"
           ></iframe>
         </div>
-
       </section>
     </div>
   );
