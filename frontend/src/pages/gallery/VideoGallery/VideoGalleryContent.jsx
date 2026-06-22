@@ -4,7 +4,7 @@ import "./VideoGalleryContent.css";
 const videos = [
   "3JHf4GVqq3E",
   "Fu2jZLm4QUw",
-  "QT9teszsADA",
+  // "QT9teszsADA", // hidden: "This Diwali bring light in the lives of poor children"
   "8RMcvuAH9Ok",
   "277t-iPOApU",
   "la5h0OAKzfQ"
