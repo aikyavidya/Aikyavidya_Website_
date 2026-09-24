@@ -41,6 +41,22 @@ function CSRPartners() {
             src="/images/cs2.jpg"
             alt="partner2"
           />
+
+          <img
+            src="/images/cs6.jpeg"
+            alt="partner3"
+          />
+
+          <img
+            src="/images/cs4.jpeg"
+            alt="partner4"
+          />
+
+          <img
+            src="/images/cs5.png"
+            alt="partner5"
+          />
+
         </div>
 
       </section>

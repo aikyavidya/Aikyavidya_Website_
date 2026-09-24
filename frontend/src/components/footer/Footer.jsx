@@ -21,7 +21,7 @@ export default function Footer() {
         <div className="footer-col" data-aos="fade-up" data-aos-delay="0">
           <img
             src="images/logo-1.png"
-            alt="logo"
+            alt="Aikya Vidya"
             className="logo"
           />
 
@@ -34,9 +34,9 @@ export default function Footer() {
           </p>
 
 
-<Link to="/donation" className="btn">
-  DONATE NOW ❤
-</Link>
+          <Link to="/donation" className="btn">
+            DONATE NOW ❤
+          </Link>
         </div>
 
         {/* COLUMN 2 */}
@@ -66,37 +66,37 @@ export default function Footer() {
           </div>
 
           <div className="socials">
-            <a 
-                    href="https://instagram.com/aikya_vidya?igshid=NGVhN2U2NjQ0Yg==" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                  >
-                    <FaInstagram />
-                  </a>
+            <a
+              href="https://instagram.com/aikya_vidya?igshid=NGVhN2U2NjQ0Yg=="
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaInstagram />
+            </a>
 
-                  <a 
-                    href="https://www.facebook.com/profile.php?id=100090151397761&mibextid=ZbWKwL" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                  >
-                    <FaFacebookF />
-                  </a>
+            <a
+              href="https://www.facebook.com/profile.php?id=100090151397761&mibextid=ZbWKwL"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaFacebookF />
+            </a>
 
-                  <a 
-                    href="https://youtube.com/@aikyavidya108?si=9XasfB3iSthH4P_2" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                  >
-                    <FaYoutube />
-                  </a>
+            <a
+              href="https://youtube.com/@aikyavidya108?si=9XasfB3iSthH4P_2"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaYoutube />
+            </a>
 
-                  <a 
-                    href="https://twitter.com/AikyaVidya" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                  >
-                    <FaTwitter />
-                  </a>
+            <a
+              href="https://twitter.com/AikyaVidya"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaTwitter />
+            </a>
           </div>
         </div>
 
@@ -117,9 +117,9 @@ export default function Footer() {
         <div className="footer-col" data-aos="fade-up" data-aos-delay="300">
           <h4>ASSOCIATED TRUSTS</h4>
 
-          <a target="_blank"  href="https://www.akshayapatra.org/">Akshaya Patra</a>
+          <a target="_blank" href="https://www.akshayapatra.org/">Akshaya Patra</a>
           <a target="_blank" href="https://www.harekrishnacharities.org/">Hare Krishna Charities</a>
-          <a target="_blank"  href="https://hkmhyderabad.org/">Hare Krishna Movement</a>
+          <a target="_blank" href="https://hkmhyderabad.org/">Hare Krishna Movement</a>
         </div>
 
       </div>

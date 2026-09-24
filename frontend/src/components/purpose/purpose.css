@@ -46,7 +46,7 @@
 }
 
 /* BUTTON */
-.donate-btn {
+.tab-content .donate-btn {
   display: inline-block;
   background: white;
   color: #f3742b;

@@ -66,7 +66,7 @@ function Checkout() {
 
       // 🔹 STEP 2: OPEN RAZORPAY
       const options = {
-        key: import.meta.env.VITE_RAZORPAY_KEY",
+        key: import.meta.env.VITE_RAZORPAY_KEY,
         amount: order.amount,
         currency: "INR",
         name: "AIKYA VIDYA",

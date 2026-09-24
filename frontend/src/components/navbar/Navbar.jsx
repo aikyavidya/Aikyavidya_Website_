@@ -27,89 +27,71 @@ export default function Header() {
   return (
     <header className="header" data-aos="fade-down" data-aos-duration="1000">
 
-      {/* TOP BAR  */}
+      {/* TOP BAR */}
       <div className="topbar">
-        <div className="container">
-
+        <div className="container topbar-container navbar-container">
           <div className="top-left">
             An Initiative of Hare Krishna Movement
           </div>
 
           <div className="top-right">
-            <Link href="mailto:connect@aikyavidya.org">
-              <FaEnvelope /> connect@aikyavidya.org
-            </Link>
-            <Link href="tel:+917386898991">
-              <FaPhoneAlt /> +91 73868 98991
-            </Link>
+            <a href="mailto:connect@aikyavidya.org" className="top-link">
+              <FaEnvelope />
+              <span>connect@aikyavidya.org</span>
+            </a>
+
+            <a href="tel:+917386898991" className="top-link">
+              <FaPhoneAlt />
+              <span>+91 73868 98991</span>
+            </a>
 
             <div className="socials">
-                   <a 
-                    href="https://instagram.com/aikya_vidya?igshid=NGVhN2U2NjQ0Yg==" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                  >
-                    <FaInstagram />
-                  </a>
+              <a href="https://instagram.com/aikya_vidya" target="_blank" rel="noreferrer">
+                <FaInstagram />
+              </a>
 
-                  <a 
-                    href="https://www.facebook.com/profile.php?id=100090151397761&mibextid=ZbWKwL" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                  >
-                    <FaFacebookF />
-                  </a>
+              <a href="https://facebook.com" target="_blank" rel="noreferrer">
+                <FaFacebookF />
+              </a>
 
-                  <a 
-                    href="https://youtube.com/@aikyavidya108?si=9XasfB3iSthH4P_2" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                  >
-                    <FaYoutube />
-                  </a>
+              <a href="https://youtube.com" target="_blank" rel="noreferrer">
+                <FaYoutube />
+              </a>
 
-                  <a 
-                    href="https://twitter.com/AikyaVidya" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                  >
-                    <FaTwitter />
-                  </a>
+              <a href="https://twitter.com" target="_blank" rel="noreferrer">
+                <FaTwitter />
+              </a>
             </div>
           </div>
-
         </div>
       </div>
 
-         {/* Navbar */}
+      {/* Navbar */}
       <div className="navbar">
         <div className="container">
 
           {/* Logo */}
           <div className="logo">
             <div className="logo-box">
-               <Link to="/">
-      <img
-        src="\images\logo-1.png"
-        alt="logo"
-      />
-    </Link>
+              <Link to="/">
+                <img src="/images/logo-1.png" alt="Aikya Vidya" />
+              </Link>
             </div>
           </div>
 
-          
+
 
           {/* Menu */}
           <nav className={`menu ${menuOpen ? "active" : ""}`}>
-              {/* 🔥 CLOSE BUTTON (ADD HERE) */}
-  <div className="close-btn" onClick={() => setMenuOpen(false)}>
-    ✕
-  </div>
+            {/* 🔥 CLOSE BUTTON (ADD HERE) */}
+            <div className="close-btn" onClick={() => setMenuOpen(false)}>
+              ✕
+            </div>
             <ul>
               <li>
-                <NavLink 
-                  to="/" 
-                  end 
+                <NavLink
+                  to="/"
+                  end
                   className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
                   onClick={closeMobileMenu}
                 >
@@ -117,80 +99,80 @@ export default function Header() {
                 </NavLink>
               </li>
 
-             
-             <li className="dropdown">
-  <span
-    className="nav-link"
-    onClick={() =>
-      setOpenDropdown(openDropdown === "about" ? null : "about")
-    }
-  >
-    About Us <span className="arrow"></span>
-  </span>
 
-  <ul className={`dropdown-menu ${openDropdown === "about" ? "show" : ""}`}>
+              <li className="dropdown">
+                <span
+                  className="nav-link"
+                  onClick={() =>
+                    setOpenDropdown(openDropdown === "about" ? null : "about")
+                  }
+                >
+                  About Us <span className="arrow"></span>
+                </span>
 
-    <NavLink to="/ourInspiration" className={({ isActive }) => isActive ? "dropdown-link active" : "dropdown-link"} onClick={closeMobileMenu}>
-      Our Inspiration
-    </NavLink>
+                <ul className={`dropdown-menu ${openDropdown === "about" ? "show" : ""}`}>
 
-    <NavLink to="/ourTrust" className={({ isActive }) => isActive ? "dropdown-link active" : "dropdown-link"} onClick={closeMobileMenu}>
-      Our Trust
-    </NavLink>
+                  <NavLink to="/ourInspiration" className={({ isActive }) => isActive ? "dropdown-link active" : "dropdown-link"} onClick={closeMobileMenu}>
+                    Our Inspiration
+                  </NavLink>
 
-    <NavLink to="/associatedTrusts" className={({ isActive }) => isActive ? "dropdown-link active" : "dropdown-link"} onClick={closeMobileMenu}>
-      Associated Trusts
-    </NavLink>
+                  <NavLink to="/ourTrust" className={({ isActive }) => isActive ? "dropdown-link active" : "dropdown-link"} onClick={closeMobileMenu}>
+                    Our Trust
+                  </NavLink>
 
-    {/* 🔥 NESTED DROPDOWN */}
-    <li
-      className="submenu-dropdown"
-    >
-      <span className="dropdown-link" onClick={(e) => { e.stopPropagation(); setOpenSubmenu(openSubmenu === "governance" ? null : "governance"); }}>
-        Governance ▸
-      </span>
+                  <NavLink to="/associatedTrusts" className={({ isActive }) => isActive ? "dropdown-link active" : "dropdown-link"} onClick={closeMobileMenu}>
+                    Associated Trusts
+                  </NavLink>
 
-      <ul className={`submenu ${openSubmenu === "governance" ? "show" : ""}`}>
-        <NavLink to="/board" className="dropdown-link" onClick={closeMobileMenu}>Board of Trustees</NavLink>
-        <NavLink to="/leadership" className="dropdown-link" onClick={closeMobileMenu}>Leadership Team</NavLink>
-        <NavLink to="/management" className="dropdown-link" onClick={closeMobileMenu}>Management Team</NavLink>
-      </ul>
-    </li>
+                  {/* 🔥 NESTED DROPDOWN */}
+                  <li
+                    className="submenu-dropdown"
+                  >
+                    <span className="dropdown-link" onClick={(e) => { e.stopPropagation(); setOpenSubmenu(openSubmenu === "governance" ? null : "governance"); }}>
+                      Governance ▸
+                    </span>
 
-    <NavLink to="/csr-page" className={({ isActive }) => isActive ? "dropdown-link active" : "dropdown-link"} onClick={closeMobileMenu}>
-      CSR Applicability
-    </NavLink>
+                    <ul className={`submenu ${openSubmenu === "governance" ? "show" : ""}`}>
+                      <NavLink to="/board" className="dropdown-link" onClick={closeMobileMenu}>Board of Trustees</NavLink>
+                      <NavLink to="/leadership" className="dropdown-link" onClick={closeMobileMenu}>Leadership Team</NavLink>
+                      <NavLink to="/management" className="dropdown-link" onClick={closeMobileMenu}>Management Team</NavLink>
+                    </ul>
+                  </li>
 
-    <NavLink to="/csr" className={({ isActive }) => isActive ? "dropdown-link active" : "dropdown-link"} onClick={closeMobileMenu}>
-      CSR Partners
-    </NavLink>
+                  <NavLink to="/csr-page" className={({ isActive }) => isActive ? "dropdown-link active" : "dropdown-link"} onClick={closeMobileMenu}>
+                    CSR Applicability
+                  </NavLink>
 
-  </ul>
-</li>
+                  <NavLink to="/csr" className={({ isActive }) => isActive ? "dropdown-link active" : "dropdown-link"} onClick={closeMobileMenu}>
+                    CSR Partners
+                  </NavLink>
 
-             <li className="dropdown">
-                 <span className="nav-link" onClick={() => setOpenDropdown(openDropdown === "initiatives" ? null : "initiatives")}>
-                   Initiatives <span className="arrow"></span>
-                 </span>
-                 <ul className={`dropdown-menu ${openDropdown === "initiatives" ? "show" : ""}`}>
-                   <li>
-                     <NavLink to="/initiatives" className={({ isActive }) => isActive ? "dropdown-link active" : "dropdown-link"} onClick={closeMobileMenu}> Our Initiatives</NavLink>
-                   </li>
-                   <li>
-                     <NavLink to="/food" className={({ isActive }) => isActive ? "dropdown-link active" : "dropdown-link"} onClick={closeMobileMenu}> Food</NavLink>
-                   </li>
-                   <li>
-                     <NavLink to="/education" className={({ isActive }) => isActive ? "dropdown-link active" : "dropdown-link"} onClick={closeMobileMenu}> Education</NavLink>
-                   </li>
-                   <li>
-                     <NavLink to="/values" className={({ isActive }) => isActive ? "dropdown-link active" : "dropdown-link"} onClick={closeMobileMenu}> Values</NavLink>
-                   </li>
-                 </ul>
-               </li>
+                </ul>
+              </li>
+
+              <li className="dropdown">
+                <span className="nav-link" onClick={() => setOpenDropdown(openDropdown === "initiatives" ? null : "initiatives")}>
+                  Initiatives <span className="arrow"></span>
+                </span>
+                <ul className={`dropdown-menu ${openDropdown === "initiatives" ? "show" : ""}`}>
+                  <li>
+                    <NavLink to="/initiatives" className={({ isActive }) => isActive ? "dropdown-link active" : "dropdown-link"} onClick={closeMobileMenu}> Our Initiatives</NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/food" className={({ isActive }) => isActive ? "dropdown-link active" : "dropdown-link"} onClick={closeMobileMenu}> Food</NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/education" className={({ isActive }) => isActive ? "dropdown-link active" : "dropdown-link"} onClick={closeMobileMenu}> Education</NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/values" className={({ isActive }) => isActive ? "dropdown-link active" : "dropdown-link"} onClick={closeMobileMenu}> Values</NavLink>
+                  </li>
+                </ul>
+              </li>
 
               <li>
-                <NavLink 
-                  to="/impact" 
+                <NavLink
+                  to="/impact"
                   className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
                   onClick={closeMobileMenu}
                 >
@@ -199,8 +181,8 @@ export default function Header() {
               </li>
 
               <li>
-                <NavLink 
-                  to="/media" 
+                <NavLink
+                  to="/media"
                   className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
                   onClick={closeMobileMenu}
                 >
@@ -209,8 +191,8 @@ export default function Header() {
               </li>
 
               <li>
-                <NavLink 
-                  to="/volunteer" 
+                <NavLink
+                  to="/volunteer"
                   className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
                   onClick={closeMobileMenu}
                 >
@@ -218,7 +200,7 @@ export default function Header() {
                 </NavLink>
               </li>
 
-  
+
               <li className="dropdown">
                 <span className="nav-link" onClick={() => setOpenDropdown(openDropdown === "gallery" ? null : "gallery")}>
                   Gallery <span className="arrow"></span>
@@ -226,90 +208,90 @@ export default function Header() {
 
                 <ul className={`dropdown-menu ${openDropdown === "gallery" ? "show" : ""}`}>
                   <li>
-                    <NavLink 
-                      to="/photos" 
+                    <NavLink
+                      to="/photos"
                       className={({ isActive }) => isActive ? "dropdown-link active" : "dropdown-link"}
                       onClick={closeMobileMenu}
                     >
                       Photo Gallery
                     </NavLink>
-               </li>
+                  </li>
 
-    <li>
-      <NavLink 
-        to="/videos" 
-        className={({ isActive }) => isActive ? "dropdown-link active" : "dropdown-link"}
-        onClick={closeMobileMenu}
-      >
-        Video Gallery
-      </NavLink>
-    </li>
-  </ul>
-</li>
+                  <li>
+                    <NavLink
+                      to="/videos"
+                      className={({ isActive }) => isActive ? "dropdown-link active" : "dropdown-link"}
+                      onClick={closeMobileMenu}
+                    >
+                      Video Gallery
+                    </NavLink>
+                  </li>
+                </ul>
+              </li>
 
 
 
               <li className="dropdown">
-  
-  <span 
-    className="nav-link" onClick={() => setOpenDropdown(openDropdown === "contact" ? null : "contact")}
-  >
-    Contact <span className="arrow"></span>
-  </span>
 
-  <ul className={`dropdown-menu ${openDropdown === "contact" ? "show" : ""}`}>
-    <li>
-      <NavLink 
-        to="/contact" 
-        className="dropdown-link"
-        onClick={closeMobileMenu}
-      >
-        Contact Us
-      </NavLink>
-    </li>
-    <li>
-      <NavLink 
-        to="/documents" 
-        className="dropdown-link"
-        onClick={closeMobileMenu}
-      >
-        Documents & Downloads
-      </NavLink>
-    </li>
-  </ul>
+                <span
+                  className="nav-link" onClick={() => setOpenDropdown(openDropdown === "contact" ? null : "contact")}
+                >
+                  Contact <span className="arrow"></span>
+                </span>
 
-</li>
+                <ul className={`dropdown-menu ${openDropdown === "contact" ? "show" : ""}`}>
+                  <li>
+                    <NavLink
+                      to="/contact"
+                      className="dropdown-link"
+                      onClick={closeMobileMenu}
+                    >
+                      Contact Us
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      to="/documents"
+                      className="dropdown-link"
+                      onClick={closeMobileMenu}
+                    >
+                      Documents & Downloads
+                    </NavLink>
+                  </li>
+                </ul>
+
+              </li>
             </ul>
           </nav>
 
-         <div
-      className="donate-btn"
-      onClick={() => navigate("/donation")}
-      style={{ cursor: "pointer" }}
-    >
-      DONATE NOW <span>❤</span>
-    </div>
+          <div
+            className="donate-btn"
+            onClick={() => navigate("/donation")}
+            style={{ cursor: "pointer" }}
+          >
+            DONATE NOW
+          </div>
 
-        {/* MOBILE MENU */}
-           <div
-  className="hamburger"
-  onClick={() => setMenuOpen(prev => !prev)}
-  role="button"
-  aria-label="Toggle menu"
->
-  ☰
-</div>
+          {/* MOBILE MENU */}
+          <div
+            className="hamburger"
+            onClick={() => setMenuOpen(prev => !prev)}
+            role="button"
+            aria-label="Toggle menu"
+          >
+            ☰
+          </div>
 
         </div>
       </div>
 
-        {/* 🔥 ADD OVERLAY HERE */}
-  {menuOpen && (
-    <div 
-      className="overlay" 
-      onClick={() => setMenuOpen(false)}
-    ></div>
-  )}
+      {/* 🔥 ADD OVERLAY HERE */}
+      {menuOpen && (
+        <div
+          className="overlay"
+          onClick={() => setMenuOpen(false)}
+        ></div>
+      )}
 
     </header>
   );
