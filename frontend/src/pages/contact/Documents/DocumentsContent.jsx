@@ -34,7 +34,7 @@ const DocumentsContent = () => {
 
         {/* ITEM 1 */}
         <div className="doc-item" data-aos="zoom-in" data-aos-delay="0">
-          <h5>HKM INDIA 12A</h5>
+          <h5>AIKYA VIDYA Foundation 12A</h5>
           <a
             href="/documents/12A - AIKYA Foundation.pdf"
             target="_blank"
@@ -47,7 +47,7 @@ const DocumentsContent = () => {
 
         {/* ITEM 2 */}
         <div className="doc-item" data-aos="zoom-in" data-aos-delay="100">
-          <h5>HKM INDIA 80G</h5>
+          <h5>AIKYA VIDYA Foundation 80G</h5>
           <a
             href="/documents/80G - AIKYA Foundation.pdf"
             target="_blank"
@@ -60,7 +60,7 @@ const DocumentsContent = () => {
 
         {/* ITEM 3 */}
         <div className="doc-item" data-aos="zoom-in" data-aos-delay="200">
-          <h5>HKM INDIA CSR Reg</h5>
+          <h5>AIKYA VIDYA Foundation CSR Reg</h5>
           <a
             href="/documents/CSR Certificate - AIKYA Foundation.pdf"
             target="_blank"

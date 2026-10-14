@@ -30,10 +30,6 @@ export default function Header() {
       {/* TOP BAR */}
       <div className="topbar">
         <div className="container topbar-container navbar-container">
-          <div className="top-left">
-            An Initiative of Hare Krishna Movement
-          </div>
-
           <div className="top-right">
             <a href="mailto:connect@aikyavidya.org" className="top-link">
               <FaEnvelope />
