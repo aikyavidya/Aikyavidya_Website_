@@ -1,5 +1,5 @@
 import "./about.css";
-import { BsBasket2Fill, BsBookHalf, BsHandThumbsUpFill } from "react-icons/bs";
+import { BsBookHalf } from "react-icons/bs";
 import { Link } from "react-router-dom";
 export default function AboutSection() {
   return (
@@ -33,7 +33,7 @@ export default function AboutSection() {
           <div className="features">
 
             <div className="feature">
-              <div className="icon"><BsBasket2Fill /></div>
+              <div className="icon"><span className="feature-icon-image feature-icon-food" aria-hidden="true" /></div>
               <p>Food</p>
             </div>
 
@@ -43,7 +43,7 @@ export default function AboutSection() {
             </div>
 
             <div className="feature">
-              <div className="icon"><BsHandThumbsUpFill /></div>
+              <div className="icon"><span className="feature-icon-image feature-icon-values" aria-hidden="true" /></div>
               <p>Values</p>
             </div>
 

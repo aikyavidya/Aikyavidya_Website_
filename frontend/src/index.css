@@ -2,7 +2,7 @@
   font-family: 'Nunito Sans', sans-serif;
   color: #263536;
   background: #fff;
-  --color-primary: #d5b06a;
+  --color-primary: #923f19;
   --color-primary-dark: #a77a30;
   --color-primary-strong: #624918;
   --color-accent: #a77a30;
@@ -26,7 +26,7 @@ body {
 
 main {
   background: #fbfaf7;
-  --color-primary: #cdb477;
+  --color-primary: #923f19;
   --color-primary-dark: #927847;
   --color-primary-strong: #655531;
   --color-accent: #927847;
@@ -42,6 +42,16 @@ main h3 {
 
 main p {
   color: var(--color-muted);
+}
+
+p {
+  text-align: justify;
+  text-align-last: left;
+}
+
+main [class$="header-overlay"] p {
+  text-align: center;
+  text-align-last: center;
 }
 
 /* GLOBAL FIX */
@@ -102,7 +112,7 @@ button {
   background: var(--color-primary);
   padding: 12px 24px;
   border: none;
-  color: var(--color-ink);
+  color: #fff;
   border-radius: 30px;
   font-weight: 600;
   font-family: inherit;

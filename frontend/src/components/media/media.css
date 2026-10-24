@@ -87,7 +87,7 @@
   margin: 15px;
   padding: 8px 16px;
   background: var(--color-primary);
-  color: var(--color-ink);
+  color: #fff;
   border-radius: 20px;
   font-size: 13px;
   transition: background-color .2s ease, color .2s ease;

@@ -47,7 +47,7 @@
 .testimonials .btn:hover {
   transform: translateY(-2px);
   background: var(--color-primary);
-  color: var(--color-ink);
+  color: #fff;
 }
 
 /* RIGHT CARD */
@@ -56,14 +56,8 @@
   padding: 30px;
   border: 1px solid rgba(38, 53, 54, .07);
   border-radius: var(--card-radius);
-  box-shadow: var(--card-shadow);
+  box-shadow: none;
   position: relative;
-  transition: transform .25s ease, box-shadow .25s ease;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--card-shadow-hover);
 }
 
 /* QUOTE */
@@ -110,14 +104,21 @@
 .controls {
   margin-top: 20px;
   display: flex;
-  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
   color: #ffffff;
 }
 
 .controls button {
+  display: grid;
+  flex: 0 0 35px;
   width: 35px;
   height: 35px;
-  border-radius: 100%;
+  min-width: 35px;
+  padding: 0;
+  place-items: center;
+  border-radius: 50%;
   border: none;
   background: rgb(48, 48, 48);
   cursor: pointer;

@@ -117,7 +117,7 @@
   background: var(--color-primary);
   border: none;
   padding: 12px;
-  color: var(--color-ink);
+  color: #fff;
   font-size: 16px;
   border-radius: 8px;
   cursor: pointer;

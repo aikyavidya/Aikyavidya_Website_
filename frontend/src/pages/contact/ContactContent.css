@@ -147,7 +147,7 @@
 /* BUTTON */
 .contact-form button {
   background: var(--color-primary);
-  color: var(--color-ink);
+  color: #fff;
   border: none;
   padding: 12px 28px; /* FIXED */
   border-radius: 25px;

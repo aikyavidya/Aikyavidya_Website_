@@ -11,7 +11,7 @@
   border: 2px solid var(--color-primary);
   border-radius: 50%;
   background: var(--color-primary);
-  color: #263536;
+  color: #fff;
   box-shadow: 0 4px 14px rgba(38, 53, 54, .22);
   cursor: pointer;
   transition: background-color .2s ease, color .2s ease, transform .2s ease;

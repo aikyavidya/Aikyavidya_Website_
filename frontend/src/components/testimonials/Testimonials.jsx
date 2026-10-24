@@ -1,5 +1,5 @@
 import "./testimonials.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 const data = [
   {
@@ -18,9 +18,20 @@ const data = [
 
 export default function Testimonials() {
   const [index, setIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
-  const next = () => setIndex((index + 1) % data.length);
-  const prev = () => setIndex((index - 1 + data.length) % data.length);
+  useEffect(() => {
+    if (isPaused || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return undefined;
+
+    const intervalId = window.setInterval(() => {
+      setIndex((currentIndex) => (currentIndex + 1) % data.length);
+    }, 5000);
+
+    return () => window.clearInterval(intervalId);
+  }, [isPaused]);
+
+  const next = () => setIndex((currentIndex) => (currentIndex + 1) % data.length);
+  const prev = () => setIndex((currentIndex) => (currentIndex - 1 + data.length) % data.length);
 
   return (
     <section className="testimonials">
@@ -31,10 +42,7 @@ export default function Testimonials() {
         <div className="left" data-aos="fade-right">
           <span className="subtitle">TESTIMONIALS</span>
 
-          <h2>
-            What People and Students Say <br />
-            About AIKYA VIDYA
-          </h2>
+          <h2>Real Stories, Real Experiences: AIKYA VIDYA</h2>
 
           <p>
             What AIKYA believes is that when children are taught a value based
@@ -49,7 +57,19 @@ export default function Testimonials() {
         </div>
 
         {/* RIGHT */}
-        <div className="right" data-aos="fade-left">
+        <div
+          className="right"
+          data-aos="fade-left"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+          onFocus={() => setIsPaused(true)}
+          onBlur={(event) => {
+            if (!event.currentTarget.contains(event.relatedTarget)) setIsPaused(false);
+          }}
+          role="region"
+          aria-label="Testimonials"
+          aria-roledescription="carousel"
+        >
 
           <div className="card">
             <div className="quote">❝</div>

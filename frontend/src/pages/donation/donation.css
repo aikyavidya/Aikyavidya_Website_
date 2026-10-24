@@ -130,7 +130,7 @@
 /* BUTTON */
 .donation-row button {
   background: var(--color-primary);
-  color: var(--color-ink);
+  color: #fff;
   border: none;
   min-height: 44px;
   padding: 10px 20px;

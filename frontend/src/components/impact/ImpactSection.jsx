@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function ImpactSection() {
   return (
     <section className="impact">
-       <div className="container impact">
+       <div className="container impact-content">
       {/* LEFT */}
       <div className="impact-left" data-aos="fade-right">
 

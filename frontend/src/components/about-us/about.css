@@ -17,7 +17,7 @@
 .about-left {
   flex: 1;
   background: var(--color-primary);
-  color: #263536;
+  color: #fff;
   padding: 40px;
   border: 1px solid rgba(167, 122, 48, .18);
   border-radius: var(--card-radius);
@@ -36,6 +36,7 @@
   font-size: 22px;
   line-height: 1.6;
   margin-bottom: 25px;
+  color: #fff;
 }
 
 .about-left .btn {
@@ -107,9 +108,29 @@
   transition: 0.3s;
 }
 
+.feature-icon-image {
+  display: block;
+  width: 22px;
+  height: 22px;
+  background-color: currentColor;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+}
+
+.feature-icon-food {
+  mask-image: url("/images/icons/fork-knife.png");
+}
+
+.feature-icon-values {
+  mask-image: url("/images/icons/core-values.png");
+}
+
 .about .feature p {
   font-size: 14px;
   font-weight: 500;
+  text-align: center;
+  text-align-last: center;
 }
 
 /* HOVER EFFECT */

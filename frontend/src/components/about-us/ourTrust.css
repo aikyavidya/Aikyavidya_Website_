@@ -142,7 +142,7 @@
   height: 76px;
   border: 1px solid rgba(255, 255, 255, .8);
   background: var(--color-primary);
-  color: var(--color-ink);
+  color: #fff;
   font-size: 24px;
 
   display: flex;
@@ -310,6 +310,7 @@
 .accordion-item.active .accordion-indicator {
   transform: rotate(180deg);
   background: var(--color-primary);
+  color: #fff;
 }
 
 .accordion-content {

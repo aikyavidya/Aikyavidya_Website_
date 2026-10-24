@@ -50,11 +50,16 @@
 
 @media (max-width: 768px) {
   .hero {
-    height: 68vh;
-    min-height: 360px;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 1900 / 864;
   }
 
   .hero::after {
-    height: 100px;
+    height: clamp(24px, 8vw, 40px);
+  }
+
+  .hero video {
+    object-fit: contain;
   }
 }

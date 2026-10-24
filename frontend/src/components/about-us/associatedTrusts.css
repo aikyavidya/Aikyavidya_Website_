@@ -113,7 +113,7 @@
   padding: 10px 24px;
   border-radius: 30px;
   background: var(--color-primary);
-  color: var(--color-ink);
+  color: #fff;
   font-weight: 600;
   text-decoration: none;
   transition: 0.3s;
