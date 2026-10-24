@@ -1,6 +1,6 @@
 /* SECTION */
 .impact-section {
-  background: #f5f2ed;
+  background: linear-gradient(145deg, #f4f1e9, #fff 72%);
   
   /* 🔥 TEXTURE (VERY IMPORTANT) */
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
@@ -12,9 +12,9 @@
 .impact-title {
   text-align: center;
   font-family: "Quicksand", sans-serif;
-  font-size: 30px;
+  font-size: clamp(26px, 3vw, 36px);
   font-weight: 700;
-  color: #f47c20;
+  color: var(--color-primary-strong);
   margin-bottom: 50px;
 }
 
@@ -25,27 +25,36 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 100px; /* 🔥 spacing between text & counters */
+  gap: clamp(32px, 6vw, 80px);
+  padding: clamp(28px, 5vw, 52px);
+  border: 1px solid rgba(38, 53, 54, .07);
+  border-radius: 26px;
+  background: rgba(255, 255, 255, .92);
+  box-shadow: var(--card-shadow);
 }
 
 /* LEFT TEXT */
 .impact-col.text {
   width: 45%;
-  font-size: 14px;
-  color: #7a7a7a; /* 🔥 lighter grey */
-  line-height: 2; /* more breathing space */
+  font-size: 16px;
+  color: var(--color-muted);
+  line-height: 1.85;
 }
 
 /* COUNTERS WRAPPER */
 .impact-col.counter {
   width: 25%;
   text-align: center;
+  padding: 24px 12px;
+  border: 1px solid rgba(38, 53, 54, .07);
+  border-radius: 18px;
+  background: var(--color-surface-soft);
 }
 
 /* NUMBERS */
 .impact-col.counter h1 {
   font-size: 64px; /* 🔥 bigger like original */
-  color: #f74f22;
+  color: var(--color-primary-strong);
   font-weight: 600;
   margin: 0;
 }
@@ -56,7 +65,7 @@
   margin-top: 10px;
   font-size: 12px;
   letter-spacing: 2px;
-  color: #f47c20;
+  color: var(--color-primary-strong);
 }
 
 /* IMAGE */
@@ -69,6 +78,8 @@
 .impact-image img {
   width: 80%;
   max-width: 800px;
+  border-radius: 22px;
+  box-shadow: var(--card-shadow);
 }
 
 .impact-header-overlay {
@@ -100,6 +111,11 @@
 
   .impact-col.counter {
     width: 100%;
+    max-width: 440px;
+  }
+
+  .impact-row {
+    padding: 24px 18px;
   }
 }
 

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Nunito+Sans:wght@400;600;700&display=swap');
+
 
 /* =========================
    FOOTER
@@ -7,7 +7,7 @@
 .footer {
   background: linear-gradient(90deg, #1f222b 0%, #181b23 100%);
   color: #fff;
-  padding: 70px 0 0;
+  padding: 44px 0 0;
   font-family: 'Nunito Sans', sans-serif;
 }
 
@@ -18,11 +18,11 @@
 .footer-container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 48px 60px;
+  padding: 0 48px 38px;
 
   display: grid;
   grid-template-columns: 1.15fr 1.1fr 1fr 1fr;
-  gap: 42px;
+  gap: 34px;
 
   align-items: start;
 }
@@ -41,33 +41,33 @@
   font-size: 17px;
   font-weight: 700;
   letter-spacing: 1px;
-  margin: 8px 0 26px;
+  margin: 8px 0 18px;
   color: #f3f3f3;
 }
 
 .footer-col p {
   font-size: 16px;
-  line-height: 1.9;
+  line-height: 1.7;
   color: #f0f0f0;
-  margin-bottom: 18px;
+  margin-bottom: 12px;
 }
 
 /* =========================
    LOGO
 ========================= */
 
-.logo {
-  width: 240px;
+.footer-logo {
+  width: 210px;
   height: auto;
   display: block;
-  margin-bottom: 28px;
+  margin-bottom: 18px;
 }
 
 /* =========================
    DONATE BUTTON
 ========================= */
 
-.btn {
+.footer .btn {
   margin-top: 18px;
   width: 100%;
   max-width: 260px;
@@ -78,20 +78,20 @@
   justify-content: center;
 
   border-radius: 999px;
-  background: linear-gradient(135deg, #ff5a2c, #ff7a18);
-  color: #fff !important;
+  background: var(--color-primary);
+  color: #263536 !important;
 
   font-size: 17px;
   font-weight: 700;
   text-decoration: none;
 
-  box-shadow: 0 10px 30px rgba(255, 90, 44, .28);
+  box-shadow: 0 8px 22px rgba(167, 122, 48, .2);
   transition: .3s;
 }
 
-.btn:hover {
+.footer .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 16px 35px rgba(255, 90, 44, .40);
+  box-shadow: 0 12px 28px rgba(167, 122, 48, .28);
 }
 
 /* =========================
@@ -121,7 +121,7 @@
 }
 
 .item-a a:hover {
-  color: #ff6b35;
+  color: var(--color-primary);
 }
 
 /* =========================
@@ -137,7 +137,7 @@
 }
 
 .footer-col>a:hover {
-  color: #ff6b35;
+  color: var(--color-primary);
   transform: translateX(4px);
 }
 
@@ -161,7 +161,7 @@
 
   border: 1px solid rgba(255, 255, 255, .45);
   border-radius: 50%;
-  color: #ff5a2c;
+  color: var(--color-primary);
   transition: .3s;
 }
 
@@ -170,9 +170,9 @@
 }
 
 .socials a:hover {
-  background: #ff5a2c;
-  border-color: #ff5a2c;
-  color: #fff;
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-ink);
 }
 
 /* =========================
@@ -184,7 +184,7 @@
   max-width: 1400px;
   margin: 0 auto;
 
-  padding: 26px 48px;
+  padding: 18px 48px;
 
   display: flex;
   justify-content: space-between;
@@ -210,7 +210,7 @@
 }
 
 .links a:hover {
-  color: #ff6b35;
+  color: var(--color-primary);
 }
 
 .footer-bottom p {
@@ -227,20 +227,25 @@
 @media (max-width:992px) {
 
   .footer {
-    padding-top: 50px;
+    padding-top: 36px;
   }
 
   .footer-container {
-    grid-template-columns: 1fr;
-    gap: 36px;
-    padding: 0 24px 40px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px 26px;
+    padding: 0 32px 30px;
   }
 
-  .logo {
-    width: 200px;
+  .footer-col:first-child {
+    grid-column: 1 / -1;
+    max-width: 560px;
   }
 
-  .btn {
+  .footer-logo {
+    width: 180px;
+  }
+
+  .footer .btn {
     max-width: 240px;
   }
 
@@ -252,5 +257,31 @@
 
   .links {
     justify-content: center;
+  }
+}
+
+@media (max-width: 560px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 26px;
+    padding: 0 22px 28px;
+  }
+
+  .footer-col:first-child {
+    grid-column: auto;
+  }
+
+  .footer-bottom {
+    padding: 18px 16px;
+  }
+
+  .links {
+    gap: 8px;
+  }
+
+  .links a,
+  .footer-bottom p {
+    font-size: 14px;
+    white-space: normal;
   }
 }

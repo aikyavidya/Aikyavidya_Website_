@@ -56,7 +56,7 @@ function AssociatedTrusts() {
 
               {/* LOGO */}
               <div className="trust-logo">
-                <img src={item.logo} alt={item.title} />
+                <img src={item.logo} alt={item.title} loading="lazy" decoding="async" />
               </div>
 
               {/* CONTENT */}

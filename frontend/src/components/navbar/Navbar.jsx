@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
 import "./navbar.css";
 import {
   FaEnvelope,
@@ -8,54 +7,59 @@ import {
   FaInstagram,
   FaFacebookF,
   FaYoutube,
-  FaTwitter,
 } from "react-icons/fa";
-import { useState } from "react";
+import { FaXTwitter } from "react-icons/fa6";
+import { useRef, useState } from "react";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
   const [openSubmenu, setOpenSubmenu] = useState(null);
-  const navigate = useNavigate();
+  const menuButtonRef = useRef(null);
 
   const closeMobileMenu = () => {
+    const shouldRestoreFocus = menuOpen;
     setMenuOpen(false);
     setOpenDropdown(null);
     setOpenSubmenu(null);
+    if (shouldRestoreFocus) menuButtonRef.current?.focus();
   };
 
   return (
     <header className="header" data-aos="fade-down" data-aos-duration="1000">
+      <a className="skip-link" href="#main-content">Skip to content</a>
 
       {/* TOP BAR */}
       <div className="topbar">
-        <div className="container topbar-container navbar-container">
-          <div className="top-right">
-            <a href="mailto:connect@aikyavidya.org" className="top-link">
-              <FaEnvelope />
-              <span>connect@aikyavidya.org</span>
-            </a>
+        <div className="container topbar-container">
+          <div className="topbar-links" role="group" aria-label="Contact and social links">
+            <div className="top-contact-links">
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=connect%40aikyavidya.org" className="top-contact-link" target="_blank" rel="noopener noreferrer" aria-label="Email connect@aikyavidya.org" title="Email">
+                <FaEnvelope />
+                <span>connect@aikyavidya.org</span>
+              </a>
 
-            <a href="tel:+917386898991" className="top-link">
-              <FaPhoneAlt />
-              <span>+91 73868 98991</span>
-            </a>
+              <a href="tel:+917386898991" className="top-contact-link" aria-label="Call +91 73868 98991" title="Call">
+                <FaPhoneAlt />
+                <span>+91 73868 98991</span>
+              </a>
+            </div>
 
-            <div className="socials">
-              <a href="https://instagram.com/aikya_vidya" target="_blank" rel="noreferrer">
+            <div className="top-social-links">
+              <a href="https://instagram.com/aikya_vidya?igshid=NGVhN2U2NjQ0Yg==" className="top-action" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">
                 <FaInstagram />
               </a>
 
-              <a href="https://facebook.com" target="_blank" rel="noreferrer">
+              <a href="https://www.facebook.com/profile.php?id=100090151397761&mibextid=ZbWKwL" className="top-action" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook">
                 <FaFacebookF />
               </a>
 
-              <a href="https://youtube.com" target="_blank" rel="noreferrer">
+              <a href="https://youtube.com/@aikyavidya108?si=9XasfB3iSthH4P_2" className="top-action" target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="YouTube">
                 <FaYoutube />
               </a>
 
-              <a href="https://twitter.com" target="_blank" rel="noreferrer">
-                <FaTwitter />
+              <a href="https://x.com/AikyaVidya" className="top-action" target="_blank" rel="noopener noreferrer" aria-label="X" title="X">
+                <FaXTwitter />
               </a>
             </div>
           </div>
@@ -78,11 +82,17 @@ export default function Header() {
 
 
           {/* Menu */}
-          <nav className={`menu ${menuOpen ? "active" : ""}`}>
-            {/* 🔥 CLOSE BUTTON (ADD HERE) */}
-            <div className="close-btn" onClick={() => setMenuOpen(false)}>
+          <nav
+            id="main-navigation"
+            className={`menu ${menuOpen ? "active" : ""}`}
+            aria-label="Main navigation"
+            onKeyDown={(event) => {
+              if (menuOpen && event.key === "Escape") closeMobileMenu();
+            }}
+          >
+            <button className="close-btn" type="button" onClick={closeMobileMenu} aria-label="Close menu">
               ✕
-            </div>
+            </button>
             <ul>
               <li>
                 <NavLink
@@ -97,16 +107,19 @@ export default function Header() {
 
 
               <li className="dropdown">
-                <span
-                  className="nav-link"
+                <button
+                  type="button"
+                  className="nav-link dropdown-toggle"
+                  aria-expanded={openDropdown === "about"}
+                  aria-controls="about-menu"
                   onClick={() =>
                     setOpenDropdown(openDropdown === "about" ? null : "about")
                   }
                 >
                   About Us <span className="arrow"></span>
-                </span>
+                </button>
 
-                <ul className={`dropdown-menu ${openDropdown === "about" ? "show" : ""}`}>
+                <ul id="about-menu" className={`dropdown-menu ${openDropdown === "about" ? "show" : ""}`}>
 
                   <NavLink to="/ourInspiration" className={({ isActive }) => isActive ? "dropdown-link active" : "dropdown-link"} onClick={closeMobileMenu}>
                     Our Inspiration
@@ -124,11 +137,11 @@ export default function Header() {
                   <li
                     className="submenu-dropdown"
                   >
-                    <span className="dropdown-link" onClick={(e) => { e.stopPropagation(); setOpenSubmenu(openSubmenu === "governance" ? null : "governance"); }}>
+                    <button type="button" className="dropdown-link dropdown-toggle" aria-expanded={openSubmenu === "governance"} aria-controls="governance-menu" onClick={(e) => { e.stopPropagation(); setOpenSubmenu(openSubmenu === "governance" ? null : "governance"); }}>
                       Governance ▸
-                    </span>
+                    </button>
 
-                    <ul className={`submenu ${openSubmenu === "governance" ? "show" : ""}`}>
+                    <ul id="governance-menu" className={`submenu ${openSubmenu === "governance" ? "show" : ""}`}>
                       <NavLink to="/board" className="dropdown-link" onClick={closeMobileMenu}>Board of Trustees</NavLink>
                       <NavLink to="/leadership" className="dropdown-link" onClick={closeMobileMenu}>Leadership Team</NavLink>
                       <NavLink to="/management" className="dropdown-link" onClick={closeMobileMenu}>Management Team</NavLink>
@@ -147,10 +160,10 @@ export default function Header() {
               </li>
 
               <li className="dropdown">
-                <span className="nav-link" onClick={() => setOpenDropdown(openDropdown === "initiatives" ? null : "initiatives")}>
+                <button type="button" className="nav-link dropdown-toggle" aria-expanded={openDropdown === "initiatives"} aria-controls="initiatives-menu" onClick={() => setOpenDropdown(openDropdown === "initiatives" ? null : "initiatives")}>
                   Initiatives <span className="arrow"></span>
-                </span>
-                <ul className={`dropdown-menu ${openDropdown === "initiatives" ? "show" : ""}`}>
+                </button>
+                <ul id="initiatives-menu" className={`dropdown-menu ${openDropdown === "initiatives" ? "show" : ""}`}>
                   <li>
                     <NavLink to="/initiatives" className={({ isActive }) => isActive ? "dropdown-link active" : "dropdown-link"} onClick={closeMobileMenu}> Our Initiatives</NavLink>
                   </li>
@@ -198,11 +211,11 @@ export default function Header() {
 
 
               <li className="dropdown">
-                <span className="nav-link" onClick={() => setOpenDropdown(openDropdown === "gallery" ? null : "gallery")}>
+                <button type="button" className="nav-link dropdown-toggle" aria-expanded={openDropdown === "gallery"} aria-controls="gallery-menu" onClick={() => setOpenDropdown(openDropdown === "gallery" ? null : "gallery")}>
                   Gallery <span className="arrow"></span>
-                </span>
+                </button>
 
-                <ul className={`dropdown-menu ${openDropdown === "gallery" ? "show" : ""}`}>
+                <ul id="gallery-menu" className={`dropdown-menu ${openDropdown === "gallery" ? "show" : ""}`}>
                   <li>
                     <NavLink
                       to="/photos"
@@ -229,13 +242,11 @@ export default function Header() {
 
               <li className="dropdown">
 
-                <span
-                  className="nav-link" onClick={() => setOpenDropdown(openDropdown === "contact" ? null : "contact")}
-                >
+                <button type="button" className="nav-link dropdown-toggle" aria-expanded={openDropdown === "contact"} aria-controls="contact-menu" onClick={() => setOpenDropdown(openDropdown === "contact" ? null : "contact")}>
                   Contact <span className="arrow"></span>
-                </span>
+                </button>
 
-                <ul className={`dropdown-menu ${openDropdown === "contact" ? "show" : ""}`}>
+                <ul id="contact-menu" className={`dropdown-menu ${openDropdown === "contact" ? "show" : ""}`}>
                   <li>
                     <NavLink
                       to="/contact"
@@ -260,23 +271,25 @@ export default function Header() {
             </ul>
           </nav>
 
-          <div
+          <Link
+            to="/donation"
             className="donate-btn"
-            onClick={() => navigate("/donation")}
-            style={{ cursor: "pointer" }}
           >
             DONATE NOW
-          </div>
+          </Link>
 
           {/* MOBILE MENU */}
-          <div
+          <button
+            ref={menuButtonRef}
+            type="button"
             className="hamburger"
             onClick={() => setMenuOpen(prev => !prev)}
-            role="button"
-            aria-label="Toggle menu"
+            aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={menuOpen}
+            aria-controls="main-navigation"
           >
             ☰
-          </div>
+          </button>
 
         </div>
       </div>
@@ -285,16 +298,10 @@ export default function Header() {
       {menuOpen && (
         <div
           className="overlay"
-          onClick={() => setMenuOpen(false)}
+          onClick={closeMobileMenu}
         ></div>
       )}
 
     </header>
   );
 }
-
-
-
-
-
-

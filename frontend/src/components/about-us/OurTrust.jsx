@@ -27,26 +27,6 @@ function OurTrust() {
     return () => observer.disconnect();
   }, []);
 
-
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setVisible(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.3 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <div className="trust-page">
 
@@ -71,13 +51,21 @@ function OurTrust() {
         <div className={`trust-container trust-grid ${visible ? "show" : ""}`}>
 
           {/* LEFT (VIDEO CARD) */}
-          <div className="trust-left" onClick={() => setOpenVideo(true)} data-aos="fade-right">
+          <button
+            className="trust-left"
+            type="button"
+            aria-label="Play the AIKYA VIDYA education video"
+            onClick={() => setOpenVideo(true)}
+            data-aos="fade-right"
+          >
             <img
-              src="\images\purpose_thumbnail.webp"
+              src="/images/purpose_thumbnail.webp"
               alt=""
+              loading="lazy"
+              decoding="async"
             />
-            <div className="play-btn">▶</div>
-          </div>
+            <span className="play-btn" aria-hidden="true">▶</span>
+          </button>
 
           {/* RIGHT */}
           <div className="trust-right" data-aos="fade-left">
@@ -103,8 +91,9 @@ function OurTrust() {
           <div className="video-content" onClick={(e) => e.stopPropagation()}>
             <iframe
               src="https://www.youtube.com/embed/277t-iPOApU?autoplay=1"
-              title="video"
+              title="AIKYA VIDYA education program video"
               allow="autoplay"
+              loading="lazy"
             ></iframe>
           </div>
         </div>
@@ -133,14 +122,18 @@ function OurTrust() {
             <div
               key={index}
               className={`accordion-item ${active === index ? "active" : ""}`}
-              onClick={() => setActive(active === index ? null : index)}
             >
-              <div className="accordion-title">
-                {item.title}
-                <span>{active === index ? "−" : "+"}</span>
-              </div>
+              <button
+                className="accordion-title"
+                type="button"
+                aria-expanded={active === index}
+                onClick={() => setActive(active === index ? null : index)}
+              >
+                <span>{item.title}</span>
+                <span className="accordion-indicator" aria-hidden="true">{active === index ? "−" : "+"}</span>
+              </button>
 
-              <div className="accordion-content">
+              <div className="accordion-content" aria-hidden={active !== index}>
                 <p>{item.content}</p>
               </div>
             </div>

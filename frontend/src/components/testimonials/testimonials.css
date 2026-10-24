@@ -1,6 +1,7 @@
 .testimonials {
   background: url("https://aikyavidya.org/new/wp-content/uploads/2020/08/icon-box_bg.jpg");
-  padding: 100px 0;
+  background-color: var(--color-surface-warm);
+  padding: 76px 0;
 }
 
 /* CONTAINER */
@@ -16,7 +17,7 @@
 
 /* LEFT */
 .left .subtitle {
-  color: orange;
+  color: var(--color-primary-dark);
   letter-spacing: 2px;
   font-size: 13px;
 }
@@ -24,6 +25,8 @@
 .left h2 {
   font-size: 32px;
   margin: 15px 0;
+  letter-spacing: -.025em;
+  line-height: 1.2;
 }
 
 .left p {
@@ -32,27 +35,41 @@
   margin-bottom: 20px;
 }
 
-.btn {
-  border: 1px solid orange;
+.testimonials .btn {
+  border: 1px solid var(--color-primary);
   padding: 10px 20px;
   border-radius: 30px;
   display: inline-block;
   color: black;
+  transition: transform .2s ease, background-color .2s ease, color .2s ease;
+}
+
+.testimonials .btn:hover {
+  transform: translateY(-2px);
+  background: var(--color-primary);
+  color: var(--color-ink);
 }
 
 /* RIGHT CARD */
 .card {
   background: #fff;
   padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  border: 1px solid rgba(38, 53, 54, .07);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
   position: relative;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--card-shadow-hover);
 }
 
 /* QUOTE */
 .quote {
   font-size: 40px;
-  color: orange;
+  color: var(--color-primary-dark);
   position: absolute;
   top: 10px;
   left: 20px;
@@ -85,7 +102,7 @@
 
 .user span {
   font-size: 12px;
-  color: orange;
+  color: var(--color-primary-dark);
   text-transform: uppercase;
 }
 
@@ -104,11 +121,19 @@
   border: none;
   background: rgb(48, 48, 48);
   cursor: pointer;
+  transition: transform .2s ease, background-color .2s ease;
+}
+
+.controls button:hover {
+  transform: translateY(-2px);
+  background: var(--color-primary-dark);
 }
 
 /* MOBILE */
 @media (max-width: 900px) {
   .test-container {
     grid-template-columns: 1fr;
+    gap: 36px;
+    padding: 0 24px;
   }
 }

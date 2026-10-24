@@ -56,7 +56,7 @@
 }
 
 .donation-tagline span {
-  color: #fea436;
+  color: #e0bc79;
   font-weight: 700;
 }
 
@@ -66,15 +66,15 @@
 }
 
 .annadaan-bg {
-  background: #ffefdb;
+  background: #f6f2eb;
 }
 
 .sponsor-bg {
-  background: #e4fcd4;
+  background: #eff3ee;
 }
 
 .vidya-bg{
-    background: #dfe7ff;
+    background: #eef2f6;
 }
 
 /* LIST CONTAINER */
@@ -91,19 +91,21 @@
   width: calc(33.33% - 14px);
   background: white;
   padding: 20px 25px;
-  border-radius: 12px;
+  border: 1px solid rgba(38, 53, 54, .06);
+  border-radius: var(--card-radius);
 
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px; /* 🔥 IMPORTANT SPACE */
 
-  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
-  transition: 0.3s;
+  box-shadow: var(--card-shadow);
+  transition: transform .25s ease, box-shadow .25s ease;
 }
 
 .donation-row:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
+  box-shadow: var(--card-shadow-hover);
 }
 
 /* TITLE */
@@ -115,26 +117,37 @@
 /* SUB TEXT */
 .sub {
   font-size: 12px;
-  color: #777;
+  color: var(--color-muted);
 }
 
 /* PRICE */
 .donation-price {
   font-size: 20px;
   font-weight: 700;
-  color: #ff5a2c;
+  color: var(--color-primary-dark);
 }
 
 /* BUTTON */
 .donation-row button {
-  background: #ff5a2c;
-  color: white;
+  background: var(--color-primary);
+  color: var(--color-ink);
   border: none;
-  padding: 8px 18px;
+  min-height: 44px;
+  padding: 10px 20px;
   border-radius: 20px;
   font-size: 12px;
   cursor: pointer;
   white-space: nowrap;
+}
+
+.donation-row button:hover {
+  background: var(--color-primary-dark);
+  color: #fff;
+}
+
+.donation-row button:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: 3px;
 }
 
 /* RESPONSIVE */
@@ -155,7 +168,7 @@
 
 /* BANK SECTION */
 .bank-section {
-  background: #d3deea;
+  background: #f1f3f4;
   padding: 80px 20px;
 }
 
@@ -201,7 +214,7 @@
 
 .upi-number {
   font-size: 26px;
-  color: #ff5a2c;
+  color: var(--color-primary-dark);
   font-weight: 700;
 }
 
@@ -294,7 +307,7 @@
 
 /* LINKS */
 .donation-note a {
-  color: #ff5a2c;
+  color: #e0bc79;
   font-weight: 600;
   margin-left: 5px;
   text-decoration: none;
@@ -304,9 +317,20 @@
   text-decoration: underline;
 }
 
+.donation-row button:hover {
+  background: var(--color-primary-dark);
+  color: #fff;
+}
+
+.donation-row button:focus-visible,
+.donation-note a:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: 3px;
+}
+
 /* PREMIUM EFFECT */
 .donation-note {
-  box-shadow: inset 0 0 80px rgba(255, 90, 44, 0.1);
+  box-shadow: inset 0 0 80px rgba(167, 122, 48, .1);
 }
 
 @media (max-width: 768px) {
@@ -330,5 +354,21 @@
 
   .donation-row {
     padding: 20px 15px;
+  }
+
+  .donation-list {
+    padding: 0 16px;
+  }
+
+  .bank-section {
+    padding: 56px 20px;
+  }
+
+  .bank-grid {
+    gap: 36px;
+  }
+
+  .upi-qr {
+    width: min(260px, 80vw);
   }
 }

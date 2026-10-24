@@ -1,6 +1,47 @@
+:root {
+  font-family: 'Nunito Sans', sans-serif;
+  color: #263536;
+  background: #fff;
+  --color-primary: #d5b06a;
+  --color-primary-dark: #a77a30;
+  --color-primary-strong: #624918;
+  --color-accent: #a77a30;
+  --color-ink: #263536;
+  --color-muted: #596563;
+  --color-surface: #f5f5f5;
+  --color-surface-warm: #f7f4ee;
+  --color-surface-soft: #faf9f6;
+  --card-radius: 18px;
+  --card-shadow: 0 12px 34px rgba(38, 53, 54, .09);
+  --card-shadow-hover: 0 20px 46px rgba(38, 53, 54, .15);
+  --focus-ring: 3px solid #8f5200;
+}
+
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   margin: 0;
+  color: var(--color-ink);
+  background: #fff;
+}
+
+main {
+  background: #fbfaf7;
+  --color-primary: #cdb477;
+  --color-primary-dark: #927847;
+  --color-primary-strong: #655531;
+  --color-accent: #927847;
+}
+
+main h2,
+main h3 {
+  font-family: "Quicksand", sans-serif;
+  color: var(--color-ink);
+  letter-spacing: -.025em;
+  line-height: 1.2;
+}
+
+main p {
+  color: var(--color-muted);
 }
 
 /* GLOBAL FIX */
@@ -8,26 +49,39 @@ a {
   text-decoration: none;
 }
 
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 10000;
+  top: 8px;
+  left: 8px;
+  padding: 10px 16px;
+  transform: translateY(-160%);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--color-ink);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, .2);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
 ul {
   list-style: none;
 }
 
-/* HERO */
-.hero {
-  position: relative;
-  height: 90vh;
-  overflow: hidden;
-}
-
-.hero iframe {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
 /* SECTIONS */
 section {
-  padding: 80px 0 ;
+  padding: 68px 0;
 }
 
 @media (max-width: 768px) {
@@ -45,15 +99,45 @@ section {
 
 /* BUTTON */
 button {
-  background: orange;
+  background: var(--color-primary);
   padding: 12px 24px;
   border: none;
-  color: white;
+  color: var(--color-ink);
   border-radius: 30px;
   font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: var(--color-primary-dark);
+  color: #fff;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: .7;
 }
 
 /* 🔥 FIX HORIZONTAL SCROLL ISSUE */
 html, body {
   overflow-x: hidden;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
 }

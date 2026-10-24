@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./ContactContent.css";
 import toast from "react-hot-toast";
+import { apiUrl } from "../../config/api";
 
 const ContactContent = () => {
   const [loading, setLoading] = useState(false);
@@ -17,7 +18,7 @@ const ContactContent = () => {
     try {
       setLoading(true);
 
-      const res = await fetch("http://localhost:5023/api/contact", {
+      const res = await fetch(apiUrl("/api/contact"), {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -31,10 +32,11 @@ const ContactContent = () => {
         toast.success("Message sent successfully 🚀");
         e.target.reset();
       } else {
-        toast.error(data.message || "Something went wrong");
+        toast.error(data.message || "Unable to send your message. Please try again.");
       }
     } catch (err) {
-      toast.error("Server error, try again later");
+      console.error("Contact form submission failed:", err);
+      toast.error("Unable to connect to the contact service. Please try again later.");
     } finally {
       setLoading(false);
     }
@@ -77,8 +79,8 @@ const ContactContent = () => {
               <div className="icon">✉️</div>
               <div>
                 <h4>Mail us</h4>
-                <p>connect@aikyavidya.org</p>
-                <p>aikyavidya@hkmhyderabad.org</p>
+                <p><a href="mailto:connect@aikyavidya.org">connect@aikyavidya.org</a></p>
+                <p><a href="mailto:aikyavidya@hkmhyderabad.org">aikyavidya@hkmhyderabad.org</a></p>
               </div>
             </div>
 
@@ -86,8 +88,8 @@ const ContactContent = () => {
               <div className="icon">📞</div>
               <div>
                 <h4>Call us</h4>
-                <p>+91 73868 98991</p>
-                <p>+91 89190 35202</p>
+                <p><a href="tel:+917386898991">+91 73868 98991</a></p>
+                <p><a href="tel:+918919035202">+91 89190 35202</a></p>
               </div>
             </div>
           </div>
@@ -103,14 +105,20 @@ const ContactContent = () => {
           <form className="contact-form" onSubmit={handleSubmit}>
             <div className="row">
               <input
+                id="contact-name"
                 name="name"
                 type="text"
+                aria-label="Your Name"
+                autoComplete="name"
                 placeholder="Your Name *"
                 required
               />
               <input
+                id="contact-email"
                 name="email"
                 type="email"
+                aria-label="Your Email"
+                autoComplete="email"
                 placeholder="Your Email *"
                 required
               />
@@ -118,6 +126,7 @@ const ContactContent = () => {
 
             <textarea
               name="message"
+              aria-label="Type your Message"
               placeholder="Type your Message"
               rows="5"
               required
@@ -131,8 +140,10 @@ const ContactContent = () => {
 
         <div className="map">
           <iframe
-            title="map"
+            title="Map showing the AIKYA VIDYA contact location"
             src="https://maps.google.com/maps?q=Hare%20Krishna%20Golden%20Temple&t=m&z=12&output=embed"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
       </section>

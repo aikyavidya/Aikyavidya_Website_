@@ -12,6 +12,8 @@
   background-position: center;
   overflow: hidden;
   cursor: pointer;
+  isolation: isolate;
+  transition: flex .35s ease, filter .35s ease;
 }
 
 /* DARK OVERLAY */
@@ -19,7 +21,7 @@
   position: absolute;
   inset: 0;
   background: rgba(0,0,0,0.4);
-  transition: 0.4s;
+  transition: background-color .35s ease;
 }
 
 /* CONTENT */
@@ -30,6 +32,7 @@
   right: 30px;
   color: white;
   z-index: 2;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, .42);
 }
 
 .content h3 {
@@ -50,7 +53,7 @@
   left: 30px;
   width: 45px;
   height: 45px;
-  background: #ff5a2c;
+  background: var(--color-primary);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -65,10 +68,19 @@
   background: rgba(0,0,0,0.6);
 }
 
+.initiative-card:hover {
+  flex: 1.08;
+}
+
+.initiative-card:focus-within {
+  outline: var(--focus-ring);
+  outline-offset: -4px;
+}
+
 .initiative-card:hover .plus-btn {
   transform: rotate(90deg);
   background: white;
-  color: #ff5a2c;
+  color: var(--color-primary-dark);
 }
 
 /* RESPONSIVE */
@@ -80,5 +92,9 @@
 
   .initiative-card {
     height: 250px;
+  }
+
+  .initiative-card:hover {
+    flex: 1;
   }
 }

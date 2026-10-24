@@ -153,11 +153,6 @@ const vidya = [
   },
 ];
 
-  const handleDonate = (amount) => {
-    alert(`Proceed to donate ${amount}`);
-    // 🔥 Later connect Razorpay here
-  };
-
   return (
     <div className="donation-page">
 
@@ -303,6 +298,8 @@ const vidya = [
           className="upi-apps"
           src="/images/donation/upi_apps_logo.png"
           alt="upi apps"
+          loading="lazy"
+          decoding="async"
         />
 
         <h2 className="upi-number">7207 188 108</h2>
@@ -318,6 +315,8 @@ const vidya = [
           className="upi-qr"
           src="/images/upi_qr.webp"
           alt="QR Code"
+          loading="lazy"
+          decoding="async"
         />
 
       </div>
@@ -332,10 +331,10 @@ const vidya = [
   <div className="gallery-container">
 
     <div className="gallery-grid">
-      <img src="/images/donation/a1.webp" alt="" />
-      <img src="/images/donation/a2.webp" alt="" />
-      <img src="/images/donation/a3.webp" alt="" />
-      <img src="/images/donation/a4.webp" alt="" />
+      <img src="/images/donation/a1.webp" alt="AIKYA VIDYA donation gallery photo 1" loading="lazy" decoding="async" />
+      <img src="/images/donation/a2.webp" alt="AIKYA VIDYA donation gallery photo 2" loading="lazy" decoding="async" />
+      <img src="/images/donation/a3.webp" alt="AIKYA VIDYA donation gallery photo 3" loading="lazy" decoding="async" />
+      <img src="/images/donation/a4.webp" alt="AIKYA VIDYA donation gallery photo 4" loading="lazy" decoding="async" />
     </div>
 
   </div>

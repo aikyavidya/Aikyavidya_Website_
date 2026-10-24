@@ -1,68 +1,60 @@
-/* HERO */
 .hero {
   position: relative;
-  height: 100vh;
+  height: min(82vh, 780px);
+  min-height: 420px;
+  padding: 0;
   overflow: hidden;
+  background: #263536;
 }
 
-/* VIDEO FULL COVER */
-.hero iframe {
+.hero::after {
+  content: "";
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100vw;
-  height: 56.25vw; /* 16:9 ratio based on width */
-  min-height: 100vh;
-  min-width: 177.77vh; /* 16:9 ratio based on height */
-  transform: translate(-50%, -50%);
-  pointer-events: none; /* disables click */
+  z-index: 2;
+  inset: auto 0 0;
+  height: clamp(90px, 18vh, 180px);
+  background: linear-gradient(transparent, rgba(38, 53, 54, .2));
+  pointer-events: none;
 }
 
-/* DARK OVERLAY (like original) */
-.hero-overlay {
+.hero video {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.4);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.hero.is-playing video,
+.hero.is-playing .hero-symbol-patches {
+  opacity: 1;
+}
+
+.hero video::-webkit-media-controls,
+.hero video::-webkit-media-controls-enclosure,
+.hero video::-webkit-media-controls-panel {
+  display: none !important;
+}
+
+.hero-symbol-patches {
+  position: absolute;
   z-index: 1;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0;
 }
 
-/* CONTENT */
-.hero-content {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  color: white;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.hero-content h1 {
-  font-size: 60px;
-  font-weight: 700;
-}
-
-.hero-content p {
-  margin: 15px 0;
-  font-size: 18px;
-}
-
-.hero-content button {
-  background: linear-gradient(135deg, #ff5a2c, #ff7a18);
-  padding: 12px 30px;
-  border-radius: 30px;
-  border: none;
-  color: white;
-  font-weight: 600;
-}
-
-/* RESPONSIVE HERO */
 @media (max-width: 768px) {
-  .hero-content h1 {
-    font-size: 36px;
+  .hero {
+    height: 68vh;
+    min-height: 360px;
   }
 
-  .hero-content p {
-    font-size: 16px;
-    padding: 0 15px;
+  .hero::after {
+    height: 100px;
   }
 }

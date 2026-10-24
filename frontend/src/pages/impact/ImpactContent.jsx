@@ -98,7 +98,9 @@ const ImpactContent = () => {
       <div className="impact-image" data-aos="zoom-in">
         <img
           src="images/bg/ak2546.jpg"
-          alt="impact"
+          alt="AIKYA VIDYA community impact"
+          loading="lazy"
+          decoding="async"
         />
       </div>
 

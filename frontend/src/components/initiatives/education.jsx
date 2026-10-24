@@ -27,6 +27,8 @@ function Education() {
             src="/images/bg/bar.png"
             alt=""
             className="edu-bar-img"
+            loading="lazy"
+            decoding="async"
           />
           <div>
             <h2>Opportunities For A Quality Life</h2>
@@ -50,6 +52,8 @@ function Education() {
           <img
             src="/images/bg/chart.png"
             alt=""
+            loading="lazy"
+            decoding="async"
           />
 
           <div>
@@ -66,7 +70,7 @@ function Education() {
 
       {/* FULL IMAGE */}
       <section className="edu-full-img">
-        <img src="/images/bg/chart2.png" />
+        <img src="/images/bg/chart2.png" alt="AIKYA VIDYA education program" loading="lazy" decoding="async" />
       </section>
 
       {/* SECTION 3 */}
@@ -82,6 +86,9 @@ function Education() {
           <img
             src="/images/bg/chart3.png"
             className="edu-wide-img"
+            alt="The AIKYA VIDYA teaching approach"
+            loading="lazy"
+            decoding="async"
           />
         </div>
       </section>
@@ -98,6 +105,9 @@ function Education() {
           <img
             src="/images/bg/chart4.png"
             className="edu-wide-img"
+            alt="AIKYA VIDYA special development drives"
+            loading="lazy"
+            decoding="async"
           />
         </div>
       </section>

@@ -34,27 +34,37 @@ function CSRPartners() {
         <div className="csr-logos" data-aos="zoom-in">
           <img
             src="/images/csr1.jpg"
-            alt="partner1"
+            alt="CSR partner logo 1"
+            loading="lazy"
+            decoding="async"
           />
 
           <img
             src="/images/cs2.jpg"
-            alt="partner2"
+            alt="CSR partner logo 2"
+            loading="lazy"
+            decoding="async"
           />
 
           <img
             src="/images/cs6.jpeg"
-            alt="partner3"
+            alt="CSR partner logo 3"
+            loading="lazy"
+            decoding="async"
           />
 
           <img
             src="/images/cs4.jpeg"
-            alt="partner4"
+            alt="CSR partner logo 4"
+            loading="lazy"
+            decoding="async"
           />
 
           <img
             src="/images/cs5.png"
-            alt="partner5"
+            alt="CSR partner logo 5"
+            loading="lazy"
+            decoding="async"
           />
 
         </div>

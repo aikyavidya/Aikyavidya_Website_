@@ -53,19 +53,19 @@ const InitiativesPage = () => {
 
           <div className="skills-grid">
             <div className="skill-box">
-              <img src="/images/initiative/ic1.webp" />
+              <img src="/images/initiative/ic1.webp" alt="Spiritual education activities" loading="lazy" decoding="async" />
               <h4>Spiritual Education</h4>
               <p>Yoga & Meditation<br/>Prayers<br/>Philosophy</p>
             </div>
 
             <div className="skill-box">
-              <img src="/images/initiative/ic2.webp" />
+              <img src="/images/initiative/ic2.webp" alt="Arts activities" loading="lazy" decoding="async" />
               <h4>Arts</h4>
-              <p>Singing<br/>Dancing<br/>Musical Instruments<br/>Story Telling India</p>
+              <p>Singing<br/>Dancing<br/>Musical Instruments<br/>Storytelling</p>
             </div>
 
             <div className="skill-box">
-              <img src="/images/initiative/ic3.webp" />
+              <img src="/images/initiative/ic3.webp" alt="Health and hygiene activities" loading="lazy" decoding="async" />
               <h4>Health & Hygiene</h4>
               <p>Health Care<br/>Basic Hygiene</p>
             </div>
@@ -73,13 +73,13 @@ const InitiativesPage = () => {
 
           <div className="skills-grid second-row">
             <div className="skill-box">
-              <img src="/images/initiative/ic4.webp" />
+              <img src="/images/initiative/ic4.webp" alt="Leadership activities" loading="lazy" decoding="async" />
               <h4>Leadership</h4>
               <p>Public Speaking<br/>Event Management<br/>Hospitality<br/>Planning & Supervision<br/>Financial Management<br/>Soft Skills</p>
             </div>
 
             <div className="skill-box">
-              <img src="/images/initiative/ic5.webp" />
+              <img src="/images/initiative/ic5.webp" alt="BASE activities" loading="lazy" decoding="async" />
               <h4>BASE</h4>
               <p>Kitchen Gardening<br/>Promoting Horticulture<br/>Waste Management<br/>Cattle Rearing</p>
             </div>
@@ -89,7 +89,7 @@ const InitiativesPage = () => {
 
       {/* Full Image */}
       <section className="full-banner container">
-        <img src="/images/initiative/ak-12.webp" />
+        <img src="/images/initiative/ak-12.webp" alt="AIKYA VIDYA initiative" loading="lazy" decoding="async" />
       </section>
 
       {/* Rural Development */}
@@ -99,7 +99,7 @@ const InitiativesPage = () => {
 
           <div className="rural-grid">
             <div className="rural-img">
-              <img src="/images/initiative/img2.webp" />
+              <img src="/images/initiative/img2.webp" alt="AIKYA VIDYA rural development" loading="lazy" decoding="async" />
             </div>
 
             <div className="rural-list">

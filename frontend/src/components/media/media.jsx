@@ -29,7 +29,7 @@ function Media() {
 
             {/* CARD */}
             <div className="media-card">
-              <img src="/images/bg/hk.png" />
+              <img src="/images/bg/hk.png" alt="Hare Krishna Movement" loading="lazy" decoding="async" />
               <h4>
                 HKM’s ‘AIKYA Vidya’ signs MoU with Woxsen University for tribal, rural development
               </h4>
@@ -43,7 +43,7 @@ function Media() {
             </div>
 
             <div className="media-card">
-              <img src="/images/bg/hk.png" />
+              <img src="/images/bg/hk.png" alt="Hare Krishna Movement" loading="lazy" decoding="async" />
               <h4>విలువలు, సంస్కారం నేర్పించేలా హరే కృష్ణ ట్రస్ట్ ఐక్య విద్య ఒప్పందం</h4>
               <p>Courtesy: ETV Bharat</p>
               <a
@@ -54,7 +54,7 @@ function Media() {
               </a>            </div>
 
             <div className="media-card">
-              <img src="/images/bg/hk.png" />
+              <img src="/images/bg/hk.png" alt="Hare Krishna Movement" loading="lazy" decoding="async" />
               <h4>గ్రామీణ నిరుపేదల సంక్షేమం కోసం ఒప్పందం</h4>
               <p>Courtesy: Andhra Jyothi</p>
               <a
@@ -66,7 +66,7 @@ function Media() {
             </div>
 
             <div className="media-card">
-              <img src="/images/bg/hk.png" />
+              <img src="/images/bg/hk.png" alt="Hare Krishna Movement" loading="lazy" decoding="async" />
               <h4>Hare Krishna Movement Hyderabad’s ‘AIKYA Vidya’ Signs MoU with Woxsen University</h4>
               <p>Courtesy: The Hans India</p>
               <a
@@ -78,7 +78,7 @@ function Media() {
             </div>
 
             <div className="media-card">
-              <img src="/images/bg/hk.png" />
+              <img src="/images/bg/hk.png" alt="Hare Krishna Movement" loading="lazy" decoding="async" />
               <h4>हरे कृष्ण आंदोलन ‘ऐक्या विद्या’ ने वॉक्ससेन विश्वविद्यालय के साथ समझौता ज्ञापन पर हस्ताक्षर किए</h4>
               <p>Courtesy: JANTASE RISTHA</p>
               <a
@@ -105,8 +105,9 @@ function Media() {
             <div className="media-video">
               <iframe
                 src="https://www.youtube.com/embed/ud6KDsGK8Cs?rel=0"
-                title="video"
+                title="AIKYA Vidya MoU News - Telugu Now"
                 allowFullScreen
+                loading="lazy"
               ></iframe>
               <h4>AIKYA Vidya MoU News</h4>
               <p>Courtesy: Telugu Now</p>
@@ -115,8 +116,9 @@ function Media() {
             <div className="media-video">
               <iframe
                 src="https://www.youtube.com/embed/1TfRO7h6fPg?rel=0"
-                title="video"
+                title="AIKYA Vidya coverage - Amma News"
                 allowFullScreen
+                loading="lazy"
               ></iframe>
               <h4>AIKYA Vidya Coverage</h4>
               <p>Courtesy: Amma News</p>
@@ -125,8 +127,9 @@ function Media() {
             <div className="media-video">
               <iframe
                 src="https://www.youtube.com/embed/ud6KDsGK8Cs"
-                title="video"
+                title="AIKYA Vidya signs MOU with Woxsen University - Bhakti One"
                 allowFullScreen
+                loading="lazy"
               ></iframe>
               <h4>AIKYA Vidya Signs MOU with Woxsen University</h4>
               <p>Courtesy: BHAKTI ONE</p>
@@ -142,21 +145,27 @@ function Media() {
     <h2 className="media-title">Gallery</h2>
 
     <div className="media-gallery">
-      <img src="/images/media/m1.webp" onClick={(e) => setSelectedImg(e.target.src)} />
-      <img src="/images/media/m2.webp" onClick={(e) => setSelectedImg(e.target.src)} />
-      <img src="/images/media/m3.webp" onClick={(e) => setSelectedImg(e.target.src)} />
-      <img src="/images/media/m4.webp" onClick={(e) => setSelectedImg(e.target.src)} />
-      <img src="/images/media/m5.webp" onClick={(e) => setSelectedImg(e.target.src)} />
-      <img src="/images/media/m6.webp" onClick={(e) => setSelectedImg(e.target.src)} />
-      <img src="/images/media/m7.webp" onClick={(e) => setSelectedImg(e.target.src)} />
-      <img src="/images/media/m8.webp" onClick={(e) => setSelectedImg(e.target.src)} />
-      <img src="/images/media/m9.webp" onClick={(e) => setSelectedImg(e.target.src)} />
+      {Array.from({ length: 9 }, (_, index) => `/images/media/m${index + 1}.webp`).map((src, index) => (
+        <button
+          key={src}
+          type="button"
+          aria-label={`Open AIKYA VIDYA media gallery photo ${index + 1}`}
+          onClick={() => setSelectedImg(src)}
+        >
+          <img
+            src={src}
+            alt={`AIKYA VIDYA media gallery photo ${index + 1}`}
+            loading="lazy"
+            decoding="async"
+          />
+        </button>
+      ))}
     </div>
 
     {/* 🔥 Lightbox */}
     {selectedImg && (
       <div className="lightbox" onClick={() => setSelectedImg(null)}>
-        <img src={selectedImg} alt="preview" />
+        <img src={selectedImg} alt="AIKYA VIDYA media gallery photo preview" />
       </div>
     )}
   </div>

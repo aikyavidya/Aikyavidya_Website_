@@ -52,7 +52,7 @@ function BoardOfTrustees() {
                 data-aos-duration="1000"
               >
                 <div className="img-wrapper">
-                  <img src={item.img} alt={item.name} />
+                  <img src={item.img} alt={item.name} loading="lazy" decoding="async" />
                 </div>
               </div>
 

@@ -59,21 +59,28 @@
   background: #fff;
   padding: 40px;
   text-align: center;
-  border-radius: 10px;
+  border: 1px solid rgba(38, 53, 54, .06);
+  border-radius: var(--card-radius);
   text-decoration: none;
   color: #232323;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-  transition: 0.3s;
+  box-shadow: var(--card-shadow);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
 }
 
 .service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+  transform: translateY(-5px);
+  border-color: rgba(167, 122, 48, .28);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.service-card:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: 4px;
 }
 
 .service-card .icon {
   font-size: 40px;
-  color: #f74f22;
+  color: var(--color-primary-dark);
   margin-bottom: 15px;
 }
 
@@ -153,7 +160,7 @@
 }
 
 .rural-grid svg {
-  color: #f74f22;
+  color: var(--color-primary-dark);
   margin-right: 10px;
 }
 
@@ -281,7 +288,7 @@
 }
 
 .rural-list svg {
-  color: #f74f22;
+  color: var(--color-primary-dark);
   margin-right: 12px;
   font-size: 18px;
   flex-shrink: 0;

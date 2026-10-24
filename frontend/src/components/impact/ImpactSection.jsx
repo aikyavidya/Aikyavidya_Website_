@@ -10,14 +10,19 @@ export default function ImpactSection() {
         <div className="image-stack">
           <img
             src="/images/home-1_01-2.png"
-            alt="bg"
+            alt=""
             className="img-back"
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
           />
 
           <img
             src="/images/12.webp"
-            alt="main"
+            alt="AIKYA VIDYA program photo"
             className="img-front"
+            loading="lazy"
+            decoding="async"
           />
         </div>
 

@@ -1,25 +1,35 @@
 .about {
   background: url("https://aikyavidya.org/new/wp-content/uploads/2020/08/bg.jpg");
-  padding: 80px 0;
-  font-family: "Poppins", sans-serif;
+  background-color: var(--color-surface-soft);
+  padding: 72px 0;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 /* CONTAINER */
 .about-container {
   display: flex;
   align-items: center;
-  gap: 60px;
+  gap: 100px;
   width: 100%;
 }
 
 /* LEFT CARD */
 .about-left {
   flex: 1;
-  background: linear-gradient(135deg, #ff5a2c, #ff7a18);
-  color: white;
+  background: var(--color-primary);
+  color: #263536;
   padding: 40px;
-  border-radius: 20px;
+  border: 1px solid rgba(167, 122, 48, .18);
+  border-radius: var(--card-radius);
   max-width: 320px;
+  text-align: center;
+  box-shadow: var(--card-shadow);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.about-left:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--card-shadow-hover);
 }
 
 .about-left h2 {
@@ -28,21 +38,28 @@
   margin-bottom: 25px;
 }
 
-/* BUTTON */
-.about-left .donate-btn {
-  display: inline-block;
-  padding: 12px 22px;
+.about-left .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  max-width: 260px;
+  min-height: 54px;
+  padding: 12px 20px;
+  border: 1px solid rgba(255, 255, 255, .35);
   border-radius: 30px;
-  border: 2px solid white;
-  color: white;
-  font-weight: 600;
-  text-decoration: none;
+  background: rgba(255, 255, 255, .82);
+  color: #263536;
+  font-weight: 700;
+  text-align: center;
+  white-space: nowrap;
   transition: 0.3s;
 }
 
-.about-left .donate-btn:hover {
+.about-left .btn:hover {
   background: white;
-  color: #ff5a2c;
+  color: var(--color-primary-dark);
 }
 
 /* RIGHT */
@@ -51,9 +68,16 @@
 }
 
 .about-right p {
-  font-size: 14px;
-  line-height: 1.9;
+  font-size: 18px;
+  line-height: 1.7;
   color: #555;
+}
+
+.about-left h2,
+.impact-right h2,
+.left h2 {
+  letter-spacing: -.025em;
+  line-height: 1.2;
 }
 
 /* FEATURES */
@@ -68,28 +92,28 @@
 }
 
 /* ICON CIRCLE */
-.icon {
+.about .icon {
   width: 60px;
   height: 60px;
-  background: #ff5a2c;
+  background: #f1f2f1;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: var(--color-primary-dark);
   font-size: 20px;
   margin: auto;
   margin-bottom: 10px;
   transition: 0.3s;
 }
 
-.feature p {
+.about .feature p {
   font-size: 14px;
   font-weight: 500;
 }
 
 /* HOVER EFFECT */
-.feature:hover .icon {
+.about .feature:hover .icon {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
@@ -103,5 +127,13 @@
 
   .features {
     justify-content: center;
+  }
+
+  .about {
+    padding: 56px 0;
+  }
+
+  .about-container {
+    gap: 36px;
   }
 }

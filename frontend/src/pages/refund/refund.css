@@ -30,11 +30,20 @@
 
 /* CONTENT */
 .refund-container {
-  max-width: 900px;
+  max-width: 940px;
   margin: auto;
-  padding: 70px 20px;
+  padding: clamp(32px, 5vw, 56px) clamp(22px, 5vw, 56px);
+  border: 1px solid rgba(38, 53, 54, .06);
+  border-radius: var(--card-radius);
+  background: #fff;
+  box-shadow: var(--card-shadow);
   line-height: 1.8;
   color: #444;
+}
+
+.refund-page {
+  background: linear-gradient(180deg, var(--color-surface-warm), #fff 50%);
+  padding-bottom: 64px;
 }
 
 /* MAIN TITLE */
@@ -67,6 +76,11 @@
   }
 
   .refund-container {
-    padding: 50px 15px;
+    margin: 0 16px;
+    padding: 30px 22px;
+  }
+
+  .refund-page {
+    padding-bottom: 36px;
   }
 }

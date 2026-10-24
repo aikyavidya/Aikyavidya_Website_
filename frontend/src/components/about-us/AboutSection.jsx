@@ -1,5 +1,5 @@
 import "./about.css";
-import { FaUtensils, FaBookOpen, FaHandsHelping } from "react-icons/fa";
+import { BsBasket2Fill, BsBookHalf, BsHandThumbsUpFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 export default function AboutSection() {
   return (
@@ -33,17 +33,17 @@ export default function AboutSection() {
           <div className="features">
 
             <div className="feature">
-              <div className="icon"><FaUtensils /></div>
+              <div className="icon"><BsBasket2Fill /></div>
               <p>Food</p>
             </div>
 
             <div className="feature">
-              <div className="icon"><FaBookOpen /></div>
+              <div className="icon"><BsBookHalf /></div>
               <p>Education</p>
             </div>
 
             <div className="feature">
-              <div className="icon"><FaHandsHelping /></div>
+              <div className="icon"><BsHandThumbsUpFill /></div>
               <p>Values</p>
             </div>
 

@@ -24,7 +24,7 @@
   font-weight: 700;
 }
 .header-content .active {
-  color: #ff7a18;
+  color: var(--color-primary);
 }
 
 .edu-header-overlay p {
@@ -36,14 +36,32 @@
 .edu-container {
   max-width: 1200px;
   margin: auto;
-  padding: 60px 20px;
+  padding: clamp(32px, 5vw, 56px);
+}
+
+.edu-section {
+  padding: clamp(24px, 4vw, 44px) 20px;
+  background:
+    radial-gradient(ellipse at 12% 10%, rgba(205, 180, 119, .15), transparent 38%),
+    linear-gradient(145deg, #f4f1e9, #fff 72%);
+}
+
+.edu-section:nth-of-type(3) {
+  background: linear-gradient(135deg, #edf2ed, #fff 72%);
+}
+
+.edu-section .edu-container {
+  border: 1px solid rgba(38, 53, 54, .07);
+  border-radius: 26px;
+  background: rgba(255, 255, 255, .92);
+  box-shadow: var(--card-shadow);
 }
 
 /* GRID */
 .edu-grid {
   display: flex;
   align-items: center;
-  gap: 50px;
+  gap: clamp(30px, 6vw, 72px);
 }
 
 .edu-reverse {
@@ -53,18 +71,20 @@
 .edu-grid img {
   width: 100%;
   max-width: 450px;
-  border-radius: 10px;
+  border-radius: 18px;
+  object-fit: contain;
 }
 
 /* TEXT */
 .edu-section h2 {
-  font-size: 28px;
-  margin-bottom: 15px;
+  font-size: clamp(26px, 3vw, 36px);
+  margin-bottom: 20px;
 }
 
 .edu-section p {
-  color: #555;
-  line-height: 1.7;
+  font-size: 16px;
+  line-height: 1.85;
+  max-width: 66ch;
 }
 
 /* FULL IMAGE */
@@ -78,25 +98,57 @@
 .edu-full-img img {
   width: 100%;
   max-width: 1100px;         /* control size like reference */
-  border-radius: 10px;
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
   display: block;
 }
 /* WIDE IMAGE */
 .edu-wide-img  {
   margin-top: 20px;
-  width: 50%;
-  border-radius: 10px;
+  width: min(100%, 760px);
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
 }
 
 
 
 .edu-bar-img{
-  width: 20%;
+  width: 25%;
+  max-width: 300px;
+  padding: 8px;
+  border-radius: 18px;
+  background: var(--color-surface-soft);
 }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .edu-grid {
     flex-direction: column;
+    align-items: stretch;
+    gap: 28px;
+  }
+
+  .edu-container {
+    padding: 28px 20px;
+  }
+
+  .edu-section {
+    padding: 18px 14px;
+  }
+
+  .edu-section .edu-container {
+    border-radius: 20px;
+  }
+
+  .edu-full-img {
+    padding: 0 16px;
+  }
+
+  .edu-bar-img {
+    width: min(45%, 220px);
+    max-width: 220px;
   }
 }

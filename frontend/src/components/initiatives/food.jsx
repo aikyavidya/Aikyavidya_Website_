@@ -36,14 +36,14 @@ export default function Food() {
           </div>
 
           <div className="food-image">
-            <img src="/images/healthy_food.webp" />
+            <img src="/images/healthy_food.webp" alt="AIKYA VIDYA food initiative" loading="lazy" decoding="async" />
           </div>
         </div>
 
         {/* BLOCK 2 (REVERSED) */}
         <div className="food-row reverse" data-aos="fade-up" data-aos-delay="100">
           <div className="food-image">
-            <img src="/images/hf2.png" />
+            <img src="/images/hf2.png" alt="Nutritious meals distributed through the food initiative" loading="lazy" decoding="async" />
           </div>
 
           <div className="food-text">

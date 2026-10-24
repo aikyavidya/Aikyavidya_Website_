@@ -54,36 +54,36 @@ function App() {
       <Header />
 
       {/* ROUTES */}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/initiatives" element={<InitiativesPage />} />
-        <Route path="/food" element={<Food />} />
-        <Route path="/education" element={<Education />} />
-        <Route path="/values" element={<Values />} />
-        <Route path="/media" element={<Media />} />
-        <Route path="/impact" element={<Impact />} />
-        <Route path="/volunteer" element={<Volunteer />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/documents" element={<Documents />} />
-        <Route path="/photos" element={<Photos />} />
-        <Route path="/videos" element={<Videos />} />
-        <Route path="/csr" element={<CSRPartners />} />
-        <Route path="/csr-page" element={<CSRPage />} />
-        <Route path="/terms" element={<Terms />} />
-        <Route path="/privacy" element={<Privacy />} />
-        <Route path="/refund" element={<Refund />} />
-        <Route path="/ourInspiration" element={<OurInspiration />} />
-        <Route path="/ourTrust" element={<OurTrust />} />
-        <Route path="/associatedTrusts" element={<AssociatedTrusts />} />
-        <Route path="/donation" element={<Donation />} />
-        <Route path="/checkout" element={<Checkout />} />
-        <Route path="/leadership" element={<LeadershipTeam />} />
-        <Route path="/management" element={<ManagementTeam />} />
-        <Route path="/board" element={<BoardOfTrustees />} />
-        <Route path="/success" element={<Success />} />
-
-
-      </Routes>
+      <main id="main-content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/initiatives" element={<InitiativesPage />} />
+          <Route path="/food" element={<Food />} />
+          <Route path="/education" element={<Education />} />
+          <Route path="/values" element={<Values />} />
+          <Route path="/media" element={<Media />} />
+          <Route path="/impact" element={<Impact />} />
+          <Route path="/volunteer" element={<Volunteer />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/documents" element={<Documents />} />
+          <Route path="/photos" element={<Photos />} />
+          <Route path="/videos" element={<Videos />} />
+          <Route path="/csr" element={<CSRPartners />} />
+          <Route path="/csr-page" element={<CSRPage />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/refund" element={<Refund />} />
+          <Route path="/ourInspiration" element={<OurInspiration />} />
+          <Route path="/ourTrust" element={<OurTrust />} />
+          <Route path="/associatedTrusts" element={<AssociatedTrusts />} />
+          <Route path="/donation" element={<Donation />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/leadership" element={<LeadershipTeam />} />
+          <Route path="/management" element={<ManagementTeam />} />
+          <Route path="/board" element={<BoardOfTrustees />} />
+          <Route path="/success" element={<Success />} />
+        </Routes>
+      </main>
       <ScrollToTopButton />
       <ScrollToTop />
       <Toaster position="top-right" />

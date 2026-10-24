@@ -1,14 +1,14 @@
 /* ROOT COLORS FROM INSPECT */
 :root {
-  --primary: #F74F22;
+  --primary: var(--color-primary-strong);
   --text: #616161;
   --heading: #232323;
 }
 
 /* SECTION */
 .documents-section {
-  padding: 90px 0; /* exact from inspect */
-  background: #ffffff;
+  padding: clamp(52px, 7vw, 84px) 20px;
+  background: linear-gradient(145deg, #f4f1e9, #fff 72%);
   text-align: center;
   font-family: "Nunito Sans", sans-serif;
 }
@@ -16,7 +16,7 @@
 /* TITLE */
 .documents-title {
   font-family: "Quicksand", sans-serif;
-  font-size: 32px;
+  font-size: clamp(27px, 3vw, 36px);
   font-weight: 700;
   color: var(--primary); /* ORANGE like screenshot */
   margin-bottom: 50px;
@@ -26,12 +26,20 @@
 .documents-grid {
   display: flex;
   justify-content: center;
-  gap: 120px; /* exact spacing */
+  gap: clamp(22px, 5vw, 64px);
   flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 /* ITEM */
 .doc-item {
+  min-width: min(280px, 100%);
+  padding: 32px;
+  border: 1px solid rgba(38, 53, 54, .07);
+  border-radius: var(--card-radius);
+  background: #fff;
+  box-shadow: var(--card-shadow);
   text-align: center;
 }
 
@@ -47,7 +55,7 @@
 /* BUTTON */
 .doc-btn {
   display: inline-block;
-  background: #5f6b77; /* exact grey button */
+  background: var(--color-primary);
   color: #fff;
   font-size: 13px;
   padding: 10px 20px;
@@ -58,14 +66,42 @@
 
 /* BUTTON HOVER */
 .doc-btn:hover {
-  background: #4a5560;
+  background: var(--color-primary-dark);
+}
+
+.doc-btn:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: 3px;
 }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
+  .documents-section {
+    padding: 56px 20px;
+  }
+
+  .documents-title {
+    font-size: 26px;
+    margin-bottom: 36px;
+  }
+
   .documents-grid {
     flex-direction: column;
-    gap: 40px;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .doc-item {
+    width: 100%;
+    max-width: 360px;
+    padding: 28px 22px;
+  }
+
+  .doc-btn {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
   }
 }
 

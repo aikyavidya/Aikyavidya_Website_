@@ -40,8 +40,9 @@ const VideoGalleryContent = () => {
             <div className="video-item" key={index} data-aos="fade-up" data-aos-delay={(index % 3) * 100}>
               <iframe
                 src={`https://www.youtube.com/embed/${id}`}
-                title={`video-${index}`}
+                title={`AIKYA VIDYA video gallery video ${index + 1}`}
                 frameBorder="0"
+                loading="lazy"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>

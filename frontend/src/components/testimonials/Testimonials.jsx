@@ -57,7 +57,7 @@ export default function Testimonials() {
             <p>{data[index].text}</p>
 
             <div className="user">
-              <img src={data[index].img} alt="" />
+              <img src={data[index].img} alt={data[index].name} loading="lazy" decoding="async" />
               <div>
                 <h4>{data[index].name}</h4>
                 <span>{data[index].role}</span>
@@ -67,8 +67,8 @@ export default function Testimonials() {
 
           {/* ARROWS */}
           <div className="controls">
-            <button onClick={prev}>←</button>
-            <button onClick={next}>→</button>
+            <button type="button" onClick={prev} aria-label="Previous testimonial">←</button>
+            <button type="button" onClick={next} aria-label="Next testimonial">→</button>
           </div>
 
         </div>

@@ -27,7 +27,7 @@ function LeadershipTeam() {
           {/* 🔹 MEMBER 1 */}
           <div className="leader-row" data-aos="fade-up">
             <div className="leader-left">
-              <img src="/images/donation/p1.jpg" alt="" />
+              <img src="/images/donation/p1.jpg" alt="HG Satya Gaura Chandra Dasa" loading="lazy" decoding="async" />
               <h3>HG Satya Gaura Chandra Dasa</h3>
               <h6>President, Hare Krishna Movement - Hyderabad</h6>
               <h6>Regional President, Akshaya Patra Foundation</h6>
@@ -44,7 +44,7 @@ function LeadershipTeam() {
           {/* 🔹 MEMBER 2 */}
           <div className="leader-row reverse" data-aos="fade-up" data-aos-delay="100">
             <div className="leader-left">
-              <img src="/images/donation/sahadeva-sakha.jpg" alt="" />
+              <img src="/images/donation/sahadeva-sakha.jpg" alt="HG Sahadeva Sakha Dasa" loading="lazy" decoding="async" />
               <h3>HG Sahadeva Sakha Dasa</h3>
               <h6>Director, AIKYA VIDYA</h6>
             </div>
@@ -52,9 +52,9 @@ function LeadershipTeam() {
             <div className="leader-right">
 
               <p>
-                HG is currently serving as Director of the AIKYA Vidya. Sahadeva Saka Dasa is also the Associate Vice President of Hare Krishna Movement Hyderabad’s state youth outreach. He pursued M.Tech degree from NIT Calicut and Worked in Wipro Software Company before joining the movement. HG has been rendering his dedicated services to movement from past 12 years.
+                HG is currently serving as Director of the AIKYA Vidya. Sahadeva Sakha Dasa is also the Associate Vice President of Hare Krishna Movement Hyderabad’s state youth outreach. He pursued M.Tech degree from NIT Calicut and Worked in Wipro Software Company before joining the movement. HG has been rendering his dedicated services to movement from past 12 years.
 
-                Swamiji is well versed in conducting training programs for the youth in the aspect of PERSONALITY DEVELOPMENT based on Bhagavad-Gita and trained students from reputed colleges like IIT Hyderabad, JNTU University, BITS Hyderabad etc. He is also the most sought-after speaker in reputed software professionals from Microsoft, Google, Qualcom, Deloitte, TCS, Infosys etc.
+                Swamiji is well versed in conducting training programs for the youth in the aspect of PERSONALITY DEVELOPMENT based on Bhagavad-Gita and trained students from reputed colleges like IIT Hyderabad, JNTU University, BITS Hyderabad etc. He is also the most sought-after speaker in reputed software professionals from Microsoft, Google, Qualcomm, Deloitte, TCS, Infosys etc.
               </p>
             </div>
           </div>
@@ -65,7 +65,7 @@ function LeadershipTeam() {
 
 
             <div className="leader-card" data-aos="zoom-in">
-              <img src="/images/donation/p4.png" />
+              <img src="/images/donation/p4.png" alt="Tejasvi Chaitanya Dasa" loading="lazy" decoding="async" />
               <h4>Tejasvi Chaitanya Dasa</h4>
               <p>Chief Operations Officer</p>
               <p>Tejasvi is currently serving as the COO of AIKYA Vidya and GITA Values Programme. His passion lies in inculcating Bharatiya values based on Bhagavadgita to metropolitan children who are otherwise overloaded with information and distracted by modern gadgets and social media. He is a Qualified Company Secretary. He has over 5 years’ experience in Corporate Law regulatory matters. </p>

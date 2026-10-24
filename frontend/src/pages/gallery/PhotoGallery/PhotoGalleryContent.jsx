@@ -85,21 +85,35 @@ useEffect(() => {
         <div className="masonry">
   {images.map((img, index) => (
     <div className="masonry-item" key={index} data-aos="fade-up" data-aos-delay={(index % 4) * 100}>
-      <img src={img} alt="gallery" onClick={() => setCurrentIndex(index)} />
+      <button
+        className="gallery-image-button"
+        type="button"
+        aria-label={`Open AIKYA VIDYA gallery photo ${index + 1}`}
+        onClick={() => setCurrentIndex(index)}
+      >
+        <img
+          src={img}
+          alt={`AIKYA VIDYA gallery photo ${index + 1}`}
+          loading="lazy"
+          decoding="async"
+        />
+      </button>
     </div>
   ))}
 </div>
 
 {/* 🔥 LIGHTBOX */}
 {currentIndex !== null && (
-  <div className="lightbox">
+  <div className="lightbox" role="dialog" aria-modal="true" aria-label="Photo preview">
     
     {/* Close */}
-    <span className="close" onClick={() => setCurrentIndex(null)}>×</span>
+    <button className="close" type="button" aria-label="Close photo preview" onClick={() => setCurrentIndex(null)}>×</button>
 
     {/* Left Arrow */}
-    <span
+    <button
       className="arrow left"
+      type="button"
+      aria-label="Previous photo"
       onClick={(e) => {
         e.stopPropagation();
         setCurrentIndex((prev) =>
@@ -108,14 +122,16 @@ useEffect(() => {
       }}
     >
       ❮
-    </span>
+    </button>
 
     {/* Image */}
-    <img src={images[currentIndex]} alt="preview" />
+    <img src={images[currentIndex]} alt={`AIKYA VIDYA gallery photo ${currentIndex + 1}`} />
 
     {/* Right Arrow */}
-    <span
+    <button
       className="arrow right"
+      type="button"
+      aria-label="Next photo"
       onClick={(e) => {
         e.stopPropagation();
         setCurrentIndex((prev) =>
@@ -124,7 +140,7 @@ useEffect(() => {
       }}
     >
       ❯
-    </span>
+    </button>
   </div>
 )}
       </div>

@@ -27,14 +27,14 @@ function ManagementTeam() {
           {/* 🔹 ROW 1 */}
           <div className="mgmt-row" data-aos="fade-up">
             <div className="mgmt-card">
-              <img src="/images/donation/15.webp" /> 
+              <img src="/images/donation/15.webp" alt="Rasa Mandal Dasa" loading="lazy" decoding="async" />
               <h4>Rasa Mandal Dasa</h4>
               
               <p>He is currently serving as the Senior Manager Outreach of AIKYA Vidya. He is a B.Pharmacy graduate from Vignan University Vizag. Before joining AIKYA Vidya, he worked in Healthcare industry  </p>
             </div>
 
             <div className="mgmt-card">
-              <img src="/images/donation/m2.png" />
+              <img src="/images/donation/m2.png" alt="Kumaraswamy" loading="lazy" decoding="async" />
               <h4>Kumaraswamy</h4>
              
               <p>He is currently serving as Senior Manager Youth outreach programme of the AIKYA Vidya. He has done his MA in Sanskrit and diploma in Kathak dance. He participated 3 times in International Kick Boxing championship and won silver medal once. Before joining AIKYA Vidya he worked with various reputed NGOs in different capacities.    </p>
@@ -47,13 +47,13 @@ function ManagementTeam() {
           <div className="mgmt-grid">
 
             <div className="mgmt-mini" data-aos="zoom-in">
-              <img src="/images/donation/m3.png" />
+              <img src="/images/donation/m3.png" alt="Brahmanandam" loading="lazy" decoding="async" />
               <h4>Brahmanandam</h4>
               <span> Senior Manager Village Outreach.</span>
             </div>
 
             <div className="mgmt-mini" data-aos="zoom-in">
-              <img src="/images/donation/m6.png" />
+              <img src="/images/donation/m6.png" alt="Sai Pawan" loading="lazy" decoding="async" />
               <h5>Sai Pawan</h5>
               <span>Executive Assistant Operations</span>
             </div>

@@ -1,7 +1,7 @@
 /* SECTION */
 .photo-gallery {
-  padding: 90px 0;
-  background: #ffffff;
+  padding: 72px 0;
+  background: linear-gradient(180deg, var(--color-surface-soft), #fff 60%);
 }
 
 /* CONTAINER (CENTERED LIKE ORIGINAL) */
@@ -15,7 +15,7 @@
 .masonry {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
+  gap: 18px;
 }
 
 /* ITEM */
@@ -23,19 +23,41 @@
   width: 100%;
 }
 
+.gallery-image-button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  line-height: 0;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+}
+
+.gallery-image-button:hover {
+  background: transparent;
+}
+
+.gallery-image-button:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: 3px;
+}
+
 /* IMAGE */
 .masonry-item img {
   width: 100%;
   height: 180px;          /* 🔥 FIXED HEIGHT FOR UNIFORM LOOK */
   object-fit: cover;      /* 🔥 CROPS NICELY */
-  border-radius: 4px;
+  border-radius: 12px;
   display: block;
+  transition: transform .3s ease, filter .3s ease;
 }
 
 /* HOVER (SUBTLE LIKE ORIGINAL) */
 .masonry-item img:hover {
-  opacity: 0.95;
-  transition: 0.3s ease;
+  filter: saturate(1.08);
+  transform: scale(1.035);
 }
 
 /* 🔥 RESPONSIVE */
@@ -50,11 +72,11 @@
 /* Mobile */
 @media (max-width: 576px) {
   .masonry {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .masonry-item img {
-    height: auto;
+    height: 150px;
   }
 }
 
@@ -104,6 +126,9 @@
   font-size: 40px;
   color: white;
   cursor: pointer;
+  padding: 0;
+  border: 0;
+  background: transparent;
 }
 
 /* ARROWS */
@@ -116,6 +141,8 @@
   cursor: pointer;
   padding: 10px;
   user-select: none;
+  border: 0;
+  background: transparent;
 }
 
 .arrow.left {
@@ -129,5 +156,38 @@
 /* HOVER EFFECT */
 .arrow:hover,
 .close:hover {
-  color: #ff5a2c;
+  color: #e0bc79;
+  background: transparent;
+}
+
+@media (max-width: 576px) {
+  .photo-gallery {
+    padding: 44px 0;
+  }
+
+  .gallery-container {
+    padding: 0 12px;
+  }
+
+  .masonry {
+    gap: 10px;
+  }
+
+  .lightbox img {
+    max-width: 94%;
+    max-height: 78%;
+  }
+
+  .close {
+    top: 12px;
+    right: 12px;
+  }
+
+  .arrow.left {
+    left: 4px;
+  }
+
+  .arrow.right {
+    right: 4px;
+  }
 }

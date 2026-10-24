@@ -5,11 +5,11 @@ import {
   FaInstagram,
   FaFacebookF,
   FaYoutube,
-  FaTwitter,
   FaMapMarkerAlt,
   FaEnvelope,
   FaPhoneAlt,
 } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 export default function Footer() {
   return (
@@ -20,9 +20,11 @@ export default function Footer() {
         {/* COLUMN 1 */}
         <div className="footer-col" data-aos="fade-up" data-aos-delay="0">
           <img
-            src="images/logo-1.png"
+            src="/images/logo-1.png"
             alt="Aikya Vidya"
-            className="logo"
+            className="footer-logo"
+            loading="lazy"
+            decoding="async"
           />
 
           <p>
@@ -70,6 +72,7 @@ export default function Footer() {
               href="https://instagram.com/aikya_vidya?igshid=NGVhN2U2NjQ0Yg=="
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Aikya Vidya on Instagram"
             >
               <FaInstagram />
             </a>
@@ -78,6 +81,7 @@ export default function Footer() {
               href="https://www.facebook.com/profile.php?id=100090151397761&mibextid=ZbWKwL"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Aikya Vidya on Facebook"
             >
               <FaFacebookF />
             </a>
@@ -86,6 +90,7 @@ export default function Footer() {
               href="https://youtube.com/@aikyavidya108?si=9XasfB3iSthH4P_2"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Aikya Vidya on YouTube"
             >
               <FaYoutube />
             </a>
@@ -94,8 +99,9 @@ export default function Footer() {
               href="https://twitter.com/AikyaVidya"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Aikya Vidya on X"
             >
-              <FaTwitter />
+              <FaXTwitter />
             </a>
           </div>
         </div>
@@ -117,9 +123,9 @@ export default function Footer() {
         <div className="footer-col" data-aos="fade-up" data-aos-delay="300">
           <h4>ASSOCIATED TRUSTS</h4>
 
-          <a target="_blank" href="https://www.akshayapatra.org/">Akshaya Patra</a>
-          <a target="_blank" href="https://www.harekrishnacharities.org/">Hare Krishna Charities</a>
-          <a target="_blank" href="https://hkmhyderabad.org/">Hare Krishna Movement</a>
+          <a target="_blank" rel="noopener noreferrer" href="https://www.akshayapatra.org/">Akshaya Patra</a>
+          <a target="_blank" rel="noopener noreferrer" href="https://www.harekrishnacharities.org/">Hare Krishna Charities</a>
+          <a target="_blank" rel="noopener noreferrer" href="https://hkmhyderabad.org/">Hare Krishna Movement</a>
         </div>
 
       </div>

@@ -35,6 +35,8 @@ function Values() {
             src="/images/bg/flow.png"
             alt="values"
             className="values-full-img"
+            loading="lazy"
+            decoding="async"
           />
 
           <p>
@@ -57,6 +59,8 @@ function Values() {
             src="/images/bg/chart2.png"
             alt="values2"
             className="values-wide-img"
+            loading="lazy"
+            decoding="async"
           />
         </div>
       </section>
